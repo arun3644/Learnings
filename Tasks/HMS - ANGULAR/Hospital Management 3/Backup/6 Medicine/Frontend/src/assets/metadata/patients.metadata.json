@@ -1,0 +1,90 @@
+{
+  "page": {
+    "header": {
+      "title": "Patients",
+      "cssClass": "",
+      "fields": [
+        {
+          "label": "+ Register Patient",
+          "cssClass": "btn-sm btn-teal",
+          "type": "button",
+          "disabled": false,
+          "variant": "secondary"
+        }
+      ]
+    }
+  },
+  "filters": [
+    {
+      "type": "input",
+      "placeholder": "Search by name, ID, condition...",
+      "cssClass": "filter-input",
+      "path": "",
+      "modal": ""
+    },
+    {
+      "type": "select",
+      "label": "Gender",
+      "name": "Gender",
+      "path": "",
+      "cssClass": " filter-select",
+      "options": [
+        { "value": "", "label": "All Genders" },
+        { "value": "Male", "label": "Male" },
+        { "value": "Female", "label": "Female" },
+        { "value": "Other", "label": "Other" }
+      ]
+    },
+    {
+      "type": "select",
+      "label": "Condition",
+      "name": "Condition",
+      "path": "",
+      "cssClass": " filter-select",
+      "options": [
+        { "value": "", "label": "All Conditions" },
+        { "value": "Hypertension", "label": "Hypertension" },
+        { "value": "Diabetes", "label": "Diabetes" },
+        { "value": "Asthma", "label": "Asthma" },
+        { "value": "Migraine", "label": "Migraine" },
+        { "value": "Stable", "label": "Stable" }
+      ]
+    }
+  ],
+  "table": {
+    "cssClass": "data-table",
+    "columns": [
+      { "key": "name", "label": "Patient", "cssClass": "item-sub", "sortable": true },
+      { "key": "age", "label": "Age/Gender", "cssClass": "item-sub", "sortable": true },
+      { "key": "condition", "label": "Condition", "cssClass": "item-sub", "sortable": true },
+      { "key": "status", "label": "Status", "cssClass": "item-sub", "sortable": true }
+    ]
+  },
+  "form": {
+    "fields": [
+      { "key": "username", "label": "Username", "type": "text", "required": true, "rowGroup": 0 },
+      { "key": "password", "label": "Password", "type": "password", "required": true, "rowGroup": 0 },
+      { "key": "name", "label": "Full Name", "type": "text", "required": true },
+      { "key": "email", "label": "Email", "type": "email", "required": true },
+      { "key": "age", "label": "Age", "type": "number", "required": true, "rowGroup": 1 },
+      { "key": "gender", "label": "Gender", "type": "select", "required": true, "rowGroup": 1, "options": [
+        { "value": "Male", "label": "Male" },
+        { "value": "Female", "label": "Female" },
+        { "value": "Other", "label": "Other" }
+      ]},
+      { "key": "phone", "label": "Phone Number", "type": "text", "required": true, "rowGroup": 2 },
+      { "key": "bloodGroup", "label": "Blood Group", "type": "select", "required": true, "rowGroup": 2, "options": [
+        { "value": "A+", "label": "A+" },
+        { "value": "A-", "label": "A-" },
+        { "value": "B+", "label": "B+" },
+        { "value": "B-", "label": "B-" },
+        { "value": "AB+", "label": "AB+" },
+        { "value": "AB-", "label": "AB-" },
+        { "value": "O+", "label": "O+" },
+        { "value": "O-", "label": "O-" }
+      ]},
+      { "key": "condition", "label": "Condition", "type": "text", "required": false },
+      { "key": "address", "label": "Address", "type": "textarea", "required": false }
+    ]
+  }
+}

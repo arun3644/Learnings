@@ -1,0 +1,76 @@
+{
+  "page": {
+    "title": "Appointments",
+    "cssClass": "page-appointments"
+  },
+  "months": [
+    "January", "February", "March", "April", "May", "June",
+    "July", "August", "September", "October", "November", "December"
+  ],
+  "timeSlotConfig": {
+    "startHour": 9,
+    "endHour": 12,
+    "intervalMinutes": 30
+  },
+  "statusMap": {
+    "confirmed": "Conf",
+    "pending": "Pend",
+    "completed": "Done",
+    "cancelled": "Cancel"
+  },
+  "doctors": [
+    {
+      "id": 1,
+      "name": "Dr. Arjun Mehta",
+      "specialization": "Cardiology"
+    },
+    {
+      "id": 2,
+      "name": "Dr. Priya Nair",
+      "specialization": "Neurology"
+    },
+    {
+      "id": 3,
+      "name": "Dr. Kavitha Reddy",
+      "specialization": "Orthopedics"
+    }
+  ],
+  "todaysQueue": [
+    {
+      "time": "10:00",
+      "period": "AM",
+      "patient": "Ravi Kumar",
+      "doctor": "Dr. Arjun",
+      "dept": "Cardio",
+      "status": "done",
+      "statusLabel": "Done"
+    },
+    {
+      "time": "10:30",
+      "period": "AM",
+      "patient": "Sunita Pillai",
+      "doctor": "Dr. Priya",
+      "dept": "Neuro",
+      "status": "active",
+      "statusLabel": "Now"
+    },
+    {
+      "time": "11:00",
+      "period": "AM",
+      "patient": "Booked Slot",
+      "doctor": "Dr. Arjun",
+      "dept": "Cardio",
+      "status": "pending",
+      "statusLabel": "Next"
+    },
+    {
+      "time": "12:00",
+      "period": "PM",
+      "patient": "Mohan Rao",
+      "doctor": "Dr. Kavitha",
+      "dept": "Ortho",
+      "status": "pending",
+      "statusLabel": "Pend"
+    }
+  ]
+}

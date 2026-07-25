@@ -1,0 +1,50 @@
+<div class="patients-wrap" *ngIf="meta$">
+  <div class="page-header">
+    <div>
+      <h1>{{ (meta$ | async)?.page?.header?.title || 'Staff' }}</h1>
+      <p *ngIf="(staff$ | async) as staff" class="page-subtitle">
+        {{ staff.length }} registered staff members
+      </p>
+    </div>
+    <div *ngIf="(meta$ | async)?.page?.header?.fields as fields">
+      <ng-container *ngIf="canAddStaff">
+        <app-button *ngFor="let btn of fields" [cssClass]="btn.cssClass" [disabled]="btn.disabled" [label]="btn.label"
+          [variant]="btn.variant" (clicked)="handleButtonClick(btn)">
+        </app-button>
+      </ng-container>
+    </div>
+  </div>
+
+  <div class="filter-bar" *ngIf="(meta$ | async)?.filters as filters">
+    <ng-container *ngIf="!(loading$ | async)">
+      <app-input [type]="filters[0]?.type || 'text'" [placeholder]="filters[0]?.placeholder"
+        [cssClass]="filters[0]?.cssClass" (messageEvent)="searchQuery = $event">
+      </app-input>
+      <app-select [cssClass]="filters[1]?.cssClass" [label]="filters[1]?.label" [name]="filters[1]?.name"
+        [path]="filters[1]?.path" [options]="filters[1]?.options" [(value)]="shiftFilter"
+        (selectedValue)="shiftFilter = $event">
+      </app-select>
+    </ng-container>
+  </div>
+
+  <div *ngIf="(staff$ | async) as staff">
+    <ng-container *ngIf="filterStaff(staff) as filtered">
+      <div *ngIf="(meta$ | async)?.table as table">
+        <app-data-table 
+          [columns]="table.columns" 
+          [data]="filtered" 
+          [totalCount]="staff.length"
+          [title]="'Staff List'"
+          [loading]="(loading$ | async) || false"
+          (rowClick)="selectStaff($event)">
+        </app-data-table>
+      </div>
+    </ng-container>
+  </div>
+</div>
+
+
+<app-modal *ngIf="showAddModal && (meta$ | async)?.form" [title]="'Register New Staff'" (close)="closeModal()">
+  <app-form [config]="(meta$ | async)?.form" (formSubmit)="handleFormSubmit($event)" (formCancel)="closeModal()">
+  </app-form>
+</app-modal>

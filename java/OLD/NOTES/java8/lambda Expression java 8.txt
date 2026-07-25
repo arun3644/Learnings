@@ -1,0 +1,115 @@
+🔥 Deep Dive: Lambda Expressions in Java 8
+Lambda Expression
+
+Introduced in Java 8.
+
+Provides a way to write shorter, cleaner code for functional interfaces.
+
+Syntax:
+
+(parameters) -> expression
+(parameters) -> { statements }
+
+🔹 Functional Interface
+
+An interface that has exactly one abstract method.
+
+Can have any number of default or static methods.
+
+Marked using @FunctionalInterface (optional but recommended).
+
+Example:
+
+@FunctionalInterface
+interface Calculator {
+    int add(int a, int b);
+}
+
+🔹 Using Lambda with Functional Interface
+Calculator calc = (a, b) -> a + b;
+System.out.println(calc.add(10, 20)); // Output: 30
+
+🔹 Important Rules
+Rule	Explanation
+✅ Only 1 abstract method	Required for lambda usage
+❌ More than 1 abstract method	Not allowed — compiler error
+✅ Default / static methods	Allowed (don’t count as abstract)
+✅ Functional interfaces can be used with lambda, method references, or anonymous classes	
+🔹 Examples
+
+✅ Works (1 abstract method):
+
+@FunctionalInterface
+interface AddOperation {
+    int add(int a, int b);
+}
+AddOperation add = (a, b) -> a + b;
+
+
+❌ Doesn’t Work (2 abstract methods):
+
+interface Innerpractice {
+    int add(int a, int b);
+    int mul(int a, int b, int c);
+}
+// Lambda not possible — too many abstract methods
+
+
+✅ Works with default method:
+
+@FunctionalInterface
+interface Innerpractice {
+    int add(int a, int b);
+    default int mul(int a, int b, int c) { return a * b * c; }
+}
+Innerpractice inner = (a, b) -> a + b;
+
+🔹 Key Terms
+Term	Meaning
+Functional Interface	Interface with exactly one abstract method
+Default Method	Method with a body in an interface
+Static Method	Method tied to the interface itself, not to instances
+Lambda Expression	Short way to implement a functional interface
+🏁 In Short
+
+🔸 Lambda expressions can only be used with functional interfaces (one abstract method).
+🔸 Multiple abstract methods → not functional → no lambda allowed.
+🔸 You can still use default or static methods in a functional interface.
+
+
+
+Before Java 8, interfaces could only have abstract methods.
+From Java 8 onwards, interfaces can also have:
+
+default methods (with body, inherited by classes)
+
+static methods (with body, called using the interface name)
+
+@FunctionalInterface
+interface Calculator {
+    int add(int a, int b);  // abstract method (for lambda)
+
+    static void showInfo() {
+        System.out.println("Static method in interface");
+    }
+}
+✅ Usage:
+
+java
+Copy code
+public class Test {
+    public static void main(String[] args) {
+        Calculator calc = (a, b) -> a + b;  // lambda for abstract method
+        System.out.println("Sum: " + calc.add(10, 20));
+
+        // Calling static method of interface
+        Calculator.showInfo();  
+    }
+}
+
+
+Abstract method: Declared without a body; must be implemented by the class or lambda expression.
+
+Default method: Has a body; provides a default implementation that can be overridden by implementing classes.
+
+Static method: Has a body; belongs to the interface itself and is called using the interface name (not via object).

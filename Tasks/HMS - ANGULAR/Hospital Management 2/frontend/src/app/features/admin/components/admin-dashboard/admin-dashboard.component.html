@@ -1,0 +1,46 @@
+<div class="dashboard-container">
+  <div class="dashboard-header">
+    <h1>Admin Dashboard</h1>
+    <p>Overview of hospital management system</p>
+  </div>
+
+  @if (loading$ | async) {
+    <app-loader size="large" message="Loading dashboard..."></app-loader>
+  } @else {
+    <div class="stats-grid">
+      <app-stats-card
+        title="Total Doctors"
+        [value]="(stats$ | async)?.totalDoctors || 0"
+        icon="👨‍⚕️"
+        color="primary">
+      </app-stats-card>
+
+      <app-stats-card
+        title="Total Patients"
+        [value]="(stats$ | async)?.totalPatients || 0"
+        icon="🏥"
+        color="success">
+      </app-stats-card>
+
+      <app-stats-card
+        title="Total Nurses"
+        [value]="(stats$ | async)?.totalNurses || 0"
+        icon="👩‍⚕️"
+        color="warning">
+      </app-stats-card>
+
+      <app-stats-card
+        title="Total Appointments"
+        [value]="(stats$ | async)?.totalAppointments || 0"
+        icon="📅"
+        color="danger">
+      </app-stats-card>
+    </div>
+
+    <div class="dashboard-content">
+      <app-card title="Recent Activity">
+        <p>Recent appointments and system activities will be displayed here.</p>
+      </app-card>
+    </div>
+  }
+</div>

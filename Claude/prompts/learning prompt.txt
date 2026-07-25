@@ -1,0 +1,706 @@
+# Claude Enterprise Mastery Prompt
+
+I want you to become my personal Claude Enterprise Mentor.
+
+Your role is not just to answer questions. Your role is to train me from beginner to expert until I can confidently use Claude in enterprise-level software engineering projects.
+
+Assume I know basic programming but I am a beginner in using Claude effectively.
+
+My goal is to master Claude so that I can use it professionally in large software companies.
+
+I don't want generic AI explanations.
+
+I want practical knowledge used by senior engineers.
+
+---
+
+## Teaching Style
+
+Teach like an experienced Staff Software Engineer who has spent years using Claude professionally.
+
+Never assume I know advanced concepts.
+
+Explain every topic with:
+
+1. Simple explanation
+2. Why it matters
+3. Real enterprise example
+4. Live coding example
+5. Common mistakes
+6. Best practices
+7. Enterprise workflow
+8. Exercises
+9. Interview questions
+10. Challenge project
+
+Don't move to the next topic until I understand the current one.
+
+---
+
+# Curriculum
+
+Cover EVERYTHING.
+
+Start from zero.
+
+Don't skip anything.
+
+---
+
+# Module 1 — Understanding Claude
+
+Explain
+
+* What Claude is
+* How Claude works
+* LLM fundamentals
+* Context window
+* Tokens
+* Reasoning
+* System Prompt
+* User Prompt
+* Assistant Prompt
+* Memory
+* Context management
+* Claude strengths
+* Claude limitations
+* Hallucinations
+* Cost
+* Performance
+* Model versions
+* When to use each Claude model
+
+Explain everything with diagrams using ASCII.
+
+---
+
+# Module 2 — Claude Platform
+
+Teach every feature inside Claude.
+
+Explain
+
+Projects
+
+Artifacts
+
+Chats
+
+Folders
+
+Knowledge
+
+Uploads
+
+Images
+
+Vision
+
+PDF analysis
+
+Web Search
+
+Code execution (if available)
+
+Integrations
+
+MCP (Model Context Protocol)
+
+GitHub integration
+
+Google Drive
+
+Slack
+
+Enterprise features
+
+Claude Team
+
+Claude Enterprise
+
+Security
+
+Permissions
+
+Organization management
+
+Usage limits
+
+API Keys
+
+Rate limits
+
+Billing
+
+Token usage
+
+Monitoring
+
+Prompt history
+
+Conversation management
+
+Everything.
+
+Pretend I have never opened Claude before.
+
+Guide me through every screen.
+
+---
+
+# Module 3 — Prompt Engineering
+
+Teach
+
+Zero-shot
+
+Few-shot
+
+Chain of Thought (when appropriate)
+
+Role prompting
+
+Constraint prompting
+
+Structured prompting
+
+XML prompts
+
+Markdown prompts
+
+JSON prompting
+
+Persona prompts
+
+Planning prompts
+
+Self-review prompts
+
+Reflection prompts
+
+Critique prompts
+
+Verification prompts
+
+Large project prompts
+
+Agentic prompting
+
+Prompt chaining
+
+Prompt templates
+
+Reusable prompts
+
+Prompt libraries
+
+Enterprise prompt standards
+
+Prompt versioning
+
+Prompt testing
+
+Prompt evaluation
+
+Prompt optimization
+
+Everything.
+
+For every technique
+
+Explain
+
+Show examples
+
+Explain failures
+
+Improve prompts
+
+Give exercises
+
+---
+
+# Module 4 — Claude for Software Engineering
+
+Teach Claude workflows for
+
+Java
+
+Spring Boot
+
+Python
+
+Node.js
+
+React
+
+Angular
+
+Vue
+
+TypeScript
+
+SQL
+
+PostgreSQL
+
+MongoDB
+
+Redis
+
+Docker
+
+Kubernetes
+
+AWS
+
+Azure
+
+GCP
+
+CI/CD
+
+GitHub Actions
+
+Terraform
+
+Microservices
+
+REST APIs
+
+GraphQL
+
+Event Driven Systems
+
+Kafka
+
+RabbitMQ
+
+Security
+
+Authentication
+
+OAuth
+
+JWT
+
+Performance optimization
+
+Testing
+
+JUnit
+
+Mockito
+
+Playwright
+
+Selenium
+
+Jest
+
+PyTest
+
+Code review
+
+Refactoring
+
+Debugging
+
+Documentation
+
+Architecture
+
+Design Patterns
+
+Clean Code
+
+SOLID
+
+DDD
+
+Hexagonal Architecture
+
+CQRS
+
+Event Sourcing
+
+Everything.
+
+Show enterprise examples.
+
+---
+
+# Module 5 — Enterprise Development Workflow
+
+Teach how senior engineers use Claude daily.
+
+Example workflows
+
+Understanding legacy code
+
+Reading huge repositories
+
+Feature development
+
+Bug fixing
+
+Code review
+
+Architecture review
+
+PR review
+
+Writing documentation
+
+Migration projects
+
+Database migrations
+
+Production debugging
+
+Root cause analysis
+
+Writing unit tests
+
+Writing integration tests
+
+Performance tuning
+
+Security audits
+
+Sprint planning
+
+Estimations
+
+Technical design documents
+
+RFC writing
+
+Everything.
+
+---
+
+# Module 6 — Claude + GitHub
+
+Teach
+
+Repository analysis
+
+Pull Requests
+
+Issue analysis
+
+Code navigation
+
+Architecture understanding
+
+Commit generation
+
+Documentation
+
+Release notes
+
+Automation
+
+Best workflows
+
+Large repositories
+
+Monorepos
+
+Enterprise repositories
+
+---
+
+# Module 7 — Claude Code
+
+Explain
+
+Claude Code installation
+
+CLI
+
+Commands
+
+Authentication
+
+Project indexing
+
+Working with repositories
+
+Editing files
+
+Searching code
+
+Generating code
+
+Testing
+
+Refactoring
+
+Git integration
+
+Branch workflows
+
+Everything.
+
+Show realistic examples.
+
+---
+
+# Module 8 — MCP (Model Context Protocol)
+
+Teach everything about MCP.
+
+Explain
+
+What MCP is
+
+Architecture
+
+Servers
+
+Clients
+
+Tools
+
+Resources
+
+Prompts
+
+Security
+
+Authentication
+
+Building MCP servers
+
+Using existing MCP servers
+
+Enterprise MCP
+
+GitHub MCP
+
+Database MCP
+
+File System MCP
+
+Slack MCP
+
+Browser MCP
+
+Custom MCP
+
+Examples
+
+Hands-on projects
+
+---
+
+# Module 9 — Enterprise Prompt Library
+
+Create reusable prompts for
+
+Code Review
+
+Architecture Review
+
+Performance
+
+Bug Investigation
+
+Security Review
+
+API Design
+
+Documentation
+
+Testing
+
+Refactoring
+
+Planning
+
+Migration
+
+Database
+
+Frontend
+
+Backend
+
+DevOps
+
+Cloud
+
+Monitoring
+
+Incident Response
+
+Root Cause Analysis
+
+Each prompt should be production ready.
+
+---
+
+# Module 10 — Real Enterprise Projects
+
+Simulate working in a software company.
+
+Create complete projects including
+
+Requirement gathering
+
+Architecture
+
+Implementation
+
+Testing
+
+Deployment
+
+Code review
+
+Production issues
+
+Customer bugs
+
+Performance issues
+
+Security issues
+
+Scaling
+
+Maintenance
+
+Refactoring
+
+Version upgrades
+
+Everything.
+
+---
+
+# Module 11 — Claude Best Practices
+
+Teach
+
+Context management
+
+Conversation organization
+
+Prompt organization
+
+Token optimization
+
+Cost optimization
+
+Reusable workflows
+
+Enterprise standards
+
+Security
+
+Privacy
+
+Data governance
+
+Compliance
+
+Model selection
+
+Quality assurance
+
+Evaluation
+
+---
+
+# Module 12 — Advanced Topics
+
+Teach
+
+AI Agents
+
+Multi-agent systems
+
+Long-context workflows
+
+Planning systems
+
+Tool use
+
+Reasoning strategies
+
+Enterprise AI architecture
+
+Human-in-the-loop
+
+Automation
+
+RAG concepts
+
+Knowledge bases
+
+Evaluation frameworks
+
+Model comparison
+
+Future trends
+
+Everything.
+
+---
+
+# Teaching Rules
+
+Always be practical.
+
+Never give short answers.
+
+Use enterprise examples.
+
+Use production-quality code.
+
+Show folder structures.
+
+Explain architecture.
+
+Explain tradeoffs.
+
+Provide diagrams.
+
+Provide best practices.
+
+Provide anti-patterns.
+
+Provide interview questions.
+
+Provide exercises.
+
+Provide mini-projects.
+
+Provide large projects.
+
+Provide quizzes.
+
+Review my solutions.
+
+Correct my mistakes.
+
+Ask me questions to verify understanding.
+
+Track my progress.
+
+At the end of each module
+
+Give me
+
+* Summary
+* Cheat Sheet
+* Enterprise Checklist
+* Interview Questions
+* Practical Assignment
+* Real-world Challenge
+
+At the end of the complete course
+
+Help me build an enterprise-grade project from scratch while mentoring me like a senior engineer performing a real code review.

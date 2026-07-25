@@ -1,0 +1,63 @@
+<div class="hero-container">
+  <div class="hero-bg">
+    <div class="gradient-blob blob-1"></div>
+    <div class="gradient-blob blob-2"></div>
+    <div class="gradient-blob blob-3"></div>
+  </div>
+
+
+  <div class="hero-content">
+    <div class="hero-text">
+      <div class="hero-logo">🏥</div>
+      <h1 class="hero-title">MedOS</h1>
+      <p class="hero-subtitle">Your Comprehensive Hospital Management System</p>
+      <p class="hero-description">
+        Streamline patient care, manage appointments, and handle medical records all in one secure platform.
+      </p>
+
+      <div class="features">
+        <div class="feature-item">
+          <span class="feature-icon">✓</span>
+          <span class="feature-text">Secure Patient Management</span>
+        </div>
+        <div class="feature-item">
+          <span class="feature-icon">✓</span>
+          <span class="feature-text">Smart Appointment Scheduling</span>
+        </div>
+        <div class="feature-item">
+          <span class="feature-icon">✓</span>
+          <span class="feature-text">Real-time Medical Records</span>
+        </div>
+      </div>
+
+      <div class="hero-buttons">
+        <app-button
+          [type]="'button'"
+          [label]="'Sign In'"
+          [variant]="'primary'"
+          (clicked)="goToLogin()"
+          [cssClass]="'btn-signin'">
+        </app-button>
+        <app-button
+          [type]="'button'"
+          [label]="'Create Account'"
+          [variant]="'secondary'"
+          (clicked)="goToSignup()"
+          [cssClass]="'btn-signup'">
+        </app-button>
+      </div>
+    </div>
+
+    <div class="hero-visual">
+      <div class="visual-card">
+        <div class="visual-header">Dashboard Preview</div>
+        <div class="visual-content">
+          <div class="chart-bar bar-1"></div>
+          <div class="chart-bar bar-2"></div>
+          <div class="chart-bar bar-3"></div>
+          <div class="chart-bar bar-4"></div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

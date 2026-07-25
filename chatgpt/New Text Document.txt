@@ -1,0 +1,392 @@
+can u do one thing, i will give already what i have done, u change the code for to make the table same, same color, every thing should be same but data use my json data i will give, and table should be responsive for all screen size(use max-width), use flex, and remove left side bottom(dont for the day, send daily report, maria, perez), for icons use your own but dont be exactly in picture becoz they found i copied from gpt,  dont give me the full code of yours just alter my code with command lines what u have changed----------> table.html file ---> <!DOCTYPE html>
+<html lang="en">               
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="table.css">
+</head>
+
+<body>
+    <div class="page-container">
+        <div class="sidebar left-container">
+            <div class="sidebar-menu">
+                <img src="./assets/images/sidebars/egg.png" alt="">
+                <div class="sidebar-item">
+                    avoclub
+                </div>
+            </div>
+            <div class="sidebar-menu">
+                <img src="./assets/images/sidebars/menu.png" alt="">
+                <div class="sidebar-item">
+                    Dashboard
+                </div>
+            </div>
+            <div class="sidebar-menu">
+                <img src="./assets/images/sidebars/bag.png" alt="">
+                <div class="sidebar-item">
+                    Orders
+                </div>
+            </div>
+            <div class="sidebar-menu">
+                <img src="./assets/images/sidebars/map.png" alt="">
+                <div class="sidebar-item">
+                    Restaurant
+                </div>
+            </div>
+            <div class="sidebar-menu">
+                <img src="./assets/images/sidebars/cofee.png" alt="">
+                <div class="sidebar-item">
+                    Products
+                </div>
+            </div>
+            <div class="sidebar-menu">
+                <img src="./assets/images/sidebars/user.png" alt="">
+                <div class="sidebar-item">
+                    Drivers
+                </div>
+            </div>
+        </div>
+        <div class="right-container">
+            <div class="header">
+                <div class="header-row1">
+
+                </div>
+                <div class="header-row2">
+
+                </div>
+            </div>
+            <div class="table">
+                <div class="table-header table-row">
+                    <div class="table-header-cell checkbox" style="width:4%;"><input type="checkbox" id="select-all"> </div>
+                    <div class="table-header-cell name">Name</div>
+                    <div class="table-header-cell status">Status</div>
+                    <div class="table-header-cell currentDeliveryId">Current Delivery ID </div>
+                    <div class="table-header-cell deliveredId">Delivered</div>
+                    <div class="table-header-cell vehicleId">Vehicle ID</div>
+                    <div class="table-header-cell action"></div>
+                </div>
+                <div id="table-body" class="table-body">
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+
+</html>         table.css ----> body {
+    overflow: hidden;
+}
+
+.page-container {
+    display: flex;
+    width: 100%;
+}
+
+
+.left-container {
+    background-color: rgb(255, 255, 255);
+    width: 11%;
+    height: 600px;
+    color: black;
+}
+
+.right-container {
+    width: 89%;
+    height: 600px;
+    background-color: rgb(243, 243, 243);
+}
+
+.table {
+    background-color: rgb(243, 243, 243);
+    margin: 20px;
+}
+
+.header {
+    height: 20%;
+}
+
+.header-row1 {
+    height: 50%;
+}
+
+.header-row2 {
+    height: 50%;
+}
+
+img {
+    width: 10px;
+    height: 10px;
+}
+
+.table-header {
+    display: flex;
+    margin: 3px;
+    width: 100%;
+}
+
+.table-header-cell {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 20px;      
+    box-sizing: border-box; 
+
+}
+
+.name {
+    width: 25%;
+}
+
+
+
+.currentDeliveryId {
+    width: 22%;
+}
+
+.deliveredId {
+    width: 10%;
+}
+
+.vehicleId {
+    width: 12%;
+}
+
+.action {
+    width: 18%;
+}
+
+
+.table-body {
+    display: flex;
+    flex-direction: column;
+    height: 400px;
+    overflow-y: auto;
+    scrollbar-width: none;
+}
+.table-row {
+    display: flex;
+    background-color: rgb(255, 255, 255);
+    margin: 3px;
+    border-radius: 4px;
+    min-height: 40px;
+    align-items: stretch;
+}
+
+.table-row-cell {
+    display: flex;
+    align-items: center;
+    padding: 20px;
+    justify-content: center;
+    
+    box-sizing: border-box;
+}
+
+.table-row-cell-name{
+    display: flex;
+    align-items: center;
+    box-sizing: border-box;
+}
+
+.table-row-cell-name img{
+    margin-left: 30px;
+}
+.table-row-cell-name span{
+    margin-left: 30px;
+}
+
+
+.status {
+    width: 11%;
+    display: flex;
+    justify-content: flex-start;
+}              data.json---> use this data only, [
+  {
+    "name": { "image": "https://randomuser.me/api/portraits/men/11.jpg", "fullName": "John Carter" },
+    "status": "ordered",
+    "currentDeliveryId": "JA243J",
+    "deliveredId": "134",
+    "vehicleId": "NY124"
+  },
+  {
+    "name": { "image": "https://randomuser.me/api/portraits/women/21.jpg", "fullName": "Emily Johnson" },
+    "status": "packed",
+    "currentDeliveryId": "JA287J",
+    "deliveredId": "542",
+    "vehicleId": "NY231"
+  },
+  {
+    "name": { "image": "https://randomuser.me/api/portraits/men/32.jpg", "fullName": "Michael Brown" },
+    "status": "delivered",
+    "currentDeliveryId": "JA123J",
+    "deliveredId": "219",
+    "vehicleId": "NY442"
+  },
+  {
+    "name": { "image": "https://randomuser.me/api/portraits/women/14.jpg", "fullName": "Sophia Williams" },
+    "status": "in-delivered",
+    "currentDeliveryId": "JA562J",
+    "deliveredId": "876",
+    "vehicleId": "NY315"
+  },
+  {
+    "name": { "image": "https://randomuser.me/api/portraits/men/40.jpg", "fullName": "Chris Evans" },
+    "status": "ordered",
+    "currentDeliveryId": "JA998J",
+    "deliveredId": "003",
+    "vehicleId": "NY908"
+  },
+  {
+    "name": { "image": "https://randomuser.me/api/portraits/women/46.jpg", "fullName": "Hannah Lee" },
+    "status": "packed",
+    "currentDeliveryId": "JA672J",
+    "deliveredId": "244",
+    "vehicleId": "NY551"
+  },
+  {
+    "name": { "image": "https://randomuser.me/api/portraits/men/58.jpg", "fullName": "Jason Miller" },
+    "status": "delivered",
+    "currentDeliveryId": "JA321J",
+    "deliveredId": "642",
+    "vehicleId": "NY117"
+  },
+  {
+    "name": { "image": "https://randomuser.me/api/portraits/women/30.jpg", "fullName": "Ava Thompson" },
+    "status": "ordered",
+    "currentDeliveryId": "JA482J",
+    "deliveredId": "110",
+    "vehicleId": "NY298"
+  },
+  {
+    "name": { "image": "https://randomuser.me/api/portraits/men/45.jpg", "fullName": "Daniel Garcia" },
+    "status": "in-delivered",
+    "currentDeliveryId": "JA211J",
+    "deliveredId": "553",
+    "vehicleId": "NY990"
+  },
+  {
+    "name": { "image": "https://randomuser.me/api/portraits/women/63.jpg", "fullName": "Natalie Perez" },
+    "status": "packed",
+    "currentDeliveryId": "JA709J",
+    "deliveredId": "822",
+    "vehicleId": "NY458"
+  },
+  {
+    "name": { "image": "https://randomuser.me/api/portraits/men/70.jpg", "fullName": "Samuel Scott" },
+    "status": "delivered",
+    "currentDeliveryId": "JA904J",
+    "deliveredId": "155",
+    "vehicleId": "NY612"
+  },
+  {
+    "name": { "image": "https://randomuser.me/api/portraits/women/77.jpg", "fullName": "Olivia Clark" },
+    "status": "ordered",
+    "currentDeliveryId": "JA119J",
+    "deliveredId": "334",
+    "vehicleId": "NY381"
+  },
+  {
+    "name": { "image": "https://randomuser.me/api/portraits/men/82.jpg", "fullName": "David Rodriguez" },
+    "status": "delivered",
+    "currentDeliveryId": "JA854J",
+    "deliveredId": "789",
+    "vehicleId": "NY227"
+  },
+  {
+    "name": { "image": "https://randomuser.me/api/portraits/women/55.jpg", "fullName": "Lily Martinez" },
+    "status": "packed",
+    "currentDeliveryId": "JA466J",
+    "deliveredId": "402",
+    "vehicleId": "NY069"
+  },
+  {
+    "name": { "image": "https://randomuser.me/api/portraits/men/33.jpg", "fullName": "Anthony Lewis" },
+    "status": "in-delivered",
+    "currentDeliveryId": "JA742J",
+    "deliveredId": "271",
+    "vehicleId": "NY589"
+  },
+  {
+    "name": { "image": "https://randomuser.me/api/portraits/women/10.jpg", "fullName": "Grace Walker" },
+    "status": "delivered",
+    "currentDeliveryId": "JA930J",
+    "deliveredId": "612",
+    "vehicleId": "NY777"
+  },
+  {
+    "name": { "image": "https://randomuser.me/api/portraits/men/64.jpg", "fullName": "Andrew Hall" },
+    "status": "ordered",
+    "currentDeliveryId": "JA120J",
+    "deliveredId": "421",
+    "vehicleId": "NY150"
+  },
+  {
+    "name": { "image": "https://randomuser.me/api/portraits/women/85.jpg", "fullName": "Zoe Allen" },
+    "status": "packed",
+    "currentDeliveryId": "JA688J",
+    "deliveredId": "290",
+    "vehicleId": "NY833"
+  },
+  {
+    "name": { "image": "https://randomuser.me/api/portraits/men/19.jpg", "fullName": "Ethan Young" },
+    "status": "delivered",
+    "currentDeliveryId": "JA540J",
+    "deliveredId": "007",
+    "vehicleId": "NY304"
+  },
+  {
+    "name": { "image": "https://randomuser.me/api/portraits/women/73.jpg", "fullName": "Isabella King" },
+    "status": "in-delivered",
+    "currentDeliveryId": "JA355J",
+    "deliveredId": "978",
+    "vehicleId": "NY909"
+  }
+]  script.js-----------> fetch("data.json")
+    .then(res => res.json())
+    .then(data => {
+        const tableBody = document.getElementById("table-body");
+
+        data.forEach(item => {
+            const row = document.createElement("div");
+            row.classList.add("table-row");
+
+            let rowCells = '';
+
+            for (let i in item) {
+                rowCells += `
+    <div class="table-row-cell checkbox" style="width:4%; display:flex; justify-content:center; align-items:center;">
+        <input type="checkbox" class="row-check">
+    </div>
+`;
+
+                if (i === "name") {
+                    rowCells += `
+                        <div class="table-row-cell-name name" data-label="Name">
+                            <img src="${item.name.image}" alt="Profile" style="width:30px;height:30px;border-radius:50%;margin-right:10px;">
+                            <span>${item.name.fullName}</span>
+                        </div>
+                    `;
+                } else {
+                    rowCells += `
+                        <div class="table-row-cell ${i}" data-label="${i}">
+                            ${item[i]}
+                        </div>
+                    `;
+                }
+            }
+
+            rowCells += `
+                <div class="table-row-cell action">
+                   <button class="btn"> <img src="./assets/images/sidebars/telephone.png" alt="Action" style="width:20px;height:20px;"></button>
+                   <button class="btn"> <img src="./assets/images/sidebars/map.png" alt="Action" style="width:20px;height:20px;"></button>
+                </div>
+            `;
+
+            row.innerHTML = rowCells;
+            tableBody.appendChild(row);
+        });
+    })
+    .catch(err => console.log(err));
+ 

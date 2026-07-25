@@ -1,0 +1,170 @@
+.role-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 8px;
+  margin-bottom: 20px;
+}
+
+.role-grid app-card {
+  font-size: 0.85rem;
+}
+
+.role-grid app-card ::ng-deep .card {
+  padding: 12px 8px;
+  min-height: auto;
+}
+
+.role-grid app-card ::ng-deep .card-icon {
+  font-size: 1.5rem;
+  margin-bottom: 6px;
+}
+
+.role-grid app-card ::ng-deep .card-label {
+  font-size: 0.75rem;
+}
+
+.section-label {
+  display: block;
+  font-size: 0.8rem;
+  font-weight: 500;
+  color: #374151;
+  margin-bottom: 10px;
+}
+
+.required-mark {
+  color: #ef4444;
+  margin-left: 2px;
+}
+
+.divider {
+  position: relative;
+  text-align: center;
+  margin: 20px 0;
+}
+
+.divider::before {
+  content: '';
+  position: absolute;
+  top: 50%;
+  left: 0;
+  right: 0;
+  height: 1px;
+  background: #e5e7eb;
+}
+
+.divider span {
+  position: relative;
+  background: white;
+  padding: 0 12px;
+  color: #9ca3af;
+  font-size: 0.875rem;
+}
+
+.btn-link {
+  background: transparent !important;
+  color: #6b7280 !important;
+  border: 1px solid #d1d5db !important;
+  font-weight: 500;
+  transition: all 0.2s;
+  margin-top: 16px !important;
+  padding: 12px 24px;
+}
+
+.btn-link:hover:not(:disabled) {
+  color: #374151 !important;
+  background: #f9fafb !important;
+  border-color: #9ca3af !important;
+}
+
+.btn-link:disabled {
+  color: #9ca3af !important;
+  background: transparent !important;
+}
+
+.btn-full{
+  width: 100%;
+  margin-top: 8px;
+}
+
+.btn-primary.btn-full {
+  margin-bottom: 0 !important;
+  margin-top: 24px !important;
+  background: #3b82f6;
+  border: none;
+  color: white;
+  padding: 12px 24px;
+  font-weight: 600;
+}
+
+.btn-primary.btn-full:hover:not(:disabled) {
+  background: #2563eb;
+}
+.btn-primary{
+  margin-top: 8px;
+}
+.spinner {
+  display: inline-block;
+  width: 14px;
+  height: 14px;
+  border: 2px solid rgba(255, 255, 255, 0.3);
+  border-top-color: white;
+  border-radius: 50%;
+  animation: spin 0.6s linear infinite;
+  margin-right: 8px;
+  vertical-align: middle;
+}
+
+@keyframes spin {
+  to { transform: rotate(360deg); }
+}
+
+.btn-loading {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.form-input:focus {
+  outline: none;
+  border-color: #3b82f6;
+  box-shadow: 0 0 0 3px rgba(59, 130, 246, 0.1);
+}
+
+.form-input.invalid {
+  border-color: #ef4444;
+}
+
+.form-input.invalid:focus {
+  box-shadow: 0 0 0 3px rgba(239, 68, 68, 0.1);
+}
+.login-head {
+  text-align: center;
+  margin-bottom: 24px;
+}
+
+.login-head h1 {
+  font-size: 1.5rem;
+  font-weight: 700;
+  color: #1f2937;
+  margin: 12px 0 6px 0;
+  letter-spacing: -0.025em;
+}
+
+.login-subtitle {
+  font-size: 0.875rem;
+  color: #6b7280;
+  margin: 0 0 8px 0;
+  font-weight: 400;
+}
+
+.form-field {
+  margin-bottom: 16px;
+}
+
+.section-label {
+  display: block;
+  font-size: 0.8rem;
+  font-weight: 500;
+  color: #374151;
+  margin-bottom: 10px;
+}

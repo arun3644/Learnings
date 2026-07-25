@@ -1,0 +1,120 @@
+<div class="auth-container">
+  <div class="auth-card">
+    <div class="auth-header">
+      <h1>Register as {{ selectedRole }}</h1>
+      <p>Create your account</p>
+    </div>
+
+    <form [formGroup]="registerForm" (ngSubmit)="onSubmit()" class="auth-form">
+      <div class="form-row">
+        <div class="form-group">
+          <label for="firstName">First Name</label>
+          <input id="firstName" type="text" formControlName="firstName" class="form-control" />
+        </div>
+        <div class="form-group">
+          <label for="lastName">Last Name</label>
+          <input id="lastName" type="text" formControlName="lastName" class="form-control" />
+        </div>
+      </div>
+
+      <div class="form-group">
+        <label for="email">Email</label>
+        <input id="email" type="email" formControlName="email" class="form-control" />
+      </div>
+
+      <div class="form-group">
+        <label for="phone">Phone</label>
+        <input id="phone" type="tel" formControlName="phone" class="form-control" />
+      </div>
+
+      <div class="form-row">
+        <div class="form-group">
+          <label for="password">Password</label>
+          <input id="password" type="password" formControlName="password" class="form-control" />
+        </div>
+        <div class="form-group">
+          <label for="confirmPassword">Confirm Password</label>
+          <input id="confirmPassword" type="password" formControlName="confirmPassword" class="form-control" />
+        </div>
+      </div>
+
+      @if (selectedRole === 'DOCTOR') {
+        <div class="form-group">
+          <label for="specialization">Specialization</label>
+          <input id="specialization" type="text" formControlName="specialization" class="form-control" />
+        </div>
+        <div class="form-row">
+          <div class="form-group">
+            <label for="licenseNumber">License Number</label>
+            <input id="licenseNumber" type="text" formControlName="licenseNumber" class="form-control" />
+          </div>
+          <div class="form-group">
+            <label for="experience">Experience (years)</label>
+            <input id="experience" type="number" formControlName="experience" class="form-control" />
+          </div>
+        </div>
+      }
+
+      @if (selectedRole === 'PATIENT') {
+        <div class="form-row">
+          <div class="form-group">
+            <label for="dateOfBirth">Date of Birth</label>
+            <input id="dateOfBirth" type="date" formControlName="dateOfBirth" class="form-control" />
+          </div>
+          <div class="form-group">
+            <label for="gender">Gender</label>
+            <select id="gender" formControlName="gender" class="form-control">
+              <option value="">Select Gender</option>
+              <option value="MALE">Male</option>
+              <option value="FEMALE">Female</option>
+              <option value="OTHER">Other</option>
+            </select>
+          </div>
+        </div>
+        <div class="form-group">
+          <label for="address">Address</label>
+          <textarea id="address" formControlName="address" class="form-control" rows="3"></textarea>
+        </div>
+      }
+
+      @if (selectedRole === 'NURSE') {
+        <div class="form-row">
+          <div class="form-group">
+            <label for="department">Department</label>
+            <input id="department" type="text" formControlName="department" class="form-control" />
+          </div>
+          <div class="form-group">
+            <label for="licenseNumber">License Number</label>
+            <input id="licenseNumber" type="text" formControlName="licenseNumber" class="form-control" />
+          </div>
+        </div>
+      }
+
+      @if (selectedRole === 'ADMIN') {
+        <div class="form-group">
+          <label for="department">Department</label>
+          <input id="department" type="text" formControlName="department" class="form-control" />
+        </div>
+      }
+
+      @if (error$ | async; as error) {
+        <div class="error-message">{{ error }}</div>
+      }
+
+      <div class="form-actions">
+        <button type="button" (click)="goBack()" class="btn btn-secondary">Back</button>
+        <button type="submit" [disabled]="!registerForm.valid || (loading$ | async)" class="btn btn-primary">
+          @if (loading$ | async) {
+            <span>Registering...</span>
+          } @else {
+            <span>Register</span>
+          }
+        </button>
+      </div>
+    </form>
+
+    <div class="auth-footer">
+      <p>Already have an account? <a routerLink="/auth/login">Login here</a></p>
+    </div>
+  </div>
+</div>

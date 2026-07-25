@@ -1,0 +1,9 @@
+<div>
+    <input 
+     type="text"
+     [placeholder]="placeholder"
+     #inputField
+     (input)="updateValue(inputField.value)"
+     [class]="cssClass"
+    >
+</div>

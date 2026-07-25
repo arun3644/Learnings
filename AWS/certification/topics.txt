@@ -1,0 +1,99 @@
+In-Scope AWS Services (These CAN appear on the exam)
+Analytics
+
+Amazon Athena
+Amazon Kinesis
+Amazon OpenSearch Service
+
+Application Integration
+
+AWS AppSync
+Amazon EventBridge
+Amazon SNS
+Amazon SQS
+AWS Step Functions
+
+Compute
+
+Amazon EC2
+AWS Elastic Beanstalk
+AWS Lambda
+AWS SAM
+
+Containers
+
+AWS Copilot
+Amazon ECR
+Amazon ECS
+Amazon EKS
+
+Database
+
+Amazon Aurora
+Amazon DynamoDB
+Amazon ElastiCache
+Amazon MemoryDB
+Amazon RDS
+
+Developer Tools
+
+AWS Amplify
+AWS CloudShell
+AWS CodeArtifact
+AWS CodeBuild
+AWS CodeDeploy
+Amazon CodeGuru
+AWS CodePipeline
+AWS X-Ray
+
+Management and Governance
+
+AWS AppConfig
+AWS CDK
+AWS CloudFormation
+AWS CloudTrail
+Amazon CloudWatch
+Amazon CloudWatch Logs
+AWS CLI
+AWS Systems Manager
+
+Networking and Content Delivery
+
+Amazon API Gateway
+Amazon CloudFront
+Elastic Load Balancing (ELB)
+Amazon Route 53
+Amazon VPC
+
+Security, Identity, and Compliance
+
+AWS Certificate Manager (ACM)
+Amazon Cognito
+AWS IAM
+AWS KMS
+AWS Private Certificate Authority
+AWS Secrets Manager
+AWS STS
+AWS WAF
+
+Storage
+
+Amazon EBS
+Amazon EFS
+Amazon S3
+Amazon S3 Glacier
+
+
+❌ Out-of-Scope (Officially excluded — do NOT waste time studying these for the exam)
+
+Analytics: Amazon QuickSight
+Business Apps: Amazon Chime, Amazon Connect, Amazon WorkMail
+End User Computing: AppStream 2.0, WorkSpaces
+Frontend/Mobile: AWS Device Farm
+Game Tech: Amazon GameLift
+ML: Amazon Lex, Polly, Rekognition
+Mgmt/Governance: AWS Managed Services, Service Catalog
+Media: Elastic Transcoder
+Migration: Application Discovery Service, Application Migration Service, DMS
+Security: Shield Advanced, Shield Standard
+Storage: Snow Family, Storage Gateway

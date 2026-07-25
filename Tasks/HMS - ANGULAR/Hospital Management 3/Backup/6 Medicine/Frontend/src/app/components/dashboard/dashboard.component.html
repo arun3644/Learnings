@@ -1,0 +1,139 @@
+<section class="dashboard-page">
+ <div class="page-header role-header">
+    <div class="header-content">
+      <h1 style="color: #1b3a82;">{{ roleName }}</h1>
+      <p class="page-subtitle">{{ roleDescription }}</p>
+    </div>
+    <div class="role-badge">{{ role }}</div>
+  </div>
+
+  <section class="quick-actions-section" *ngIf="quickActions.length > 0">
+    <div class="section-header">
+      <h2 class="section-title">Quick Actions</h2>
+      <p class="section-desc">Access the most common workflows immediately.</p>
+    </div>
+    <div class="quick-actions-grid">
+      <button 
+        *ngFor="let action of quickActions"
+        class="quick-action-btn"
+        [ngClass]="'action-' + action.color"
+        (click)="executeAction(action)"
+        title="{{ action.label }}">
+        <span class="action-icon">{{ action.icon }}</span>
+        <span class="action-label">{{ action.label }}</span>
+      </button>
+    </div>
+  </section>
+
+  <div class="stat-grid" *ngIf="navigationCards.length > 0 && (stats$ | async) as stats">
+    <div class="stat-card clickable" *ngFor="let card of navigationCards" (click)="navigatePage(card.page)">
+      <div class="stat-icon">{{ card.icon }}</div>
+      <div class="stat-content">
+        <span class="stat-label">{{ card.label }}</span>
+        <span class="stat-value">{{ stats[card.key] || 0 }}</span>
+      </div>
+    </div>
+  </div>
+
+  <div class="stat-grid" *ngIf="stats$ | async as stats">
+    <div class="stat-card" *ngFor="let card of statCards" [ngClass]="'stat-' + card.key"
+         [class.clickable]="card.page"
+         (click)="card.page && navigatePage(card.page)">
+      <div class="stat-icon">{{ card.icon }}</div>
+      <div class="stat-content">
+        <span class="stat-label">{{ card.label }}</span>
+        <span class="stat-value">{{ stats[card.key] || 0 }}</span>
+      </div>
+    </div>
+  </div>
+
+  <section class="activity-section" *ngIf="meta && (stats$ | async) as stats">
+    <ng-container *ngIf="stats?.recentActivity?.length && stats.recentActivity.length > 0">
+      <h2 class="section-title">{{ meta.recentActivity?.title }}</h2>
+      <div class="table-card">
+        <table class="data-table">
+          <thead>
+            <tr>
+              <th *ngFor="let column of meta.recentActivity.columns" [ngClass]="column.cssClass">{{ column.label }}</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr *ngFor="let activity of stats.recentActivity.slice(0, 4)">
+              <td class="timestamp-col">{{ activity.timestamp | date:'short' }}</td>
+              <td class="message-col">{{ activity.message }}</td>
+              <td class="user-col">{{ activity.user }}</td>
+              <td class="status-col">
+                <span class="status-badge" 
+                      [ngClass]="{
+                        'badge-scheduled': activity.type === 'Scheduled',
+                        'badge-completed': activity.type === 'Completed',
+                        'badge-cancelled': activity.type === 'Cancelled',
+                        'badge-rescheduled': activity.type === 'Rescheduled',
+                        'badge-registered': activity.type === 'Registered'
+                      }">
+                  {{ activity.type }}
+                </span>
+              </td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+    </ng-container>
+  </section>
+</section>
+
+<app-modal
+  *ngIf="isModalOpen"
+  [title]="modalTitle"
+  (close)="closeModal()">
+  <form [formGroup]="modalForm" (ngSubmit)="handleModalSubmit(modalForm.value)">
+    <div class="form-grid">
+      <div *ngFor="let field of modalFields" class="form-field" [class.full-width]="field.type === 'textarea' || field.key === 'specialization'">
+        <label [for]="field.key" class="form-label">
+          {{ field.label }}
+          <span *ngIf="field.required" class="required-mark">*</span>
+        </label>
+
+        <input
+          *ngIf="field.type !== 'select' && field.type !== 'textarea'"
+          [id]="field.key"
+          [type]="field.type || 'text'"
+          [placeholder]="field.placeholder || ''"
+          [formControlName]="field.key"
+          [disabled]="isSubmitting"
+          class="form-input" />
+
+        <select
+          *ngIf="field.type === 'select'"
+          [id]="field.key"
+          [formControlName]="field.key"
+          [disabled]="isSubmitting"
+          class="form-input">
+          <option value="">Select {{ field.label }}</option>
+          <option *ngFor="let option of field.options" [value]="option.value">
+            {{ option.label }}
+          </option>
+        </select>
+
+        <textarea
+          *ngIf="field.type === 'textarea'"
+          [id]="field.key"
+          [placeholder]="field.placeholder || ''"
+          [formControlName]="field.key"
+          [disabled]="isSubmitting"
+          class="form-input"></textarea>
+      </div>
+    </div>
+
+    <div *ngIf="modalErrorMessage" class="alert alert-error">{{ modalErrorMessage }}</div>
+    <div *ngIf="modalSuccessMessage" class="alert alert-success">{{ modalSuccessMessage }}</div>
+
+    <div class="form-actions">
+      <button type="button" class="btn btn-secondary" (click)="closeModal()" [disabled]="isSubmitting">Cancel</button>
+      <button type="submit" class="btn btn-primary" [disabled]="isSubmitting">
+        <span *ngIf="!isSubmitting">Submit</span>
+        <span *ngIf="isSubmitting">Submitting...</span>
+      </button>
+    </div>
+  </form>
+</app-modal>

@@ -1,0 +1,48 @@
+<div class="list-wrap">
+  <div class="page-header">
+    <div>
+      <h1>Doctors</h1>
+      <p class="page-subtitle">{{ doctors.length }} registered doctors</p>
+    </div>
+  </div>
+
+  <div class="filter-bar">
+    <input class="filter-input" placeholder="Search by name, ID, specialization..." [(ngModel)]="searchQuery" style="flex:1">
+    <select class="filter-select" [(ngModel)]="specializationFilter">
+      <option value="">All Specializations</option>
+      <option *ngFor="let s of specializations" [value]="s">{{ s }}</option>
+    </select>
+  </div>
+
+  <div class="list-card">
+    <ng-container *ngIf="filterDoctors() as filtered">
+      <div class="list-header">
+        <span>Doctor List</span>
+        <span class="muted">Showing {{ filtered.length }} of {{ doctors.length }}</span>
+      </div>
+      <div class="list-header-row">
+        <span class="list-col">Doctor</span>
+        <span class="list-col">Specialization</span>
+        <span class="list-col">Experience</span>
+        <span class="list-col">Phone</span>
+      </div>
+      <div *ngFor="let doctor of filtered" class="list-item">
+        <div>
+          <div class="item-name">
+            <span class="avatar">{{ getInitials(doctor.name) }}</span>
+            {{ doctor.name }}
+          </div>
+          <div class="item-id">{{ doctor.doctorId }}</div>
+        </div>
+        <div class="item-spec">{{ doctor.specialization || 'N/A' }}</div>
+        <div class="item-sub">{{ doctor.yearsOfExperience || 0 }} yrs</div>
+        <div class="item-sub">{{ doctor.phoneNumber || 'N/A' }}</div>
+      </div>
+      <div *ngIf="filtered.length === 0" class="empty-state">
+        <p>No doctors match your search</p>
+      </div>
+    </ng-container>
+  </div>
+
+  <div class="loading-state" *ngIf="loading"><p>Loading doctors...</p></div>
+</div>

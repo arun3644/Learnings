@@ -1,0 +1,15 @@
+<div>
+    <select 
+    [name]="name"
+    [id]="id"
+    [class]="cssClass"
+    [disabled]="disabled"
+    [required]="required"
+    [(ngModel)]="selectedOption"
+    (change)="onSelectionChange($event)"
+    >
+    <option [value]="option.value" *ngFor="let option of options">
+        {{option.label}}
+    </option>
+    </select>
+</div>

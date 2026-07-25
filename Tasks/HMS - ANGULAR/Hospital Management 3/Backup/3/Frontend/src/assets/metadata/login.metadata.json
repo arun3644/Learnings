@@ -1,0 +1,143 @@
+{
+  "Layout": {
+    "heading": "Welcome back",
+    "backgrdClr": "#0a0f1e"
+  },
+  "cards": [
+    {
+      "name": "Admin",
+      "label": "Admin",
+      "icon": "👨‍💼",
+      "properties": {
+        "css": "role-chip"
+      }
+    },
+    {
+      "name": "Doctor",
+      "label": "Doctor",
+      "icon": "👨‍⚕️",
+      "properties": {
+        "css": "role-chip"
+      }
+    },
+    {
+      "name": "Nurse",
+      "label": "Nurse",
+      "icon": "👩‍⚕️",
+      "properties": {
+        "css": "role-chip"
+      }
+    },
+    {
+      "name": "Lab Tech",
+      "label": "Lab Tech",
+      "icon": "🧑‍🔬",
+      "properties": {
+        "css": "role-chip"
+      }
+    },
+    {
+      "name": "Pharma",
+      "label": "Pharma",
+      "icon": "💊",
+      "properties": {
+        "css": "role-chip"
+      }
+    },
+    {
+      "name": "Patient",
+      "label": "Patient",
+      "icon": "🧑‍🤝‍🧑",
+      "properties": {
+        "css": "role-chip"
+      }
+    }
+  ],
+  "form": {
+    "title": "Hospital Login",
+    "subtitle": "Sign in to your account",
+    "cssClass": "login-form",
+    "submitButton": {
+      "label": "Login",
+      "cssClass": "btn btn-primary btn-full"
+    }
+  },
+  "register": {
+    "title": "Create account",
+    "subtitle": "Register as Doctor, Nurse, or Patient",
+    "cssClass": "login-form",
+    "allowedRoles": ["Doctor", "Nurse", "Patient"],
+    "submitButton": {
+      "label": "Register",
+      "cssClass": "btn btn-primary btn-full"
+    },
+    "fields": [
+      {
+        "key": "name",
+        "label": "Full Name",
+        "type": "text",
+        "placeholder": "Enter full name",
+        "required": true,
+        "cssClass": "form-field",
+        "inputCssClass": "form-input",
+        "labelCssClass": "form-label",
+        "validations": {
+          "required": {
+            "message": "Name is required"
+          }
+        }
+      },
+      {
+        "key": "email",
+        "label": "Email",
+        "type": "email",
+        "placeholder": "Enter email",
+        "required": true,
+        "cssClass": "form-field",
+        "inputCssClass": "form-input",
+        "labelCssClass": "form-label",
+        "validations": {
+          "required": {
+            "message": "Email is required"
+          }
+        }
+      }
+    ]
+  },
+  "fields": [
+    {
+      "key": "username",
+      "label": "Username",
+      "type": "text",
+      "placeholder": "Enter username",
+      "required": true,
+      "cssClass": "form-field",
+      "inputCssClass": "form-input",
+      "labelCssClass": "form-label",
+      "validations": {
+        "required": {
+          "message": "Username is required"
+        }
+      }
+    },
+    {
+      "key": "password",
+      "label": "Password",
+      "type": "password",
+      "placeholder": "Enter password",
+      "required": true,
+      "cssClass": "form-field",
+      "inputCssClass": "form-input",
+      "labelCssClass": "form-label",
+      "validations": {
+        "required": {
+          "message": "Password is required"
+        },
+        "minLength": {
+          "value": 6,
+          "message": "Minimum 6 characters"
+        }
+      }
+    }
+  ]
+}

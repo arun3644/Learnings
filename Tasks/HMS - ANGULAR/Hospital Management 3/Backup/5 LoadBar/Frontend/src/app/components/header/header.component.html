@@ -1,0 +1,13 @@
+<header class="header">
+  <div class="header-title">Hospital Management System</div>
+  <div class="header-actions">
+    <div class="header-user-info" *ngIf="currentUser">
+      <span class="header-user-icon">👤</span>
+      <div class="user-details">
+        <span class="user-name">{{ currentUser.name || currentUser.username }}</span>
+        <span class="user-role">{{ currentUser.role }}</span>
+      </div>
+    </div>
+    <button class="btn btn-ghost" (click)="logout()">🚪 Logout</button>
+  </div>
+</header>

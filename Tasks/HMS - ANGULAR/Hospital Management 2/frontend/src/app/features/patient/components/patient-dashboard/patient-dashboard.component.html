@@ -1,0 +1,46 @@
+<div class="dashboard-container">
+  <div class="dashboard-header">
+    <h1>Patient Dashboard</h1>
+    <p>Welcome back!</p>
+  </div>
+
+  @if (loading$ | async) {
+    <app-loader size="large" message="Loading dashboard..."></app-loader>
+  } @else {
+    <div class="stats-grid">
+      <app-stats-card
+        title="Upcoming Appointments"
+        [value]="(stats$ | async)?.upcomingAppointments || 0"
+        icon="📅"
+        color="primary">
+      </app-stats-card>
+
+      <app-stats-card
+        title="Total Appointments"
+        [value]="(stats$ | async)?.totalAppointments || 0"
+        icon="📊"
+        color="success">
+      </app-stats-card>
+
+      <app-stats-card
+        title="Completed"
+        [value]="(stats$ | async)?.completedAppointments || 0"
+        icon="✅"
+        color="success">
+      </app-stats-card>
+
+      <app-stats-card
+        title="Cancelled"
+        [value]="(stats$ | async)?.cancelledAppointments || 0"
+        icon="❌"
+        color="danger">
+      </app-stats-card>
+    </div>
+
+    <div class="dashboard-content">
+      <app-card title="Upcoming Appointments">
+        <p>Your upcoming appointments will be displayed here.</p>
+      </app-card>
+    </div>
+  }
+</div>

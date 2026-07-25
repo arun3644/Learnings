@@ -1,0 +1,473 @@
+# AWS Certified Developer – Associate (DVA-C02) Topic-by-Topic Master Prompt
+
+# TOPIC
+
+**Topic:** `<Replace this with your AWS topic before running the prompt>`
+
+Example:
+
+**Topic:** Amazon Athena
+
+---
+
+# ROLE
+
+Act as a Senior AWS Solutions Architect, AWS Authorized Instructor, AWS Developer Advocate, AWS Certification Coach, and Technical Interviewer with 15+ years of real-world AWS experience.
+
+Your goal is to teach me the AWS topic specified above and prepare me to pass the **AWS Certified Developer – Associate (DVA-C02)** certification with a score of **90% or higher**.
+
+Assume I am a beginner with little or no AWS knowledge.
+
+Teach everything from beginner to advanced in a practical, real-world, and exam-focused manner.
+
+---
+
+# TOPIC INSTRUCTIONS
+
+The topic is already specified above.
+
+Do **NOT** ask me for the topic name again.
+
+Start generating the lesson immediately using the provided topic.
+
+Generate content **ONLY** for the specified topic.
+
+Do **NOT** teach other AWS services except where they are required to explain:
+
+* Service integrations
+* Comparisons
+* Dependencies
+* Real-world architectures
+* AWS Certified Developer – Associate (DVA-C02) exam scenarios
+
+When this prompt is reused, only the **Topic** value will change. Treat every new topic as a completely new lesson.
+
+---
+
+# IMPORTANT RULES
+
+* Never assume prior AWS knowledge.
+* Explain every concept from scratch.
+* Cover every DVA-C02 exam objective related to this topic.
+* Do not skip any important subtopic.
+* Do not summarize important concepts.
+* Use simple language first, then gradually introduce advanced concepts.
+* Use real-world analogies wherever possible.
+* Use production best practices.
+* Explain WHY things are done, not just HOW.
+* Explain common mistakes and how to avoid them.
+* Highlight important exam concepts, limits, defaults, and frequently tested scenarios.
+* If you are uncertain about any AWS feature, pricing, limit, or exam objective, clearly mention uncertainty instead of guessing.
+
+---
+
+# IF THE RESPONSE IS TOO LONG
+
+If the response reaches the maximum output length:
+
+1. Stop only after completing the current section.
+2. Do not summarize unfinished sections.
+3. End with exactly:
+
+**Reply with CONTINUE to generate the remaining sections.**
+
+When I reply:
+
+**CONTINUE**
+
+continue from the next unfinished section without repeating previous content.
+
+---
+
+# FOR THE GIVEN TOPIC, GENERATE ALL OF THE FOLLOWING
+
+# 1. Introduction
+
+Explain:
+
+* What is this AWS service?
+* Why was it created?
+* What problem does it solve?
+* Why companies use it
+* Real-world analogy
+* Real-world business examples
+
+---
+
+# 2. Core Concepts
+
+Explain:
+
+* Architecture
+* Components
+* Features
+* Advantages
+* Limitations
+* Use cases
+* When to use
+* When not to use
+* Scalability
+* Availability
+* Reliability
+* Performance considerations
+
+---
+
+# 3. AWS Console Walkthrough
+
+Provide step-by-step instructions.
+
+Include:
+
+* Every click
+* Every option
+* Every configuration
+* Every setting
+* Recommended settings
+* Common mistakes
+* Best practices
+
+Explain why every option is selected.
+
+---
+
+# 4. AWS CLI
+
+Provide complete AWS CLI examples.
+
+Explain:
+
+* Every command
+* Every parameter
+* Expected output
+* Common errors
+* Troubleshooting
+
+---
+
+# 5. SDK Examples
+
+Use Python (boto3).
+
+Include:
+
+* Installation
+* Authentication
+* CRUD operations (where applicable)
+* Error handling
+* Best practices
+
+Explain every line of code.
+
+---
+
+# 6. Infrastructure as Code
+
+Provide complete examples using:
+
+* AWS CloudFormation
+* AWS SAM
+* AWS CDK (TypeScript)
+
+Explain:
+
+* Every resource
+* Every property
+* Deployment process
+* Best practices
+
+---
+
+# 7. IAM & Security
+
+Explain:
+
+* IAM Users
+* IAM Roles
+* IAM Policies
+* Resource Policies
+* Least Privilege
+* Cross-account access (if applicable)
+* Encryption at Rest
+* Encryption in Transit
+* AWS KMS
+* Secrets Manager
+* Systems Manager Parameter Store
+* Authentication
+* Authorization
+* Security best practices
+* Common security mistakes
+
+Provide example IAM policies where appropriate.
+
+Explain every permission.
+
+---
+
+# 8. Pricing
+
+Explain:
+
+* Pricing model
+* AWS Free Tier
+* Cost optimization
+* Billing examples
+* Common hidden costs
+
+---
+
+# 9. Monitoring & Troubleshooting
+
+Explain:
+
+* CloudWatch Metrics
+* CloudWatch Logs
+* CloudTrail
+* AWS X-Ray (if applicable)
+* Monitoring best practices
+* Debugging
+* Troubleshooting common issues
+
+---
+
+# 10. Service Integrations
+
+Explain every important integration with AWS services.
+
+For every integration explain:
+
+* Why it is used
+* How it works
+* Supported triggers/events
+* IAM permissions
+* Authentication
+* Architecture
+* Best practices
+* Limitations
+* Cost considerations
+
+Include relevant integrations with:
+
+* Lambda
+* API Gateway
+* S3
+* DynamoDB
+* DynamoDB Streams
+* EventBridge
+* SNS
+* SQS
+* Step Functions
+* CloudWatch
+* CloudTrail
+* IAM
+* KMS
+* Secrets Manager
+* Systems Manager Parameter Store
+* ECS
+* ECR
+* AppSync
+* CloudFront
+* Aurora
+* RDS
+* Kinesis
+* SES
+* CodePipeline
+* CodeBuild
+* CodeDeploy
+* CloudFormation
+* AWS CDK
+* AWS SAM
+
+Present integrations in a comparison table.
+
+---
+
+# 11. Architecture
+
+Create multiple Mermaid architecture diagrams.
+
+Explain:
+
+* Request flow
+* Data flow
+* Security
+* IAM permissions
+* High Availability
+* Scalability
+
+---
+
+# 12. Hands-on Labs
+
+Provide multiple practical labs.
+
+For each lab include:
+
+* Objective
+* Prerequisites
+* Step-by-step implementation
+* Expected output
+* Testing steps
+* Troubleshooting
+
+---
+
+# 13. Real-World Projects
+
+Create at least one production-level project using this service.
+
+Include:
+
+* Requirements
+* Architecture
+* AWS services used
+* Deployment
+* Testing
+* Monitoring
+* Logging
+* Cost estimation
+* Security
+* Best practices
+
+---
+
+# 14. Best Practices
+
+Explain AWS-recommended best practices.
+
+Explain why each best practice matters.
+
+---
+
+# 15. Common Mistakes
+
+List at least 20 common mistakes.
+
+Explain:
+
+* Why they happen
+* How to identify them
+* How to avoid them
+
+---
+
+# 16. Exam Tips
+
+Highlight:
+
+* Frequently tested concepts
+* Default values
+* Limits
+* Timeouts
+* Retries
+* IAM questions
+* Common traps
+* Memory tricks
+* Mnemonics
+
+Focus on AWS Certified Developer Associate (DVA-C02).
+
+---
+
+# 17. Comparison Tables
+
+Compare this service with similar AWS services.
+
+Explain:
+
+* Differences
+* Advantages
+* Disadvantages
+* When to use each service
+* Exam-specific differences
+
+---
+
+# 18. Cheat Sheet
+
+Create a one-page revision guide containing:
+
+* Key concepts
+* Important limits
+* Commands
+* IAM permissions
+* Pricing
+* Security
+* Best practices
+* Exam notes
+
+---
+
+# 19. Practical Exam Questions
+
+Create at least 20 AWS Certified Developer – Associate (DVA-C02) exam-style scenario-based questions focused only on this topic.
+
+The questions should match the difficulty, format, and thinking style of the real AWS certification exam.
+
+Requirements:
+
+Use realistic production scenarios.
+Focus on decision-making, architecture choices, troubleshooting, security, performance, and cost optimization.
+Avoid simple definition-based questions.
+Include situations where multiple answers may appear correct, but only one is the best AWS-recommended solution.
+Cover common exam patterns, traps, and frequently tested concepts related to this topic.
+Include four answer options (A, B, C, D).
+Provide the correct answer.
+Explain why the correct answer is the best choice.
+Explain why each incorrect option is not suitable.
+Mention the AWS exam concept being tested for each question.
+Each question must include:
+
+* Real-world scenario
+* Four options (A–D)
+* Correct answer
+* Explanation of why it is correct
+* Explanation of why other options are incorrect
+
+Avoid simple definition-based questions.
+
+---
+
+# 20. Practice Questions
+
+Create:
+
+* 20 Multiple Choice Questions
+* 10 True/False Questions
+* 10 Debugging Questions
+* 10 Hands-on Questions
+* 10 IAM Questions
+
+Explain every answer.
+
+---
+
+# 21. Interview Questions
+
+Create at least 20 interview questions from beginner to advanced.
+
+Include detailed model answers.
+
+---
+
+# 22. Revision Notes
+
+Summarize the topic into concise revision notes for quick review before the exam.
+
+---
+
+# 23. Final Knowledge Check
+
+At the end of the lesson:
+
+* Ask me 10 review questions.
+* Wait for my answers.
+* Evaluate my answers.
+* Identify weak areas.
+* Recommend what I should revise before moving to the next AWS topic.
+
+---
+
+# FINAL OBJECTIVE
+
+After studying this single topic lesson, I should have enough knowledge, practical experience, and exam preparation to confidently answer AWS Certified Developer – Associate (DVA-C02) questions related to this topic without needing additional learning material.

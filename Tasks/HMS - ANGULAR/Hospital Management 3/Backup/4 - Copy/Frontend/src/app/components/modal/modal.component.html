@@ -1,0 +1,21 @@
+<div class="modal-overlay" (click)="onClose()">
+  <div class="modal-container" [ngClass]="getSizeClass()" (click)="$event.stopPropagation()">
+    <div class="modal-header">
+      <h2>{{ title }}</h2>
+      <button class="modal-close-btn" (click)="onClose()">✕</button>
+    </div>
+    
+    <div class="modal-body">
+       <ng-content></ng-content>
+    </div>
+    
+     <div class="modal-footer" *ngIf="showFooter">
+      <button type="button" class="btn btn-secondary" (click)="onClose()">
+        {{ cancelText }}
+      </button>
+      <button type="button" class="btn btn-primary" (click)="onConfirm()">
+        {{ confirmText }}
+      </button>
+    </div>
+  </div>
+</div>

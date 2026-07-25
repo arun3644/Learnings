@@ -1,0 +1,57 @@
+<div *ngIf="loading" class="loading-state">
+  <p>Loading...</p>
+</div>
+
+<div *ngIf="!loading" class="table-list">
+  <div class="table-list-header">
+    <span style="font-size: 0.8rem; font-weight: 600">{{ title }}</span>
+    <span style="font-size: 0.65rem; color: var(--muted)">
+      Showing {{ data.length }} of {{ totalCount }} records
+    </span>
+  </div>
+
+  <div class="table-rows-container">
+    <div class="pl-header-row" [style.grid-template-columns]="'repeat(' + columns.length + ', 1fr)'">
+      <span class="pl-header-col" *ngFor="let col of columns">{{ col.label }}</span>
+    </div>
+
+    <div *ngFor="let item of data" 
+         class="pl-item" 
+         [style.grid-template-columns]="'repeat(' + columns.length + ', 1fr)'"
+         (click)="onRowClick(item)">
+      <div *ngFor="let col of columns" [class]="col.cssClass">
+        <ng-container [ngSwitch]="col.key">
+          <div *ngSwitchCase="'name'" class="pl-name">
+            <span class="avatar">{{ getInitials(item.name) }}</span>
+            <div>
+              <div>{{ item.name }}</div>
+              <!-- <div class="pl-id">{{ getIdValue(item) }}</div> -->
+            </div>
+          </div>
+          <div *ngSwitchCase="'specialization'">{{ item.specialization || 'N/A' }}</div>
+          <div *ngSwitchCase="'experience'">{{ item.yearsOfExperience || 'N/A' }} yrs</div>
+          <div *ngSwitchCase="'phone'">{{ item.phoneNumber || 'N/A' }}</div>
+          <div *ngSwitchCase="'email'">{{ item.email || 'N/A' }}</div>
+          <div *ngSwitchCase="'age'">{{ item.age }} {{ item.gender?.charAt(0) }}</div>
+          <div *ngSwitchCase="'condition'">{{ item.condition || 'N/A' }}</div>
+          <div *ngSwitchCase="'status'">
+            <span class="status-pill" [ngClass]="getStatusClass(item.status)">
+              {{ item.status }}
+            </span>
+          </div>
+          <div *ngSwitchCase="'department'">{{ item.department || 'N/A' }}</div>
+          <div *ngSwitchCase="'shift'">
+            <span class="shift-pill" [ngClass]="'shift-' + (item.shift || 'morning').toLowerCase()">
+              {{ item.shift || 'N/A' }}
+            </span>
+          </div>
+          <div *ngSwitchDefault>{{ getNestedValue(item, col.key) || col.defaultValue || 'N/A' }}</div>
+        </ng-container>
+      </div>
+    </div>
+
+    <div *ngIf="data.length === 0" class="empty-state">
+      <p>No records found</p>
+    </div>
+  </div>
+</div>

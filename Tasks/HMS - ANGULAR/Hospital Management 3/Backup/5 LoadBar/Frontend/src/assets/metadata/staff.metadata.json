@@ -1,0 +1,71 @@
+{
+  "page": {
+    "header": {
+      "title": "Staff",
+      "cssClass": "",
+      "fields": [
+        {
+          "label": "+ Register Staff",
+          "cssClass": "btn-sm btn-teal",
+          "type": "button",
+          "disabled": false,
+          "variant": "secondary"
+        }
+      ]
+    }
+  },
+  "filters": [
+    {
+      "type": "input",
+      "placeholder": "Search by name, ID, department...",
+      "cssClass": "filter-input",
+      "path": "",
+      "modal": ""
+    },
+    {
+      "type": "select",
+      "label": "Shift",
+      "name": "Shift",
+      "path": "",
+      "cssClass": " filter-select",
+      "options": [
+        { "value": "", "label": "All Shifts" },
+        { "value": "Morning", "label": "Morning" },
+        { "value": "Evening", "label": "Evening" },
+        { "value": "Night", "label": "Night" }
+      ]
+    }
+  ],
+  "table": {
+    "cssClass": "data-table",
+    "columns": [
+      { "key": "name", "label": "Staff", "cssClass": "item-sub", "sortable": true },
+      { "key": "department", "label": "Department", "cssClass": "item-sub", "sortable": true },
+      { "key": "shift", "label": "Shift", "cssClass": "item-sub", "sortable": true },
+      { "key": "experience", "label": "Experience", "cssClass": "item-sub", "sortable": true }
+    ]
+  },
+  "form": {
+    "fields": [
+      { "key": "username", "label": "Username", "type": "text", "required": true, "rowGroup": 0 },
+      { "key": "password", "label": "Password", "type": "password", "required": true, "rowGroup": 0 },
+      { "key": "name", "label": "Full Name", "type": "text", "required": true },
+      { "key": "email", "label": "Email", "type": "email", "required": true },
+      { "key": "department", "label": "Department", "type": "select", "required": true, "rowGroup": 1, "options": [
+        { "value": "Emergency", "label": "Emergency" },
+        { "value": "ICU", "label": "ICU" },
+        { "value": "General", "label": "General" },
+        { "value": "Pediatrics", "label": "Pediatrics" },
+        { "value": "Surgery", "label": "Surgery" },
+        { "value": "Cardiology", "label": "Cardiology" }
+      ]},
+      { "key": "shift", "label": "Shift", "type": "select", "required": true, "rowGroup": 1, "options": [
+        { "value": "Morning", "label": "Morning" },
+        { "value": "Evening", "label": "Evening" },
+        { "value": "Night", "label": "Night" }
+      ]},
+      { "key": "phone", "label": "Phone Number", "type": "text", "required": true, "rowGroup": 2 },
+      { "key": "yearsOfExperience", "label": "Years of Experience", "type": "number", "required": true, "rowGroup": 2 }
+    ]
+  }
+}

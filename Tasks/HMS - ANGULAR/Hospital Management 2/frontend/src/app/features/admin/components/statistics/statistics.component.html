@@ -1,0 +1,48 @@
+<div class="statistics-container">
+  <div class="page-header">
+    <h1>Hospital Statistics</h1>
+    <p>Comprehensive overview of hospital operations</p>
+  </div>
+
+  @if (stats$ | async; as stats) {
+    <div class="stats-grid">
+      <app-stats-card
+        title="Total Doctors"
+        [value]="stats.totalDoctors || 0"
+        icon="👨‍⚕️"
+        color="primary">
+      </app-stats-card>
+
+      <app-stats-card
+        title="Total Patients"
+        [value]="stats.totalPatients || 0"
+        icon="🏥"
+        color="success">
+      </app-stats-card>
+
+      <app-stats-card
+        title="Total Nurses"
+        [value]="stats.totalNurses || 0"
+        icon="👩‍⚕️"
+        color="warning">
+      </app-stats-card>
+
+      <app-stats-card
+        title="Total Appointments"
+        [value]="stats.totalAppointments || 0"
+        icon="📅"
+        color="danger">
+      </app-stats-card>
+    </div>
+
+    <div class="charts-grid">
+      <app-card title="Appointment Trends">
+        <p>Chart showing appointment trends over time</p>
+      </app-card>
+
+      <app-card title="Department Distribution">
+        <p>Chart showing distribution across departments</p>
+      </app-card>
+    </div>
+  }
+</div>

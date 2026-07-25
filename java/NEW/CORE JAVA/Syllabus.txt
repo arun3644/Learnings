@@ -1,0 +1,84 @@
+📘 Core Java Topics
+🔹 Basics & OOP
+Java Basics — JVM, JRE, JDK, data types, operators, control flow
+
+OOP Concepts — Encapsulation, Inheritance, Polymorphism, Abstraction
+
+Access Modifiers — public, private, protected, default
+
+Packages & Interfaces
+
+🔹 Strings & Memory
+String, StringBuffer, StringBuilder — mutability, performance, thread-safety
+
+Memory Management — Heap, Stack, Garbage Collection
+
+Immutable Objects
+
+🔹 Collections Framework
+Collection Interfaces — List, Set, Map, Queue
+
+ArrayList vs LinkedList
+
+HashMap vs Hashtable
+
+Concurrent Collections
+
+🔹 Exception Handling
+Checked vs Unchecked Exceptions
+
+Custom Exceptions
+
+Try-with-resources
+
+🔹 Multithreading & Concurrency
+Thread Lifecycle
+
+Synchronization & Locks
+
+Executor Framework
+
+ForkJoinPool
+
+CompletableFuture
+
+🔹 Advanced Java Concepts
+Generics
+
+Annotations
+
+Reflection API
+
+Java Streams & Lambda Expressions
+
+Functional Interfaces
+
+🔹 Design & Best Practices
+Design Patterns — Singleton, Factory, Builder, Observer
+
+SOLID Principles
+
+Clean Code Practices
+
+🔹 JVM Internals
+Class Loading
+
+JVM Architecture
+
+Garbage Collection Algorithms
+
+🔹 Interview-Level Extras
+Java 8 Features — Streams, Lambdas, Optional
+
+Java 11+ Features — var, new APIs
+
+Performance Tuning
+
+Memory Leaks
+
+📊 Quick Comparison Table (Strings Example)
+Concept	Mutability	Thread-Safe	Performance	Use Case
+String	Immutable	Yes	Slower for modifications	Constant text values
+StringBuffer	Mutable	Yes	Slower than StringBuilder	Multi-threaded apps
+StringBuilder	Mutable	No	Fastest	Single-threaded apps
+

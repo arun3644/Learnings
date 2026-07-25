@@ -1,0 +1,123 @@
+{
+  "page": {
+    "title": "Dashboard",
+    "cssClass": "page-dashboard"
+  },
+  "recentActivity": {
+    "title": "Recent Activity",
+    "cssClass": "activity-table",
+    "columns": [
+      { "key": "time",     "label": "Time",     "cssClass": "col-time" },
+      { "key": "activity", "label": "Activity", "cssClass": "col-activity" },
+      { "key": "user",     "label": "By",       "cssClass": "col-user" },
+      { "key": "status",   "label": "Status",   "cssClass": "col-status" }
+    ]
+  },
+  "roleContents": {
+    "Admin": {
+      "role": "Admin",
+      "title": "Administration Dashboard",
+      "description": "Manage entire hospital operations",
+      "statCards": [
+        { "key": "totalPatients", "label": "Total Patients",      "icon": "🧑", "value": 0, "page": "patients" },
+        { "key": "totalDoctors",  "label": "Total Doctors",       "icon": "👨", "value": 0, "page": "doctors"  },
+        { "key": "totalStaff",    "label": "Total Staff",         "icon": "👥",   "value": 0, "page": "staff"    },
+        { "key": "appointments",  "label": "Appointments Today",  "icon": "📅",   "value": 0, "page": "appointments" }
+      ],
+      "quickActions": [
+        { "id": "add-doctor",  "label": "Add Doctor",  "icon": "➕", "color": "blue",   "action": "add_doctor"  },
+        { "id": "add-nurse",   "label": "Add Nurse",   "icon": "➕", "color": "pink",   "action": "add_nurse"   },
+        { "id": "add-patient", "label": "Add Patient", "icon": "➕", "color": "green",  "action": "add_patient" },
+        { "id": "add-staff",   "label": "Add Staff",   "icon": "➕", "color": "purple", "action": "add_staff"   }
+      ],
+      "features": ["Manage Doctors", "Manage Nurses", "Manage Patients", "Manage Staff"]
+    },
+    "Doctor": {
+      "role": "Doctor",
+      "title": "Doctor Dashboard",
+      "description": "Manage patients and appointments",
+      "statCards": [
+        { "key": "myPatients",  "label": "My Patients",        "icon": "🧑", "value": 0 },
+        { "key": "appointments","label": "Appointments Today", "icon": "📅",   "value": 0, "page": "appointments" }
+      ],
+      "quickActions": [
+        { "id": "add-doctor",  "label": "Add Doctor",  "icon": "➕", "color": "blue",   "action": "add_doctor"  },
+        { "id": "add-nurse",   "label": "Add Nurse",   "icon": "➕", "color": "pink",   "action": "add_nurse"   },
+        { "id": "add-patient", "label": "Add Patient", "icon": "➕", "color": "green",  "action": "add_patient" },
+        { "id": "add-staff",   "label": "Add Staff",   "icon": "➕", "color": "purple", "action": "add_staff"   }
+      ],
+      "features": ["Add Doctor", "Add Nurse", "Add Patient", "Add Staff", "View Patient Details", "Manage Appointments"]
+    }
+  },
+  "staffConfigs": {
+    "add_doctor": {
+      "title": "Add New Doctor",
+      "successMessage": "Doctor added successfully!",
+      "fields": [
+        { "key": "username",          "label": "Username",            "type": "text",     "required": true,  "placeholder": "Enter username", "rowGroup": 0 },
+        { "key": "password",          "label": "Password",            "type": "password", "required": true,  "placeholder": "Enter password", "minLength": 6, "rowGroup": 0 },
+        { "key": "name",              "label": "Full Name",           "type": "text",     "required": true,  "placeholder": "Dr. John Doe" },
+        { "key": "email",             "label": "Email",               "type": "email",    "required": true,  "placeholder": "doctor@hospital.com" },
+        { "key": "specialization",    "label": "Specialization",      "type": "select",   "required": true,  "rowGroup": 1, "options": [
+          { "value": "Cardiologist",      "label": "Cardiologist" },
+          { "value": "Neurologist",       "label": "Neurologist" },
+          { "value": "Pediatrician",      "label": "Pediatrician" },
+          { "value": "Orthopedic",        "label": "Orthopedic" },
+          { "value": "Dermatologist",     "label": "Dermatologist" },
+          { "value": "General Physician", "label": "General Physician" },
+          { "value": "Psychiatrist",      "label": "Psychiatrist" },
+          { "value": "Oncologist",        "label": "Oncologist" },
+          { "value": "Radiologist",       "label": "Radiologist" },
+          { "value": "Anesthesiologist",  "label": "Anesthesiologist" }
+        ]},
+        { "key": "licenseNumber",     "label": "License Number",      "type": "text",     "required": false, "placeholder": "LIC12345", "rowGroup": 1 },
+        { "key": "phone",             "label": "Phone",               "type": "tel",      "required": true,  "placeholder": "555-0100", "rowGroup": 2 },
+        { "key": "yearsOfExperience", "label": "Years of Experience", "type": "number",   "required": false, "placeholder": "5", "rowGroup": 2 },
+        { "key": "status",            "label": "Status",              "type": "hidden",   "defaultValue": "Available" }
+      ]
+    },
+    "add_nurse": {
+      "title": "Add New Nurse",
+      "successMessage": "Nurse added successfully!",
+      "fields": [
+        { "key": "username",          "label": "Username",            "type": "text",     "required": true,  "placeholder": "Enter username", "rowGroup": 0 },
+        { "key": "password",          "label": "Password",            "type": "password", "required": true,  "placeholder": "Enter password", "minLength": 6, "rowGroup": 0 },
+        { "key": "name",              "label": "Full Name",           "type": "text",     "required": true,  "placeholder": "Jane Doe" },
+        { "key": "email",             "label": "Email",               "type": "email",    "required": true,  "placeholder": "nurse@hospital.com" },
+        { "key": "department",        "label": "Department",          "type": "text",     "required": true,  "placeholder": "ICU", "rowGroup": 1 },
+        { "key": "shift",             "label": "Shift",               "type": "select",   "required": false, "rowGroup": 1, "options": [
+          { "value": "Morning", "label": "Morning" },
+          { "value": "Evening", "label": "Evening" },
+          { "value": "Night",   "label": "Night" }
+        ]},
+        { "key": "yearsOfExperience", "label": "Years of Experience", "type": "number",   "required": false, "placeholder": "3" },
+        { "key": "status",            "label": "Status",              "type": "hidden",   "defaultValue": "Active" }
+      ]
+    },
+    "add_patient": {
+      "title": "Add New Patient",
+      "successMessage": "Patient added successfully!",
+      "fields": [
+        { "key": "username", "label": "Username",  "type": "text",     "required": true, "placeholder": "Enter username", "rowGroup": 0 },
+        { "key": "password", "label": "Password",  "type": "password", "required": true, "placeholder": "Enter password", "minLength": 6, "rowGroup": 0 },
+        { "key": "name",     "label": "Full Name", "type": "text",     "required": true, "placeholder": "John Patient" },
+        { "key": "email",    "label": "Email",     "type": "email",    "required": true, "placeholder": "patient@hospital.com" },
+        { "key": "age",      "label": "Age",       "type": "number",   "required": true, "placeholder": "25", "rowGroup": 1 },
+        { "key": "phone",    "label": "Phone",     "type": "tel",      "required": true, "placeholder": "555-0100", "rowGroup": 1 },
+        { "key": "status",   "label": "Status",    "type": "hidden",   "defaultValue": "Active" }
+      ]
+    },
+    "add_staff": {
+      "title": "Add New Staff",
+      "successMessage": "Staff added successfully!",
+      "fields": [
+        { "key": "username",   "label": "Username",   "type": "text",     "required": true, "placeholder": "Enter username", "rowGroup": 0 },
+        { "key": "password",   "label": "Password",   "type": "password", "required": true, "placeholder": "Enter password", "minLength": 6, "rowGroup": 0 },
+        { "key": "name",       "label": "Full Name",  "type": "text",     "required": true, "placeholder": "John Staff" },
+        { "key": "email",      "label": "Email",      "type": "email",    "required": true, "placeholder": "staff@hospital.com" },
+        { "key": "department", "label": "Department", "type": "text",     "required": true, "placeholder": "Administration" },
+        { "key": "status",     "label": "Status",     "type": "hidden",   "defaultValue": "Active" }
+      ]
+    }
+  }
+}

@@ -1,0 +1,87 @@
+<div class="patients-wrap" *ngIf="meta">
+  <div class="page-header">
+    <div>
+      <h1>{{ meta.page.title }}</h1>
+      <p *ngIf="(patients$ | async) as patients" class="page-subtitle">
+        {{ patients.length }} registered patients
+      </p>
+    </div>
+    <button class="btn-sm btn-teal" (click)="handleAction({key: 'add'})">
+      + Register Patient
+    </button>
+  </div>
+
+  <div *ngIf="!(loading$ | async)">
+    <div class="filter-bar">
+      <input class="filter-input" placeholder="Search by name, ID, condition..." [(ngModel)]="searchQuery"
+        style="flex: 1">
+      <select class="filter-select" [(ngModel)]="genderFilter">
+        <option value="">All Genders</option>
+        <option value="Male">Male</option>
+        <option value="Female">Female</option>
+        <option value="Other">Other</option>
+      </select>
+      <select class="filter-select" [(ngModel)]="conditionFilter">
+        <option value="">All Conditions</option>
+        <option value="Hypertension">Hypertension</option>
+        <option value="Diabetes">Diabetes</option>
+        <option value="Asthma">Asthma</option>
+        <option value="Migraine">Migraine</option>
+        <option value="Stable">Stable</option>
+      </select>
+    </div>
+
+    <div class="table-list">
+      <div *ngIf="(patients$ | async) as patients">
+        <ng-container *ngIf="filterPatients(patients) as filtered">
+          <div class="table-list-header">
+            <span style="font-size: 0.8rem; font-weight: 600">Patient List</span>
+            <span style="font-size: 0.65rem; color: var(--muted)">
+              Showing {{ filtered.length }} of {{ patients.length }} patients
+            </span>
+          </div>
+
+          <div class="pl-header-row" [style.grid-template-columns]="'repeat(' + 4 + ', 1fr)'">
+            <span class="pl-header-col">Patient</span>
+            <span class="pl-header-col">Age/Gender</span>
+            <span class="pl-header-col">Condition</span>
+            <span class="pl-header-col">Status</span>
+          </div>
+
+          <div *ngFor="let patient of filtered" class="pl-item" (click)="selectPatient(patient)"
+            [style.grid-template-columns]="'repeat(' + 4 + ', 1fr)'">
+            <div class="pl-name">
+              <span class="avatar">{{ getInitials(patient.name) }}</span>
+              <div>
+                <div>{{ patient.name }}</div>
+                <div class="pl-id">{{ patient.patientId }}</div>
+              </div>
+            </div>
+            <div class="pl-age">{{ patient.age }} {{ patient.gender?.charAt(0) }}</div>
+            <div class="pl-cond">{{ patient.condition || 'N/A' }}</div>
+            <div>
+              <span class="status-pill" [ngClass]="getStatusClass(patient.status)">
+                {{ patient.status }}
+              </span>
+            </div>
+          </div>
+
+
+          <div *ngIf="filtered.length === 0" class="empty-state">
+            <p>No patients match your search</p>
+          </div>
+        </ng-container>
+      </div>
+    </div>
+
+  </div>
+
+  <div class="loading-state" *ngIf="loading$ | async">
+    <p>Loading patients...</p>
+  </div>
+</div>
+
+<app-modal *ngIf="showAddModal && meta?.form" [title]="'Register New Patient'" (close)="closeModal()">
+  <app-form [config]="meta.form" (formSubmit)="handleFormSubmit($event)" (formCancel)="closeModal()">
+  </app-form>
+</app-modal>

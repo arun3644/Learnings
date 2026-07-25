@@ -1,0 +1,57 @@
+<form [formGroup]="formGroup" (ngSubmit)="onSubmit()" *ngIf="config">
+  <ng-container *ngFor="let row of groupedFields">
+    <div class="form-row" [class.form-row-single]="row.length === 1" [class.form-row-double]="row.length === 2">
+      <div *ngFor="let field of row" class="form-field">
+        <label [for]="field.key" class="form-label">
+          {{ field.label }}
+          <span *ngIf="field.required" class="required-mark">*</span>
+        </label>
+        
+        <input
+          *ngIf="field.type !== 'select' && field.type !== 'textarea' && field.type !== 'hidden'"
+          [id]="field.key"
+          [type]="field.type || 'text'"
+          [placeholder]="field.placeholder || ''"
+          [formControlName]="field.key"
+          [disabled]="isSubmitting"
+          class="form-input"
+          [class.invalid]="formGroup.get(field.key)?.invalid && formGroup.get(field.key)?.touched" />
+        
+        <select
+          *ngIf="field.type === 'select'"
+          [id]="field.key"
+          [formControlName]="field.key"
+          [disabled]="isSubmitting"
+          class="form-input">
+          <option value="">Select {{ field.label }}</option>
+          <option *ngFor="let option of field.options" [value]="option.value">
+            {{ option.label }}
+          </option>
+        </select>
+        
+        <textarea
+          *ngIf="field.type === 'textarea'"
+          [id]="field.key"
+          [placeholder]="field.placeholder || ''"
+          [formControlName]="field.key"
+          [disabled]="isSubmitting"
+          class="form-input"
+          rows="4"></textarea>
+        
+        <div *ngIf="getFieldError(field.key)" class="field-error">
+          {{ getFieldError(field.key) }}
+        </div>
+      </div>
+    </div>
+  </ng-container>
+  
+  <div class="form-actions">
+    <button type="button" class="btn btn-secondary" (click)="onCancel()" [disabled]="isSubmitting">
+      Cancel
+    </button>
+    <button type="submit" class="btn btn-primary" [disabled]="isSubmitting">
+      <span *ngIf="!isSubmitting">Submit</span>
+      <span *ngIf="isSubmitting">Submitting...</span>
+    </button>
+  </div>
+</form>

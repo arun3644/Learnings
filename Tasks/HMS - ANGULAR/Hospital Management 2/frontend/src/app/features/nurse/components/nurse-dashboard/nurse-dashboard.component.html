@@ -1,0 +1,46 @@
+<div class="dashboard-container">
+  <div class="dashboard-header">
+    <h1>Nurse Dashboard</h1>
+    <p>Welcome back, Nurse!</p>
+  </div>
+
+  @if (loading$ | async) {
+    <app-loader size="large" message="Loading dashboard..."></app-loader>
+  } @else {
+    <div class="stats-grid">
+      <app-stats-card
+        title="Patients Today"
+        [value]="0"
+        icon="🏥"
+        color="primary">
+      </app-stats-card>
+
+      <app-stats-card
+        title="Tasks Pending"
+        [value]="0"
+        icon="📋"
+        color="warning">
+      </app-stats-card>
+
+      <app-stats-card
+        title="Tasks Completed"
+        [value]="0"
+        icon="✅"
+        color="success">
+      </app-stats-card>
+
+      <app-stats-card
+        title="Urgent Cases"
+        [value]="0"
+        icon="🚨"
+        color="danger">
+      </app-stats-card>
+    </div>
+
+    <div class="dashboard-content">
+      <app-card title="Today's Tasks">
+        <p>Your tasks for today will be displayed here.</p>
+      </app-card>
+    </div>
+  }
+</div>

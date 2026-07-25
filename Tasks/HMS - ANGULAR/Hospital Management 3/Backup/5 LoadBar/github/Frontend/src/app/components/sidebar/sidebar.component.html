@@ -1,0 +1,12 @@
+<aside class="sidebar">
+  <div class="sidebar-logo">🏥 MediCare</div>
+  <nav>
+    <a *ngFor="let item of navItems"
+       class="nav-item"
+       [class.active]="activePage === item.key"
+       (click)="navigate(item.key)">
+      <span class="nav-icon">{{ item.icon }}</span>
+      <span class="nav-label">{{ item.label }}</span>
+    </a>
+  </nav>
+</aside>

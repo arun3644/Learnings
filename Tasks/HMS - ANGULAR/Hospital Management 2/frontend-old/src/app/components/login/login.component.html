@@ -1,0 +1,69 @@
+﻿<div class="login-page">
+  <div class="login-card">
+    <div class="login-head">
+      <div class="login-logo">🏥 MedOS</div>
+      <h1>{{ isRegisterMode ? (loginData?.register?.title || 'Create Account') : ((layout$ | async)?.heading || 'Welcome Back') }}</h1>
+      <p class="login-subtitle">{{ isRegisterMode ? (loginData?.register?.subtitle || 'Join our healthcare platform') : (loginData?.form?.subtitle || 'Sign in to continue') }}</p>
+    </div>
+
+    <div *ngIf="authError" class="alert alert-error">
+      <span class="alert-icon">⚠️</span>
+      <span class="alert-text">{{ authError }}</span>
+    </div>
+
+    <section class="role-section" *ngIf="cards$ | async as cards">
+      <label class="section-label">Select Your Role</label>
+      <div class="role-grid">
+        <ng-container *ngFor="let card of cards">
+          <app-card
+            *ngIf="!isRegisterMode || registrationRoles.includes(card.name)"
+            [label]="card.label"
+            [icon]="card.icon"
+            [cssClass]="card.properties?.css + (selectedCard === card.name ? ' sel' : '')"
+            (click)="chooseRole(card.name)"
+            [class.disabled]="isSubmitting">
+          </app-card>
+        </ng-container>
+      </div>
+    </section>
+
+    <form [formGroup]="loginForm" class="login-form" (ngSubmit)="submit()" [class.disabled]="isSubmitting">
+      <div *ngFor="let field of activeFields" class="form-field">
+        <label [for]="field.key" class="form-label">
+          {{ field.label }}
+          <span *ngIf="field.validations?.required" class="required-mark">*</span>
+        </label>
+        <input
+          [id]="field.key"
+          [type]="field.type"
+          [placeholder]="field.placeholder"
+          [formControlName]="field.key"
+          [disabled]="isSubmitting"
+          [class.invalid]="loginForm.get(field.key)?.invalid && loginForm.get(field.key)?.touched"
+          class="form-input"
+          [attr.autocomplete]="field.key === 'password' ? 'current-password' : field.key === 'username' ? 'username' : 'off'" />
+        <div *ngIf="loginForm.get(field.key)?.errors && loginForm.get(field.key)?.touched" class="field-error">
+          <span *ngIf="loginForm.get(field.key)?.errors?.['required']">{{ field.validations?.required?.message || field.label + ' is required' }}</span>
+          <span *ngIf="loginForm.get(field.key)?.errors?.['minlength']">{{ field.validations?.minLength?.message || 'Minimum length not met' }}</span>
+        </div>
+      </div>
+
+      <app-button
+        [type]="'submit'"
+        [label]="isSubmitting ? (isRegisterMode ? 'Creating account...' : 'Signing in...') : (isRegisterMode ? (loginData?.register?.submitButton?.label || 'Create Account') : (loginData?.form?.submitButton?.label || 'Sign In'))"
+        [variant]="'primary'"
+        [disabled]="isSubmitting || !selectedCard"
+        [cssClass]="'btn-full'">
+      </app-button>
+    </form>
+
+    <app-button
+      [type]="'button'"
+      [label]="isRegisterMode ? '← Back to Login' : 'New user →'"
+      [variant]="'secondary'"
+      [disabled]="isSubmitting"
+      (clicked)="toggleMode()"
+      [cssClass]="'btn-full mt-4'">
+    </app-button>
+  </div>
+</div>

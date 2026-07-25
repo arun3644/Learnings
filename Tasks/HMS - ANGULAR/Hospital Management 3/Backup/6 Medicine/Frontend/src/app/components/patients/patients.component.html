@@ -1,0 +1,53 @@
+<div class="patients-wrap" *ngIf="meta$">
+  <div class="page-header">
+    <div>
+      <h1>{{ (meta$ | async)?.page?.header?.title || 'Patients' }}</h1>
+      <p *ngIf="(patients$ | async) as patients" class="page-subtitle">
+        {{ patients.length }} registered patients
+      </p>
+    </div>
+    <div *ngIf="(meta$ | async)?.page?.header?.fields as fields">
+      <ng-container *ngIf="canAddPatient">
+        <app-button *ngFor="let btn of fields" [cssClass]="btn.cssClass" [disabled]="btn.disabled" [label]="btn.label"
+          [variant]="btn.variant" (clicked)="handleButtonClick(btn)">
+        </app-button>
+      </ng-container>
+    </div>
+  </div>
+
+  <div class="filter-bar" *ngIf="(meta$ | async)?.filters as filters">
+    <ng-container *ngIf="!(loading$ | async)">
+      <app-input [type]="filters[0]?.type || 'text'" [placeholder]="filters[0]?.placeholder"
+        [cssClass]="filters[0]?.cssClass" (messageEvent)="searchQuery = $event">
+      </app-input>
+      <app-select [cssClass]="filters[1]?.cssClass" [label]="filters[1]?.label" [name]="filters[1]?.name"
+        [path]="filters[1]?.path" [options]="filters[1]?.options" [(value)]="genderFilter"
+        (selectedValue)="genderFilter = $event">
+      </app-select>
+      <app-select [cssClass]="filters[2]?.cssClass" [label]="filters[2]?.label" [name]="filters[2]?.name"
+        [path]="filters[2]?.path" [options]="filters[2]?.options" [(value)]="conditionFilter"
+        (selectedValue)="conditionFilter = $event">
+      </app-select>
+    </ng-container>
+  </div>
+
+  <div *ngIf="(patients$ | async) as patients">
+    <ng-container *ngIf="filterPatients(patients) as filtered">
+      <div *ngIf="(meta$ | async)?.table as table">
+        <app-data-table 
+          [columns]="table.columns" 
+          [data]="filtered" 
+          [totalCount]="patients.length"
+          [title]="'Patient List'"
+          [loading]="(loading$ | async) || false"
+          (rowClick)="selectPatient($event)">
+        </app-data-table>
+      </div>
+    </ng-container>
+  </div>
+</div>
+
+<app-modal *ngIf="showAddModal && (meta$ | async)?.form" [title]="'Register New Patient'" (close)="closeModal()">
+  <app-form [config]="(meta$ | async)?.form" (formSubmit)="handleFormSubmit($event)" (formCancel)="closeModal()">
+  </app-form>
+</app-modal>

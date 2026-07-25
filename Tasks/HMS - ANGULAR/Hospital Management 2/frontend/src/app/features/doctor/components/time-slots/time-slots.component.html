@@ -1,0 +1,28 @@
+<div class="time-slots-container">
+  <div class="page-header">
+    <h1>Manage Time Slots</h1>
+    <button class="btn btn-primary" (click)="addTimeSlot()">Add Time Slot</button>
+  </div>
+
+  <app-card>
+    @if (loading$ | async) {
+      <p>Loading time slots...</p>
+    } @else {
+      @if ((timeSlots$ | async)?.length === 0) {
+        <p>No time slots available. Add your first time slot.</p>
+      } @else {
+        <div class="time-slots-grid">
+          @for (slot of (timeSlots$ | async) || []; track slot.id) {
+            <div class="time-slot-card">
+              <div class="slot-info">
+                <p><strong>{{ slot.dayOfWeek }}</strong></p>
+                <p>{{ slot.startTime }} - {{ slot.endTime }}</p>
+              </div>
+              <button class="btn btn-danger btn-sm" (click)="deleteTimeSlot(slot.id)">Delete</button>
+            </div>
+          }
+        </div>
+      }
+    }
+  </app-card>
+</div>

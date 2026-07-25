@@ -1,0 +1,115 @@
+{
+  "ADMIN": [
+    {
+      "label": "Dashboard",
+      "route": "/admin/dashboard",
+      "icon": "dashboard"
+    },
+    {
+      "label": "Manage Doctors",
+      "route": "/admin/manage-doctors",
+      "icon": "people"
+    },
+    {
+      "label": "Manage Patients",
+      "route": "/admin/manage-patients",
+      "icon": "patients"
+    },
+    {
+      "label": "Manage Nurses",
+      "route": "/admin/manage-nurses",
+      "icon": "nurses"
+    },
+    {
+      "label": "Appointments",
+      "route": "/admin/manage-appointments",
+      "icon": "calendar"
+    },
+    {
+      "label": "Statistics",
+      "route": "/admin/statistics",
+      "icon": "chart"
+    }
+  ],
+  "DOCTOR": [
+    {
+      "label": "Dashboard",
+      "route": "/doctor/dashboard",
+      "icon": "dashboard"
+    },
+    {
+      "label": "My Schedule",
+      "route": "/doctor/today-schedule",
+      "icon": "calendar"
+    },
+    {
+      "label": "Appointments",
+      "route": "/doctor/appointments-list",
+      "icon": "appointment"
+    },
+    {
+      "label": "Time Slots",
+      "route": "/doctor/time-slots",
+      "icon": "time"
+    },
+    {
+      "label": "Patients",
+      "route": "/doctor/patients-list",
+      "icon": "patients"
+    },
+    {
+      "label": "Profile",
+      "route": "/doctor/profile",
+      "icon": "user"
+    }
+  ],
+  "PATIENT": [
+    {
+      "label": "Dashboard",
+      "route": "/patient/dashboard",
+      "icon": "dashboard"
+    },
+    {
+      "label": "Book Appointment",
+      "route": "/patient/book-appointment",
+      "icon": "add"
+    },
+    {
+      "label": "My Appointments",
+      "route": "/patient/my-appointments",
+      "icon": "list"
+    },
+    {
+      "label": "Doctors",
+      "route": "/patient/doctors-list",
+      "icon": "doctors"
+    },
+    {
+      "label": "History",
+      "route": "/patient/appointment-history",
+      "icon": "history"
+    },
+    {
+      "label": "Profile",
+      "route": "/patient/profile",
+      "icon": "user"
+    }
+  ],
+  "NURSE": [
+    {
+      "label": "Dashboard",
+      "route": "/nurse/dashboard",
+      "icon": "dashboard"
+    },
+    {
+      "label": "Patient Care",
+      "route": "/nurse/patient-care",
+      "icon": "care"
+    },
+    {
+      "label": "Profile",
+      "route": "/nurse/profile",
+      "icon": "user"
+    }
+  ]
+}

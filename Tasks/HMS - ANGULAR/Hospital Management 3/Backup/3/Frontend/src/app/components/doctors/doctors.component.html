@@ -1,0 +1,69 @@
+<div class="patients-wrap" *ngIf="meta$">
+  <div class="page-header">
+    <div>
+      <h1>{{ (meta$ | async)?.page?.title || 'Doctors' }}</h1>
+      <p *ngIf="(doctors$ | async) as doctors" class="page-subtitle">
+        {{ doctors.length }} registered Doctors
+      </p>
+    </div>
+    <div *ngIf="(meta$ | async)?.page?.header?.fields as fields">
+      <app-button *ngFor="let btn of fields" [cssClass]="btn.cssClass" [disabled]="btn.disabled" [label]="btn.label"
+        [variant]="btn.variant" (clicked)="handleButtonClick(btn)">
+      </app-button>
+    </div>
+  </div>
+
+  <div class="filter-bar" *ngIf="(meta$ | async)?.filters as filters">
+    <app-input [type]="filters[0]?.type || 'text'" [placeholder]="filters[0]?.placeholder"
+      [cssClass]="filters[0]?.cssClass" (messageEvent)="searchQuery = $event">
+    </app-input>
+    <app-select [cssClass]="filters[1]?.cssClass" [label]="filters[1]?.label" [name]="filters[1]?.name"
+      [path]="filters[1]?.path" [options]="filters[1]?.options" [(value)]="specializationFilter"
+      (selectedValue)="specializationFilter = $event">
+    </app-select>
+  </div>
+
+  <div class="table-list">
+    <div *ngIf="(doctors$ | async) as doctors">
+      <ng-container *ngIf="filterDoctors(doctors) as filtered">
+        <div class="table-list-header">
+          <span style="font-size: 0.8rem; font-weight: 600">Doctor List</span>
+          <span style="font-size: 0.65rem; color: var(--muted)">
+            Showing {{filtered.length}} of {{doctors.length}} doctors
+          </span>
+        </div>
+
+        <div *ngIf="(meta$ | async)?.table as table">
+          <div class="pl-header-row" [style.grid-template-columns]="'repeat(' + table.columns.length + ', 1fr)'">
+            <span class="pl-header-col" *ngFor="let col of table.columns">{{col.label}}</span>
+          </div>
+          <div *ngFor="let doctor of filtered" 
+               class="pl-item" 
+               [style.grid-template-columns]="'repeat(' + table.columns.length + ', 1fr)'"
+               (click)="selectDoctor(doctor)">
+            <div *ngFor="let col of table.columns" [class]="col.cssClass">
+              <ng-container [ngSwitch]="col.key">
+                <div *ngSwitchCase="'name'" class="pl-name">
+                  <span class="avatar">{{ getInitials(doctor.name) }}</span>
+                  <div>
+                    <div>{{ doctor.name }}</div>
+                    <div class="pl-id">{{ doctor.doctorId }}</div>
+                  </div>
+                </div>
+                <div *ngSwitchCase="'specialization'">{{ doctor.specialization || 'N/A' }}</div>
+                <div *ngSwitchCase="'experience'">{{ doctor.yearsOfExperience || 'N/A' }} yrs</div>
+                <div *ngSwitchCase="'phone'">{{ doctor.phoneNumber || 'N/A' }}</div>
+                <div *ngSwitchCase="'email'">{{ doctor.email || 'N/A' }}</div>
+                <div *ngSwitchDefault>{{ doctor[col.key] || 'N/A' }}</div>
+              </ng-container>
+            </div>
+          </div>
+
+          <div *ngIf="filtered.length === 0" class="empty-state">
+            <p>No doctors match your search</p>
+          </div>
+        </div>
+      </ng-container>
+    </div>
+  </div>
+</div>

@@ -1,0 +1,29 @@
+<div class="doctors-container">
+  <div class="page-header">
+    <h1>Available Doctors</h1>
+  </div>
+
+  @if (loading$ | async) {
+    <p>Loading doctors...</p>
+  } @else {
+    <div class="doctors-grid">
+      @for (doctor of (doctors$ | async) || []; track doctor.id) {
+        <app-card>
+          <div class="doctor-card">
+            <div class="doctor-avatar">
+              {{ doctor.firstName.charAt(0) }}{{ doctor.lastName.charAt(0) }}
+            </div>
+            <h3>Dr. {{ doctor.firstName }} {{ doctor.lastName }}</h3>
+            <p class="specialization">{{ doctor.specialization }}</p>
+            <p class="experience">{{ doctor.experience }} years experience</p>
+            <p class="contact">{{ doctor.email }}</p>
+            <p class="contact">{{ doctor.phone }}</p>
+            <button class="btn btn-primary" (click)="bookAppointment(doctor.id)">
+              Book Appointment
+            </button>
+          </div>
+        </app-card>
+      }
+    </div>
+  }
+</div>

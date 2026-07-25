@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="table.css">
+</head>
+
+<body>
+    <div class="container">
+        <div class="header">
+            <div class="header-row1">
+                <div class="search-container">
+                    <span class="search-icon"></span>
+                    <input type="text" class="search-input">
+                </div>
+                <div class="title-dropdown">
+                    <span>Driver list</span>
+                    <span class="arrow">▼</span>
+                    <div class="dropdown-menu">
+                        <div>Driver 1</div>
+                        <div>Driver 2</div>
+                        <div>Driver 3</div>
+                    </div>
+                </div>
+
+            </div>
+
+            <div class="header-row2">
+                <button class="add-btn">
+                    <span class="plus-icon">+</span>
+                    Add driver/vehicle
+                </button>
+            </div>
+        </div>
+        <div class="table">
+            <div class="table-header table-row">
+                <div class="table-header-cell checkbox" style="width:4%;"><input type="checkbox" id="select-all"> </div>
+                <div class="table-header-cell name" data-tooltip="Full name of the person">Name</div>
+                <div class="table-header-cell status" data-tooltip="Current status of delivery">Status</div>
+                <div class="table-header-cell currentDeliveryId" data-tooltip="Unique ID for current delivery">Current
+                    ID</div>
+                <div class="table-header-cell deliveredId" data-tooltip="Delivered ID reference">Delivered</div>
+                <div class="table-header-cell vehicleId" data-tooltip="Vehicle identification number">Vehicle ID</div>
+                <div class="table-header-cell action" data-tooltip="Available actions for this row">Action</div>
+            </div>
+
+            <div id="table-body" class="table-body">
+            </div>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+
+</html>

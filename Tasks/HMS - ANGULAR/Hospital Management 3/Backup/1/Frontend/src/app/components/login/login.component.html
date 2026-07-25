@@ -1,0 +1,152 @@
+<div class="login-page">
+  <div class="login-card">
+
+    <!-- Header -->
+    <div class="login-head">
+      <div class="login-logo">🏥 MedOS</div>
+      <h1>{{ (layout$ | async)?.heading || 'Welcome Back' }}</h1>
+      <p class="login-subtitle">{{ loginData?.form?.subtitle || 'Sign in to continue' }}</p>
+    </div>
+
+    <!-- Auth error -->
+    <div *ngIf="authError" class="alert alert-error">
+      <span>⚠️</span> {{ authError }}
+    </div>
+
+    <!-- Role selector -->
+    <section class="role-section" *ngIf="cards$ | async as cards">
+      <label class="section-label">Select Your Role</label>
+      <div class="role-grid">
+        <app-card
+          *ngFor="let card of cards"
+          [label]="card.label"
+          [icon]="card.icon"
+          [cssClass]="card.properties?.css + (selectedCard === card.name ? ' sel' : '')"
+          (click)="chooseRole(card.name)"
+          [class.disabled]="isSubmitting">
+        </app-card>
+      </div>
+    </section>
+
+    <!-- Login form -->
+    <form [formGroup]="loginForm" (ngSubmit)="submit()">
+      <div *ngFor="let field of loginFields" class="form-field">
+        <label [for]="field.key" class="form-label">
+          {{ field.label }}<span *ngIf="field.validations?.required" class="required-mark">*</span>
+        </label>
+        <input
+          [id]="field.key"
+          [type]="field.type"
+          [placeholder]="field.placeholder"
+          [formControlName]="field.key"
+          [disabled]="isSubmitting"
+          [class.invalid]="loginForm.get(field.key)?.invalid && loginForm.get(field.key)?.touched"
+          class="form-input"
+          [attr.autocomplete]="field.key === 'password' ? 'current-password' : 'username'" />
+        <div *ngIf="loginForm.get(field.key)?.errors && loginForm.get(field.key)?.touched" class="field-error">
+          <span *ngIf="loginForm.get(field.key)?.errors?.['required']">{{ field.validations?.required?.message || field.label + ' is required' }}</span>
+          <span *ngIf="loginForm.get(field.key)?.errors?.['minlength']">{{ field.validations?.minLength?.message || 'Minimum length not met' }}</span>
+        </div>
+      </div>
+
+      <app-button [type]="'submit'"
+        [label]="isSubmitting ? 'Signing in...' : (loginData?.form?.submitButton?.label || 'Sign In')"
+        [variant]="'primary'" [disabled]="isSubmitting || !selectedCard" [cssClass]="'btn-full'">
+      </app-button>
+    </form>
+
+    <app-button [type]="'button'" label="New user →" [variant]="'secondary'"
+      [disabled]="isSubmitting" (clicked)="openRegister()" [cssClass]="'btn-full mt-4'">
+    </app-button>
+  </div>
+</div>
+
+<!-- ── REGISTER OVERLAY ── -->
+<div class="reg-overlay" *ngIf="registerStep > 0">
+  <div class="reg-modal">
+
+    <!-- Step 1: Pick role -->
+    <ng-container *ngIf="registerStep === 1">
+      <div class="reg-modal-header">
+        <h2>Create Account</h2>
+        <p class="reg-subtitle">Choose your role to get started</p>
+      </div>
+
+      <div *ngIf="registerError" class="reg-alert reg-alert-error">⚠️ {{ registerError }}</div>
+
+      <div class="reg-role-grid">
+        <div *ngFor="let role of registrationRoles"
+             class="reg-role-card"
+             [class.selected]="registerRole === role"
+             (click)="chooseRegisterRole(role)">
+          <span class="reg-role-icon">{{ roleIcons[role] }}</span>
+          <span class="reg-role-label">{{ role }}</span>
+        </div>
+      </div>
+
+      <div class="reg-actions">
+        <button class="reg-btn reg-btn-secondary" (click)="cancelRegister()">Cancel</button>
+        <button class="reg-btn reg-btn-primary" [disabled]="!registerRole" (click)="proceedToForm()">
+          Next →
+        </button>
+      </div>
+    </ng-container>
+
+    <!-- Step 2: Fill form -->
+    <ng-container *ngIf="registerStep === 2">
+      <div class="reg-modal-header">
+        <h2>{{ roleIcons[registerRole] }} Register as {{ registerRole }}</h2>
+        <p class="reg-subtitle">Fill in your details below</p>
+      </div>
+
+      <div *ngIf="registerError"   class="reg-alert reg-alert-error">⚠️ {{ registerError }}</div>
+      <div *ngIf="registerSuccess" class="reg-alert reg-alert-success">✅ {{ registerSuccess }}</div>
+
+      <form [formGroup]="registerForm" (ngSubmit)="submitRegister()">
+        <div class="reg-form-grid">
+          <div *ngFor="let field of getRegisterFields()"
+               class="reg-form-field"
+               [class.full-width]="field.fullWidth">
+
+            <label [for]="field.key" class="reg-form-label">
+              {{ field.label }}<span *ngIf="field.required" class="required-mark">*</span>
+            </label>
+
+            <!-- text / email / password / number / tel -->
+            <input *ngIf="field.type !== 'select'"
+              [id]="field.key"
+              [type]="field.type"
+              [placeholder]="field.placeholder || ''"
+              [formControlName]="field.key"
+              [disabled]="isSubmitting"
+              [class.invalid]="registerForm.get(field.key)?.invalid && registerForm.get(field.key)?.touched"
+              class="reg-form-input" />
+
+            <!-- select -->
+            <select *ngIf="field.type === 'select'"
+              [id]="field.key"
+              [formControlName]="field.key"
+              [disabled]="isSubmitting"
+              [class.invalid]="registerForm.get(field.key)?.invalid && registerForm.get(field.key)?.touched"
+              class="reg-form-input">
+              <option value="">Select {{ field.label }}</option>
+              <option *ngFor="let opt of field.options" [value]="opt">{{ opt }}</option>
+            </select>
+
+            <div *ngIf="registerForm.get(field.key)?.invalid && registerForm.get(field.key)?.touched" class="field-error">
+              This field is required
+            </div>
+          </div>
+        </div>
+
+        <div class="reg-actions">
+          <button type="button" class="reg-btn reg-btn-secondary" (click)="backToRolePicker()" [disabled]="isSubmitting">← Back</button>
+          <button type="submit" class="reg-btn reg-btn-primary" [disabled]="isSubmitting">
+            {{ isSubmitting ? 'Creating...' : 'Create Account' }}
+          </button>
+        </div>
+      </form>
+    </ng-container>
+
+  </div>
+</div>

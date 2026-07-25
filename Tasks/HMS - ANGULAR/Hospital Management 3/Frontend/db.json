@@ -1,0 +1,789 @@
+{
+  "appointments": [
+    {
+      "id": "2",
+      "appointmentId": "APT002",
+      "patientName": "arun",
+      "doctorName": "Dr. Akilesh",
+      "date": "2026-04-07",
+      "time": "10:00",
+      "type": "Follow-up",
+      "status": "Pending"
+    },
+    {
+      "id": "3",
+      "appointmentId": "APT003",
+      "patientName": "kathi",
+      "doctorName": "Dr. Akilesh",
+      "date": "2026-04-08",
+      "time": "09:00",
+      "type": "fever",
+      "status": "Confirmed"
+    },
+    {
+      "id": "4",
+      "appointmentId": "APT004",
+      "patientName": "Patient1",
+      "doctorName": "Dr. Suman",
+      "date": "2026-04-08",
+      "time": "11:00",
+      "type": "fever",
+      "status": "Confirmed"
+    },
+    {
+      "appointmentId": "APT005",
+      "patientName": "arun",
+      "doctorName": "Dr. Default",
+      "date": "2026-04-06",
+      "time": "09:30",
+      "type": "fever",
+      "status": "Confirmed",
+      "id": "EQH29_KGJOE"
+    },
+    {
+      "appointmentId": "APT006",
+      "patientName": "madhan",
+      "doctorName": "Dr. Default",
+      "date": "2026-04-07",
+      "time": "09:30",
+      "type": "fever",
+      "status": "Confirmed",
+      "id": "NnLLHHkWX5Q"
+    },
+    {
+      "appointmentId": "APT008",
+      "patientName": "test",
+      "doctorName": "Dr. Default",
+      "date": "2026-04-08",
+      "time": "12:30",
+      "type": "test",
+      "status": "Confirmed",
+      "id": "PtCYxCerAP8"
+    },
+    {
+      "appointmentId": "APT007",
+      "patientName": "arun",
+      "doctorName": "Dr. Akilesh",
+      "date": "2026-04-13",
+      "time": "09:30",
+      "type": "test",
+      "status": "Confirmed",
+      "id": "Jz88ZM5cbAs"
+    },
+    {
+      "appointmentId": "APT008",
+      "patientName": "arun",
+      "doctorName": "Dr. Default",
+      "date": "2026-04-15",
+      "time": "09:00",
+      "type": "test",
+      "status": "Confirmed",
+      "id": "M26-AF4iV2Q"
+    }
+  ],
+  "billing": [
+    {
+      "id": "1",
+      "billId": "BL001",
+      "patientName": "John Doe",
+      "patientId": "PAT001",
+      "amount": 5000,
+      "date": "2026-04-05",
+      "dueDate": "2026-04-20",
+      "services": "Consultation, Lab Tests",
+      "status": "Paid"
+    },
+    {
+      "id": "2",
+      "billId": "BL002",
+      "patientName": "suman",
+      "patientId": "PAT002",
+      "amount": 3500,
+      "date": "2026-04-06",
+      "dueDate": "2026-04-21",
+      "services": "X-Ray, Medication",
+      "status": "Pending"
+    },
+    {
+      "id": "3",
+      "billId": "BL003",
+      "patientName": "Ravi Kumar",
+      "patientId": "PAT003",
+      "amount": 8500,
+      "date": "2026-04-07",
+      "dueDate": "2026-04-22",
+      "services": "Surgery, ICU",
+      "status": "Pending"
+    },
+    {
+      "id": "4",
+      "billId": "BL004",
+      "patientName": "Priya ",
+      "patientId": "PAT004",
+      "amount": 2200,
+      "date": "2026-04-03",
+      "dueDate": "2026-04-18",
+      "services": "Consultation",
+      "status": "Paid"
+    },
+    {
+      "id": "5",
+      "billId": "BL005",
+      "patientName": "Amit Patel",
+      "patientId": "PAT005",
+      "amount": 4800,
+      "date": "2026-04-04",
+      "dueDate": "2026-04-19",
+      "services": "Physiotherapy, Medication",
+      "status": "Overdue"
+    }
+  ],
+  "doctors": [
+    {
+      "id": "1",
+      "doctorId": "DOC001",
+      "username": "suman",
+      "password": "doctor123",
+      "email": "suman@hospital.com",
+      "name": "Dr. Suman",
+      "specialization": "Cardiologist",
+      "department": "Cardiology",
+      "phone": "555-0101",
+      "experience": "15 years",
+      "rating": 4.8,
+      "availableSlots": 5,
+      "status": "Available",
+      "createdAt": "2024-01-01T00:00:00.000Z"
+    },
+    {
+      "id": "2",
+      "doctorId": "DOC002",
+      "username": "dr.akilesh",
+      "password": "doctor123",
+      "email": "akilesh@hospital.com",
+      "name": "Dr. ",
+      "specialization": "Neurologist",
+      "department": "Neurology",
+      "phone": "555-0102",
+      "experience": "12 years",
+      "rating": 4.6,
+      "availableSlots": 3,
+      "status": "Available",
+      "createdAt": "2024-01-01T00:00:00.000Z"
+    },
+    {
+      "id": "3",
+      "doctorId": "DOC003",
+      "username": "dr.arjun",
+      "password": "doctor123",
+      "email": "arjun@hospital.com",
+      "name": "Dr. Arjun",
+      "specialization": "Cardiologist",
+      "department": "Cardiology",
+      "phone": "555-0103",
+      "experience": "20 years",
+      "rating": 4.9,
+      "availableSlots": 7,
+      "status": "Available",
+      "createdAt": "2024-01-01T00:00:00.000Z"
+    },
+    {
+      "id": "4",
+      "doctorId": "DOC004",
+      "username": "dr.priya",
+      "password": "doctor123",
+      "email": "priya@hospital.com",
+      "name": "Dr. Priya",
+      "specialization": "Neurologist",
+      "department": "Neurology",
+      "phone": "555-0104",
+      "experience": "10 years",
+      "rating": 4.7,
+      "availableSlots": 4,
+      "status": "Available",
+      "createdAt": "2024-01-01T00:00:00.000Z"
+    },
+    {
+      "id": "5",
+      "doctorId": "DOC005",
+      "username": "dr.kavitha",
+      "password": "doctor123",
+      "email": "kavitha@hospital.com",
+      "name": "Dr. Kavitha S",
+      "specialization": "Orthopedic Surgeon",
+      "department": "Orthopedic",
+      "phone": "555-0105",
+      "experience": "18 years",
+      "rating": 4.8,
+      "availableSlots": 2,
+      "status": "Available",
+      "createdAt": "2024-01-01T00:00:00.000Z"
+    },
+    {
+      "id": "6",
+      "doctorId": "DOC006",
+      "username": "dr.senthil",
+      "password": "doctor123",
+      "email": "senthil@hospital.com",
+      "name": "Dr. Senthil K",
+      "specialization": "Pulmonologist",
+      "department": "Pulmonology",
+      "phone": "555-0106",
+      "experience": "14 years",
+      "rating": 4.5,
+      "availableSlots": 6,
+      "status": "Available",
+      "createdAt": "2024-01-01T00:00:00.000Z"
+    },
+    {
+      "name": "Asif",
+      "specialization": "heart",
+      "department": "ICU",
+      "phone": "1234567890",
+      "email": "asif@gmail.com",
+      "experience": "12",
+      "doctorId": "DOC515",
+      "status": "Available",
+      "rating": 0,
+      "availableSlots": 8,
+      "createdAt": "2026-04-08T03:19:15.515Z",
+      "id": "VTdFysDGBGA"
+    }
+  ],
+  "patients": [
+    {
+      "id": "1",
+      "patientId": "PAT001",
+      "username": "arun.123",
+      "password": "patient123",
+      "email": "arun@email.com",
+      "name": "Arun",
+      "age": 45,
+      "gender": "Male",
+      "phone": "555-1001",
+      "condition": "Hypertension",
+      "bloodGroup": "O+",
+      "address": "123 Main St",
+      "status": "Active",
+      "createdAt": "2024-01-01T00:00:00.000Z"
+    },
+    {
+      "id": "2",
+      "patientId": "PAT002",
+      "username": "lokesh12",
+      "password": "patient123",
+      "email": "lokesh@email.com",
+      "name": "lokesh",
+      "age": 35,
+      "gender": "Female",
+      "phone": "555-1002",
+      "condition": "Diabetes",
+      "bloodGroup": "A+",
+      "address": "456 Oak Ave",
+      "status": "Active",
+      "createdAt": "2024-01-01T00:00:00.000Z"
+    },
+    {
+      "id": "3",
+      "patientId": "PAT003",
+      "username": "ravi123",
+      "password": "patient123",
+      "email": "ravi.kumar@email.com",
+      "name": "Ravi",
+      "age": 52,
+      "gender": "Male",
+      "phone": "555-1003",
+      "condition": "Cardiac Arrhythmia",
+      "bloodGroup": "B+",
+      "address": "789 Pine Rd",
+      "status": "Active",
+      "createdAt": "2024-01-01T00:00:00.000Z"
+    },
+    {
+      "id": "4",
+      "patientId": "PAT004",
+      "username": "priya",
+      "password": "patient123",
+      "email": "priya.sharma@email.com",
+      "name": "Priya",
+      "age": 28,
+      "gender": "Female",
+      "phone": "555-1004",
+      "condition": "Asthma",
+      "bloodGroup": "AB+",
+      "address": "321 Elm St",
+      "status": "Active",
+      "createdAt": "2024-01-01T00:00:00.000Z"
+    },
+    {
+      "id": "5",
+      "patientId": "PAT005",
+      "username": "asif",
+      "password": "patient123",
+      "email": "asif@email.com",
+      "name": "Asif",
+      "age": 60,
+      "gender": "Male",
+      "phone": "555-1005",
+      "condition": "Arthritis",
+      "bloodGroup": "O-",
+      "address": "654 Maple Dr",
+      "status": "Inactive",
+      "createdAt": "2024-01-01T00:00:00.000Z"
+    }
+  ],
+  "pharmacy": [
+    {
+      "id": "1",
+      "medicineId": "MED001",
+      "name": "Paracetamol",
+      "category": "Analgesic",
+      "quantity": 500,
+      "price": 50,
+      "manufacturer": "PharmaCorp",
+      "expiry": "2025-12-31",
+      "stockLevel": "High"
+    },
+    {
+      "id": "2",
+      "medicineId": "MED002",
+      "name": "Aspirin",
+      "category": "Antiplatelet",
+      "quantity": 300,
+      "price": 30,
+      "manufacturer": "MediLife",
+      "expiry": "2025-11-30",
+      "stockLevel": "Medium"
+    },
+    {
+      "id": "3",
+      "medicineId": "MED003",
+      "name": "Amoxicillin",
+      "category": "Antibiotic",
+      "quantity": 150,
+      "price": 120,
+      "manufacturer": "BioMed",
+      "expiry": "2025-10-15",
+      "stockLevel": "Medium"
+    },
+    {
+      "id": "4",
+      "medicineId": "MED004",
+      "name": "Metformin",
+      "category": "Antidiabetic",
+      "quantity": 80,
+      "price": 85,
+      "manufacturer": "DiabCare",
+      "expiry": "2025-09-20",
+      "stockLevel": "Low"
+    },
+    {
+      "id": "5",
+      "medicineId": "MED005",
+      "name": "Lisinopril",
+      "category": "Antihypertensive",
+      "quantity": 45,
+      "price": 95,
+      "manufacturer": "CardioMed",
+      "expiry": "2025-08-30",
+      "stockLevel": "Low"
+    },
+    {
+      "id": "6",
+      "medicineId": "MED006",
+      "name": "Omeprazole",
+      "category": "Proton Pump Inhibitor",
+      "quantity": 220,
+      "price": 65,
+      "manufacturer": "GastroHealth",
+      "expiry": "2026-01-15",
+      "stockLevel": "Medium"
+    }
+  ],
+  "nurses": [
+    {
+      "id": "1",
+      "staffId": "STAFF001",
+      "username": "nurse",
+      "password": "nurse123",
+      "email": "alice.wilson@hospital.com",
+      "name": "Alice Wilson",
+      "department": "ICU",
+      "status": "Active",
+      "createdAt": "2024-01-01T00:00:00.000Z"
+    },
+    {
+      "id": "2",
+      "staffId": "STAFF002",
+      "username": "sarah.jones",
+      "password": "nurse123",
+      "email": "sarah.jones@hospital.com",
+      "name": "Sarah Jones",
+      "department": "Emergency",
+      "status": "Active",
+      "createdAt": "2024-01-01T00:00:00.000Z"
+    }
+  ],
+  "staff": [
+    {
+      "id": "1",
+      "staffId": "STAFF003",
+      "name": "Bob Brown",
+      "role": "Lab Technician",
+      "department": "Laboratory",
+      "phone": "555-2001",
+      "email": "bob.brown@hospital.com",
+      "shift": "Morning",
+      "status": "Active"
+    },
+    {
+      "id": "2",
+      "staffId": "STAFF004",
+      "name": "Alice Wilson",
+      "role": "Nurse",
+      "department": "ICU",
+      "phone": "555-2002",
+      "email": "alice.wilson@hospital.com",
+      "shift": "Night",
+      "status": "Active"
+    },
+    {
+      "id": "3",
+      "staffId": "STAFF005",
+      "name": "Sarah Jones",
+      "role": "Nurse",
+      "department": "Emergency",
+      "phone": "555-2003",
+      "email": "sarah.jones@hospital.com",
+      "shift": "Day",
+      "status": "Active"
+    },
+    {
+      "id": "4",
+      "staffId": "REC001",
+      "name": "Michael Chen",
+      "role": "Receptionist",
+      "department": "Front Desk",
+      "phone": "555-2004",
+      "email": "michael.chen@hospital.com",
+      "shift": "Morning",
+      "status": "Active"
+    },
+    {
+      "id": "5",
+      "staffId": "PHARMA001",
+      "name": "Lisa Kumar",
+      "role": "Pharmacist",
+      "department": "Pharmacy",
+      "phone": "555-2005",
+      "email": "lisa.kumar@hospital.com",
+      "shift": "Day",
+      "status": "Active"
+    }
+  ],
+  "wards": [
+    {
+      "id": "1",
+      "wardId": "WARD001",
+      "name": "ICU Ward",
+      "totalBeds": 20,
+      "occupiedBeds": 15,
+      "status": "Active"
+    },
+    {
+      "id": "2",
+      "wardId": "WARD002",
+      "name": "General Ward",
+      "totalBeds": 50,
+      "occupiedBeds": 40,
+      "status": "Active"
+    }
+  ],
+  "reports": [
+    {
+      "id": "1",
+      "reportId": "REP001",
+      "title": "Monthly Report",
+      "date": "2024-04-01",
+      "type": "Monthly",
+      "status": "Completed"
+    },
+    {
+      "id": "2",
+      "reportId": "REP002",
+      "title": "Quarterly Report",
+      "date": "2024-03-31",
+      "type": "Quarterly",
+      "status": "Completed"
+    }
+  ],
+  "users": {
+    "admin": [
+      {
+        "id": 1,
+        "username": "admin",
+        "email": "admin@hospital.com",
+        "password": "admin123",
+        "name": "System Admin",
+        "createdAt": "2024-01-01T00:00:00.000Z"
+      }
+    ],
+    "analysts": [
+      {
+        "id": 1,
+        "staffId": "ANALYST001",
+        "username": "analyst",
+        "password": "analyst123",
+        "email": "analyst@hospital.com",
+        "name": "Data Analyst",
+        "department": "Data Analytics",
+        "status": "Active",
+        "createdAt": "2024-01-01T00:00:00.000Z"
+      }
+    ],
+    "doctors": [
+      {
+        "id": 1,
+        "doctorId": "DOC001",
+        "username": "doctor",
+        "password": "doctor123",
+        "email": "doctor@hospital.com",
+        "name": "Dr. Default",
+        "specialization": "General Physician",
+        "phone": "555-0100",
+        "status": "Available",
+        "createdAt": "2024-01-01T00:00:00.000Z"
+      },
+      {
+        "id": 2,
+        "doctorId": "DOC002",
+        "username": "dr.suman",
+        "password": "doctor123",
+        "email": "suman@hospital.com",
+        "name": "Dr. Suman",
+        "specialization": "Cardiologist",
+        "phone": "555-0101",
+        "status": "Available",
+        "createdAt": "2024-01-01T00:00:00.000Z"
+      },
+      {
+        "id": 3,
+        "doctorId": "DOC003",
+        "username": "dr.akilesh",
+        "password": "doctor123",
+        "email": "akilesh@hospital.com",
+        "name": "Dr. Akilesh",
+        "specialization": "Neurologist",
+        "phone": "555-0102",
+        "status": "Available",
+        "createdAt": "2024-01-01T00:00:00.000Z"
+      },
+      {
+        "username": "a",
+        "email": "a@gmail.com",
+        "password": "arun123",
+        "name": "a",
+        "createdAt": "2026-04-08T04:29:20.931Z",
+        "doctorId": "DOC004",
+        "specialization": "General",
+        "phone": "",
+        "status": "Available",
+        "id": 4
+      },
+      {
+        "username": "b",
+        "email": "b@gmail.com",
+        "password": "b1234567",
+        "name": "b",
+        "createdAt": "2026-04-08T04:34:54.724Z",
+        "doctorId": "DOC005",
+        "specialization": "General",
+        "phone": "",
+        "status": "Available",
+        "id": 5
+      },
+      {
+        "id": 6,
+        "username": "Dhinesh",
+        "password": "dhinesh123",
+        "name": "Dr. Dhinesh",
+        "email": "dhinesh@gmai.com",
+        "specialization": "Oncologist",
+        "phone": "887778777",
+        "status": "Available",
+        "createdAt": "2026-04-08T13:27:22.828Z",
+        "doctorId": "DOC006"
+      }
+    ],
+    "nurses": [
+      {
+        "id": 1,
+        "staffId": "STAFF001",
+        "username": "nurse",
+        "password": "nurse123",
+        "email": "nurse@hospital.com",
+        "name": "Nurse Default",
+        "department": "General",
+        "status": "Active",
+        "createdAt": "2024-01-01T00:00:00.000Z"
+      },
+      {
+        "id": 2,
+        "staffId": "STAFF002",
+        "username": "alice.wilson",
+        "password": "nurse123",
+        "email": "alice.wilson@hospital.com",
+        "name": "Alice Wilson",
+        "department": "ICU",
+        "status": "Active",
+        "createdAt": "2024-01-01T00:00:00.000Z"
+      },
+      {
+        "id": 3,
+        "staffId": "STAFF003",
+        "username": "sarah.jones",
+        "password": "nurse123",
+        "email": "sarah.jones@hospital.com",
+        "name": "Sarah Jones",
+        "department": "Emergency",
+        "status": "Active",
+        "createdAt": "2024-01-01T00:00:00.000Z"
+      }
+    ],
+    "receptions": [
+      {
+        "id": 1,
+        "staffId": "REC001",
+        "username": "reception",
+        "password": "reception123",
+        "email": "reception@hospital.com",
+        "name": "Reception Default",
+        "shift": "Morning",
+        "status": "Active",
+        "createdAt": "2024-01-01T00:00:00.000Z"
+      }
+    ],
+    "labtechs": [
+      {
+        "id": 1,
+        "staffId": "LAB001",
+        "username": "labtech",
+        "password": "labtech123",
+        "email": "labtech@hospital.com",
+        "name": "Lab Tech Default",
+        "department": "Laboratory",
+        "status": "Active",
+        "createdAt": "2024-01-01T00:00:00.000Z"
+      }
+    ],
+    "pharmas": [
+      {
+        "id": 1,
+        "staffId": "PHARMA001",
+        "username": "pharma",
+        "password": "pharma123",
+        "email": "pharma@hospital.com",
+        "name": "Pharma Default",
+        "shift": "Day",
+        "status": "Active",
+        "createdAt": "2024-01-01T00:00:00.000Z"
+      }
+    ],
+    "patients": [
+      {
+        "id": 1,
+        "patientId": "PAT001",
+        "username": "patient",
+        "password": "patient123",
+        "email": "patient@hospital.com",
+        "name": "Patient",
+        "age": 30,
+        "gender": "Other",
+        "phone": "555-1000",
+        "status": "Active",
+        "createdAt": "2024-01-01T00:00:00.000Z"
+      },
+      {
+        "id": 2,
+        "patientId": "PAT002",
+        "username": "john.doe",
+        "password": "patient123",
+        "email": "john.doe@email.com",
+        "name": "John Doe",
+        "age": 45,
+        "gender": "Male",
+        "phone": "555-1001",
+        "status": "Active",
+        "createdAt": "2024-01-01T00:00:00.000Z"
+      },
+      {
+        "id": 3,
+        "patientId": "PAT003",
+        "username": "suman",
+        "password": "patient123",
+        "email": "suman@email.com",
+        "name": "suman",
+        "age": 35,
+        "gender": "Female",
+        "phone": "555-1002",
+        "status": "Active",
+        "createdAt": "2024-01-01T00:00:00.000Z"
+      },
+      {
+        "id": 4,
+        "patientId": "PAT004",
+        "username": "dhanush",
+        "email": "dhanush@gmail.com",
+        "password": "dhanush123",
+        "name": "Dhanush",
+        "age": 0,
+        "gender": "",
+        "phone": "",
+        "status": "Active",
+        "createdAt": "2026-04-07T09:15:35.198Z"
+      },
+      {
+        "username": "akilesh",
+        "email": "akilesh123@gmail.com",
+        "password": "akilesh123",
+        "name": "Akilesh",
+        "createdAt": "2026-04-07T18:22:47.639Z",
+        "patientId": "PAT005",
+        "age": 0,
+        "gender": "",
+        "phone": "",
+        "status": "Active",
+        "id": 5
+      }
+    ]
+  },
+  "dashboard": {
+    "totalPatients": 1240,
+    "totalDoctors": 48,
+    "appointments": 35,
+    "availableBeds": 22,
+    "pendingBills": 18,
+    "medicinesInStock": 530,
+    "recentActivity": [
+      {
+        "time": "09:10 AM",
+        "activity": "New patient registered",
+        "user": "Reception",
+        "status": "Completed"
+      },
+      {
+        "time": "10:00 AM",
+        "activity": "Doctor consultation booked",
+        "user": "Front Desk",
+        "status": "Pending"
+      },
+      {
+        "time": "10:30 AM",
+        "activity": "Lab sample collected",
+        "user": "Lab Tech",
+        "status": "Completed"
+      }
+    ]
+  },
+  "$schema": "./node_modules/json-server/schema.json"
+}

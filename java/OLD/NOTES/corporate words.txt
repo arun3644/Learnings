@@ -1,0 +1,52 @@
+Batch 1: Common Corporate Words & Phrases (1–50)
+No	Word/Phrase	Meaning	Tamil Meaning	Example
+1	Project	A planned set of tasks	திட்டம்	“The project deadline is next week.”
+2	Client	Customer or company	வாடிக்கையாளர்	“The client approved the design.”
+3	Stakeholder	Person interested in project	பங்குதாரர்	“We need stakeholder approval for this feature.”
+4	Deadline	Task completion date	கடைசித் தேதி	“The report must be submitted by Friday’s deadline.”
+5	Timeline	Schedule of tasks	நேரக்கட்டமைப்பு	“The project timeline has been extended.”
+6	Task	Work to do	பணியிடம்	“Complete your task before leaving.”
+7	Sub-task	Smaller part of a task	துணைப் பணியிடம்	“Break the project into sub-tasks for clarity.”
+8	Meeting	Discussion with team	கூட்டம்	“We have a team meeting at 10 AM.”
+9	Standup	Short daily meeting	துயரக்கூட்டம்	“Let’s discuss updates in today’s standup.”
+10	Agenda	List of topics for meeting	கூட்டத் திட்டம்	“Check the meeting agenda before joining.”
+11	Deliverables	Items to submit	வழங்க வேண்டியவை	“Submit all project deliverables on time.”
+12	Milestone	Important checkpoint	முக்கிய கட்டம்	“We achieved the first milestone yesterday.”
+13	Scope	Project boundaries	பரப்பு	“The feature is outside the current scope.”
+14	Requirement	Needed specifications	தேவைகள்	“The client shared the project requirements.”
+15	Assign	Give task to someone	பணியை ஒதுக்கிடு	“I will assign this task to you.”
+16	Review	Check or evaluate	மதிப்பாய்வு செய்யவும்	“Please review the document.”
+17	Update	Provide latest info	புதுப்பிப்பு	“Update the status in the tracker.”
+18	Submit	Hand over completed work	சமர்ப்பி	“Submit your report by EOD.”
+19	Follow up	Check progress later	தொடர்ச்சி	“I will follow up with the client.”
+20	Escalate	Send issue to higher authority	உயர்நிலை அதிகாரிக்கு அனுப்பு	“Escalate if the problem continues.”
+21	Collaborate	Work together	இணைந்து பணியாற்று	“We need to collaborate with the testing team.”
+22	Coordinate	Organize activities	ஒருங்கிணைக்கவும்	“Coordinate with the design team.”
+23	Ping me	Message me	எனக்கு மெசேஜ் செய்	“Ping me if you have any updates.”
+24	DM me	Direct message me	நேரடி செய்தி அனுப்பு	“DM me the document.”
+25	FYI	For your information	உங்கள் தகவலுக்கு	“FYI, the meeting is rescheduled.”
+26	Action items	Tasks from a meeting	நடவடிக்கை செயல்கள்	“Complete your action items by today.”
+27	Blocker	Issue stopping progress	தடுப்பு	“There is a blocker in completing the task.”
+28	Touch base	Check updates	தகவல் பரிமாற்றம்	“Let’s touch base tomorrow.”
+29	Circle back	Revisit discussion	திரும்ப பேசு	“I’ll circle back to this topic later.”
+30	EOD	End of day	நாளின் இறுதி	“Send me the report by EOD.”
+31	COB	Close of business	தொழில்நிறைவு நேரம்	“The client will respond by COB.”
+32	Priority	Importance level	முக்கியத்துவம்	“This task is our top priority.”
+33	Feedback	Opinion on work	கருத்து	“Please give feedback on the design.”
+34	Requirement gathering	Collecting needs	தேவைகள் சேகரிப்பு	“Requirement gathering is the first phase of the project.”
+35	Feasibility	Possibility of doing	சாத்தியக்கூறல்	“We need to check feasibility before starting.”
+36	Deployment	Launching product	செயல்படுத்தல்	“The deployment is scheduled for Monday.”
+37	Testing	Checking for errors	சோதனை	“QA team is doing testing.”
+38	Bug	Error in software	பிழை	“Report the bug to the developer.”
+39	Patch	Fix for bug	திருத்தம்	“Apply the patch to resolve the issue.”
+40	Release	New version launch	வெளியீடு	“The release is scheduled for Friday.”
+41	Hotfix	Immediate fix for problem	உடனடி திருத்தம்	“The hotfix resolved the critical bug.”
+42	Rollback	Revert to previous version	முந்தைய நிலைக்கு திரும்புதல்	“We had to rollback the release.”
+43	Sprint	Short development cycle	குறுகிய வளர்ச்சி காலம்	“We completed the sprint successfully.”
+44	Standup notes	Notes from daily meeting	தினசரி கூட்ட குறிப்பு	“Check the standup notes for updates.”
+45	Roadmap	Plan for future work	செயல்திட்டம்	“The roadmap shows tasks for next quarter.”
+46	KPI	Key performance indicator	முக்கிய செயல்திறன் குறியீடு	“Our KPI is to reduce errors by 20%.”
+47	OKR	Objectives and key results	இலக்குகள் மற்றும் முக்கிய முடிவுகள்	“Set OKRs for the team this quarter.”
+48	Onboarding	Joining process for new employees	புதிய ஊழியர் சேர்க்கை	“Onboarding will start next Monday.”
+49	Offboarding	Exit process for employees	ஊழியர் வெளியேற்றம்	“Offboarding documents are ready.”
+50	Knowledge transfer	Sharing info with team	அறிவு பரிமாற்றம்	“KT session is scheduled for tomorrow.”

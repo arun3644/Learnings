@@ -1,0 +1,173 @@
+🚀 Node.js Complete Course (Zero → Advanced)
+1. Introduction to Node.js
+
+What is Node.js?
+→ Runtime environment for JavaScript, built on Chrome’s V8 engine, for running JS outside the browser.
+
+Why use Node.js?
+→ Non-blocking, event-driven, perfect for scalable apps.
+
+Install Node.js and npm (Node Package Manager).
+
+Run your first script:
+
+console.log("Hello Node.js!");
+
+2. Node.js Fundamentals
+
+Modules
+
+Core Modules: fs, http, path, os, events
+
+Custom Modules: module.exports, require
+
+Example:
+
+// math.js
+module.exports.add = (a, b) => a + b;
+
+// app.js
+const math = require('./math');
+console.log(math.add(5, 3)); // 8
+
+
+NPM basics
+
+npm init -y
+
+npm install package-name
+
+npm uninstall package-name
+
+3. File System (fs) Module
+
+Read, write, update, delete files.
+
+Example:
+
+const fs = require('fs');
+
+fs.writeFileSync("data.txt", "Hello World!");
+const data = fs.readFileSync("data.txt", "utf8");
+console.log(data); // Hello World!
+
+
+Asynchronous vs Synchronous file handling.
+
+4. Path and OS Modules
+
+path.join(), path.extname(), path.basename()
+
+os.type(), os.platform(), os.totalmem()
+
+5. Events and EventEmitter
+
+Core of Node.js (everything is event-driven).
+
+const EventEmitter = require('events');
+const emitter = new EventEmitter();
+
+emitter.on('greet', () => {
+  console.log("Hello from EventEmitter!");
+});
+
+emitter.emit('greet');
+
+6. HTTP Module (Build Your Own Server)
+
+Create server
+
+Handle routes (/, /about, /contact)
+
+Send HTML responses
+
+const http = require('http');
+
+const server = http.createServer((req, res) => {
+  res.setHeader('Content-Type', 'text/html');
+  if (req.url === '/') res.end("<h1>Home Page</h1>");
+  else res.end("<h1>Page Not Found</h1>");
+});
+
+server.listen(3000, () => console.log("Server running on port 3000"));
+
+7. Streams and Buffers
+
+Large data handling
+
+File streaming
+
+const fs = require('fs');
+
+const readStream = fs.createReadStream("bigfile.txt", "utf8");
+readStream.on("data", chunk => {
+  console.log("Chunk received:", chunk);
+});
+
+8. Asynchronous Programming
+
+Callbacks
+
+Promises
+
+Async/Await
+
+const fs = require('fs').promises;
+
+async function readFile() {
+  try {
+    const data = await fs.readFile("data.txt", "utf8");
+    console.log(data);
+  } catch (err) {
+    console.log(err);
+  }
+}
+readFile();
+
+9. Package Management
+
+Using external libraries (lodash, chalk, etc.)
+
+Global vs local installs
+
+Understanding package.json and package-lock.json
+
+10. Node.js Debugging
+
+Using console.log()
+
+Using VS Code debugger
+
+Using node --inspect
+
+11. Node.js Advanced Concepts
+
+Cluster Module (multi-core CPU usage)
+
+Child Processes
+
+Worker Threads
+
+Building REPL (Read-Eval-Print Loop)
+
+Handling environment variables (dotenv)
+
+12. Node.js Security
+
+Input validation
+
+Avoiding synchronous blocking
+
+Rate limiting
+
+Securing sensitive data with .env
+
+13. Node.js Projects (Without Express)
+
+Basic: File system-based Notes App
+
+Medium: CLI To-Do App
+
+Large: HTTP server with routing, login system, and file storage.
+
+🔥 After this, you’ll have master-level Node.js knowledge. Then, jumping into Express.js, Nest.js, or frameworks will be very easy.

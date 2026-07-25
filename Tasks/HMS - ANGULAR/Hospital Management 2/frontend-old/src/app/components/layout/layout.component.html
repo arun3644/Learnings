@@ -1,0 +1,11 @@
+<div class="app-shell">
+  <app-sidebar *ngIf="showSidebar" (pageChange)="navigate($event)" [activePage]="activePage" />
+  <div class="main-area" [class.full-width]="!showSidebar">
+    <app-header />
+    <main class="page-content">
+      <app-dashboard *ngIf="activePage === 'dashboard'" (pageNavigate)="navigate($event)"></app-dashboard>
+      <app-patients     *ngIf="activePage === 'patients'"     />
+      <app-appointments *ngIf="activePage === 'appointments'" />
+    </main>
+  </div>
+</div>

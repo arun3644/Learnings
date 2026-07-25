@@ -1,0 +1,7 @@
+﻿<div [ngClass]="cssClass">
+  <div *ngIf="icon" class="card-icon">{{ icon }}</div>
+  <div class="card-content">
+    <span *ngIf="value !== ''" class="card-value">{{ value }}</span>
+    <span class="card-label">{{ label }}</span>
+  </div>
+</div>

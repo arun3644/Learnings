@@ -1,0 +1,58 @@
+{
+    
+    "page":{
+        "header":{
+            "title": "Doctors",
+            "cssClass" : "",
+            "fields":[
+                {
+                    "label":"+ Register Doctor",
+                    "cssClass":"btn-sm btn-teal",
+                    "type":"button",
+                    "disabled":false,
+                    "variant":"secondary"
+
+                }
+            ]
+        }
+    },
+    "filters": [
+        {
+            "type": "input",
+            "placeholder": "Search name, Specialization..",
+            "cssClass": "filter-input",
+            "path":"",
+            "modal":""
+        },
+        {
+            "type": "select",
+            "label":"Specialization",
+            "name": "Specialization",
+            "path":"",
+            "cssClass":" filter-select",
+            "options":[
+                {"value":"", "label":"All Specialization"},
+                { "value": "Cardiologist",      "label": "Cardiologist" },
+                { "value": "Neurologist",       "label": "Neurologist" },
+                { "value": "Pediatrician",      "label": "Pediatrician" },
+                { "value": "Orthopedic",        "label": "Orthopedic" },
+                { "value": "Dermatologist",     "label": "Dermatologist" },
+                { "value": "General Physician", "label": "General Physician" },
+                { "value": "Psychiatrist",      "label": "Psychiatrist" },
+                { "value": "Oncologist",        "label": "Oncologist" },
+                { "value": "Radiologist",       "label": "Radiologist" },
+                { "value": "Anesthesiologist",  "label": "Anesthesiologist" }
+            ]
+        }
+    ],
+    "table":{
+        "cssClass":"data-table",
+        "columns":[
+            { "key": "name", "label": "Name", "cssClass":"item-sub",  "sortable": true },
+            { "key": "specialization",  "label": "Specialization", "cssClass":"item-sub",  "sortable": true},
+            { "key": "experience",  "label": "Experience", "cssClass":"item-sub",  "sortable": true },
+            { "key": "phone",       "label": "Phone", "cssClass":"item-sub",  "sortable": true },
+            { "key": "email",       "label": "Email", "cssClass":"item-sub",  "sortable": true }
+        ]
+    }
+}

@@ -1,0 +1,54 @@
+<div class="list-wrap">
+  <div class="page-header">
+    <div>
+      <h1>Staff</h1>
+      <p class="page-subtitle">{{ staff.length }} registered staff members</p>
+    </div>
+  </div>
+
+  <div class="filter-bar">
+    <input class="filter-input" placeholder="Search by name, ID, department..." [(ngModel)]="searchQuery" style="flex:1">
+    <select class="filter-select" [(ngModel)]="shiftFilter">
+      <option value="">All Shifts</option>
+      <option value="Morning">Morning</option>
+      <option value="Evening">Evening</option>
+      <option value="Night">Night</option>
+    </select>
+  </div>
+
+  <div class="list-card">
+    <ng-container *ngIf="filterStaff() as filtered">
+      <div class="list-header">
+        <span>Staff List</span>
+        <span class="muted">Showing {{ filtered.length }} of {{ staff.length }}</span>
+      </div>
+      <div class="list-header-row">
+        <span class="list-col">Staff</span>
+        <span class="list-col">Department</span>
+        <span class="list-col">Shift</span>
+        <span class="list-col">Experience</span>
+      </div>
+      <div *ngFor="let member of filtered" class="list-item">
+        <div>
+          <div class="item-name">
+            <span class="avatar">{{ getInitials(member.name) }}</span>
+            {{ member.name }}
+          </div>
+          <div class="item-id">{{ member.nurseId }}</div>
+        </div>
+        <div class="item-spec">{{ member.department || 'N/A' }}</div>
+        <div class="item-sub">
+          <span class="shift-pill" [ngClass]="'shift-' + (member.shift || 'morning').toLowerCase()">
+            {{ member.shift || 'N/A' }}
+          </span>
+        </div>
+        <div class="item-sub">{{ member.yearsOfExperience || 0 }} yrs</div>
+      </div>
+      <div *ngIf="filtered.length === 0" class="empty-state">
+        <p>No staff match your search</p>
+      </div>
+    </ng-container>
+  </div>
+
+  <div class="loading-state" *ngIf="loading"><p>Loading staff...</p></div>
+</div>

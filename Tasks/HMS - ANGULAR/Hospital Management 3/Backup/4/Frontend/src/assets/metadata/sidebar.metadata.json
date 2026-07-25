@@ -1,0 +1,9 @@
+{
+  "nav": [
+    { "key": "dashboard",     "label": "Dashboard",     "icon": "🏠"   },
+    { "key": "appointments",  "label": "Appointments",  "icon": "📅"   },
+    { "key": "patients",      "label": "Patients",      "icon": "🧑" },
+    { "key": "doctors",       "label": "Doctors",       "icon": "👨" },
+    { "key": "staff",         "label": "Staff",         "icon": "👥"   }
+  ]
+}

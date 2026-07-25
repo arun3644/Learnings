@@ -1,0 +1,24 @@
+
+C:\learnings>ssh-keygen -t ed25519 -C arunkarthikk364@gmail.com
+Generating public/private ed25519 key pair.
+Enter file in which to save the key (C:\Users\arunkumar.r7/.ssh/id_ed25519): GitHubKey
+Enter passphrase (empty for no passphrase):
+Enter same passphrase again:
+Your identification has been saved in GitHubKey
+Your public key has been saved in GitHubKey.pub
+The key fingerprint is:
+SHA256:WZQN6kSVfyZ+8ocmOmbMfkfBwY/LN6dzi2Fsz0OyAyE arunkarthikk364@gmail.com
+The key's randomart image is:
++--[ED25519 256]--+
+|        ..+= .   |
+|       . oo . o  |
+|        o .. . + |
+|       o E .o * .|
+|        S ...= o |
+|           .+.=oo|
+|         o  .X++o|
+|          * =o%.o|
+|         +o+ =.Bo|
++----[SHA256]-----+
+
+C:\learnings>

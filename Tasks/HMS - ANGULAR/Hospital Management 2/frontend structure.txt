@@ -1,0 +1,279 @@
+src/
+├── app/
+│   ├── core/
+│   │   ├── guards/
+│   │   │   ├── auth.guard.ts
+│   │   │   ├── role.guard.ts
+│   │   │   └── index.ts
+│   │   ├── interceptors/
+│   │   │   ├── auth.interceptor.ts
+│   │   │   ├── error.interceptor.ts
+│   │   │   └── index.ts
+│   │   ├── services/
+│   │   │   ├── auth.service.ts
+│   │   │   ├── storage.service.ts
+│   │   │   ├── notification.service.ts
+│   │   │   └── index.ts
+│   │   ├── models/
+│   │   │   ├── user.model.ts
+│   │   │   ├── appointment.model.ts
+│   │   │   ├── doctor.model.ts
+│   │   │   ├── patient.model.ts
+│   │   │   ├── nurse.model.ts
+│   │   │   ├── admin.model.ts
+│   │   │   ├── time-slot.model.ts
+│   │   │   └── index.ts
+│   │   ├── constants/
+│   │   │   ├── api.constants.ts
+│   │   │   ├── app.constants.ts
+│   │   │   └── index.ts
+│   │   └── utils/
+│   │       ├── date.utils.ts
+│   │       ├── validation.utils.ts
+│   │       └── index.ts
+│   │
+│   ├── store/
+│   │   ├── auth/
+│   │   │   ├── auth.actions.ts
+│   │   │   ├── auth.reducer.ts
+│   │   │   ├── auth.effects.ts
+│   │   │   ├── auth.selectors.ts
+│   │   │   └── auth.state.ts
+│   │   ├── doctor/
+│   │   │   ├── doctor.actions.ts
+│   │   │   ├── doctor.reducer.ts
+│   │   │   ├── doctor.effects.ts
+│   │   │   ├── doctor.selectors.ts
+│   │   │   └── doctor.state.ts
+│   │   ├── patient/
+│   │   │   ├── patient.actions.ts
+│   │   │   ├── patient.reducer.ts
+│   │   │   ├── patient.effects.ts
+│   │   │   ├── patient.selectors.ts
+│   │   │   └── patient.state.ts
+│   │   ├── appointment/
+│   │   │   ├── appointment.actions.ts
+│   │   │   ├── appointment.reducer.ts
+│   │   │   ├── appointment.effects.ts
+│   │   │   ├── appointment.selectors.ts
+│   │   │   └── appointment.state.ts
+│   │   ├── nurse/
+│   │   │   ├── nurse.actions.ts
+│   │   │   ├── nurse.reducer.ts
+│   │   │   ├── nurse.effects.ts
+│   │   │   ├── nurse.selectors.ts
+│   │   │   └── nurse.state.ts
+│   │   ├── admin/
+│   │   │   ├── admin.actions.ts
+│   │   │   ├── admin.reducer.ts
+│   │   │   ├── admin.effects.ts
+│   │   │   ├── admin.selectors.ts
+│   │   │   └── admin.state.ts
+│   │   ├── time-slot/
+│   │   │   ├── time-slot.actions.ts
+│   │   │   ├── time-slot.reducer.ts
+│   │   │   ├── time-slot.effects.ts
+│   │   │   ├── time-slot.selectors.ts
+│   │   │   └── time-slot.state.ts
+│   │   ├── dashboard/
+│   │   │   ├── dashboard.actions.ts
+│   │   │   ├── dashboard.reducer.ts
+│   │   │   ├── dashboard.effects.ts
+│   │   │   ├── dashboard.selectors.ts
+│   │   │   └── dashboard.state.ts
+│   │   ├── app.state.ts
+│   │   └── index.ts
+│   │
+│   ├── features/
+│   │   ├── auth/
+│   │   │   ├── components/
+│   │   │   │   ├── login/
+│   │   │   │   │   ├── login.component.ts
+│   │   │   │   │   └── login.component.html
+│   │   │   │   ├── register/
+│   │   │   │   │   ├── register.component.ts
+│   │   │   │   │   └── register.component.html
+│   │   │   │   └── role-selection/
+│   │   │   │       ├── role-selection.component.ts
+│   │   │   │       └── role-selection.component.html
+│   │   │   └── auth.routes.ts
+│   │   │
+│   │   ├── admin/
+│   │   │   ├── components/
+│   │   │   │   ├── admin-dashboard/
+│   │   │   │   │   ├── admin-dashboard.component.ts
+│   │   │   │   │   └── admin-dashboard.component.html
+│   │   │   │   ├── admin-layout/
+│   │   │   │   │   ├── admin-layout.component.ts
+│   │   │   │   │   └── admin-layout.component.html
+│   │   │   │   ├── manage-doctors/
+│   │   │   │   │   ├── manage-doctors.component.ts
+│   │   │   │   │   └── manage-doctors.component.html
+│   │   │   │   ├── manage-patients/
+│   │   │   │   │   ├── manage-patients.component.ts
+│   │   │   │   │   └── manage-patients.component.html
+│   │   │   │   ├── manage-nurses/
+│   │   │   │   │   ├── manage-nurses.component.ts
+│   │   │   │   │   └── manage-nurses.component.html
+│   │   │   │   ├── manage-appointments/
+│   │   │   │   │   ├── manage-appointments.component.ts
+│   │   │   │   │   └── manage-appointments.component.html
+│   │   │   │   └── statistics/
+│   │   │   │       ├── statistics.component.ts
+│   │   │   │       └── statistics.component.html
+│   │   │   └── admin.routes.ts
+│   │   │
+│   │   ├── doctor/
+│   │   │   ├── components/
+│   │   │   │   ├── doctor-dashboard/
+│   │   │   │   │   ├── doctor-dashboard.component.ts
+│   │   │   │   │   └── doctor-dashboard.component.html
+│   │   │   │   ├── doctor-layout/
+│   │   │   │   │   ├── doctor-layout.component.ts
+│   │   │   │   │   └── doctor-layout.component.html
+│   │   │   │   ├── doctor-profile/
+│   │   │   │   │   ├── doctor-profile.component.ts
+│   │   │   │   │   └── doctor-profile.component.html
+│   │   │   │   ├── appointments-list/
+│   │   │   │   │   ├── appointments-list.component.ts
+│   │   │   │   │   └── appointments-list.component.html
+│   │   │   │   ├── time-slots/
+│   │   │   │   │   ├── time-slots.component.ts
+│   │   │   │   │   └── time-slots.component.html
+│   │   │   │   ├── patients-list/
+│   │   │   │   │   ├── patients-list.component.ts
+│   │   │   │   │   └── patients-list.component.html
+│   │   │   │   └── today-schedule/
+│   │   │   │       ├── today-schedule.component.ts
+│   │   │   │       └── today-schedule.component.html
+│   │   │   └── doctor.routes.ts
+│   │   │
+│   │   ├── patient/
+│   │   │   ├── components/
+│   │   │   │   ├── patient-dashboard/
+│   │   │   │   │   ├── patient-dashboard.component.ts
+│   │   │   │   │   └── patient-dashboard.component.html
+│   │   │   │   ├── patient-layout/
+│   │   │   │   │   ├── patient-layout.component.ts
+│   │   │   │   │   └── patient-layout.component.html
+│   │   │   │   ├── patient-profile/
+│   │   │   │   │   ├── patient-profile.component.ts
+│   │   │   │   │   └── patient-profile.component.html
+│   │   │   │   ├── book-appointment/
+│   │   │   │   │   ├── book-appointment.component.ts
+│   │   │   │   │   └── book-appointment.component.html
+│   │   │   │   ├── my-appointments/
+│   │   │   │   │   ├── my-appointments.component.ts
+│   │   │   │   │   └── my-appointments.component.html
+│   │   │   │   ├── doctors-list/
+│   │   │   │   │   ├── doctors-list.component.ts
+│   │   │   │   │   └── doctors-list.component.html
+│   │   │   │   └── appointment-history/
+│   │   │   │       ├── appointment-history.component.ts
+│   │   │   │       └── appointment-history.component.html
+│   │   │   └── patient.routes.ts
+│   │   │
+│   │   └── nurse/
+│   │       ├── components/
+│   │       │   ├── nurse-dashboard/
+│   │       │   │   ├── nurse-dashboard.component.ts
+│   │       │   │   └── nurse-dashboard.component.html
+│   │       │   ├── nurse-layout/
+│   │       │   │   ├── nurse-layout.component.ts
+│   │       │   │   └── nurse-layout.component.html
+│   │       │   ├── nurse-profile/
+│   │       │   │   ├── nurse-profile.component.ts
+│   │       │   │   └── nurse-profile.component.html
+│   │       │   └── patient-care/
+│   │       │       ├── patient-care.component.ts
+│   │       │       └── patient-care.component.html
+│   │       └── nurse.routes.ts
+│   │
+│   ├── shared/
+│   │   ├── components/
+│   │   │   ├── header/
+│   │   │   │   ├── header.component.ts
+│   │   │   │   └── header.component.html
+│   │   │   ├── sidebar/
+│   │   │   │   ├── sidebar.component.ts
+│   │   │   │   └── sidebar.component.html
+│   │   │   ├── footer/
+│   │   │   │   ├── footer.component.ts
+│   │   │   │   └── footer.component.html
+│   │   │   ├── loader/
+│   │   │   │   ├── loader.component.ts
+│   │   │   │   └── loader.component.html
+│   │   │   ├── modal/
+│   │   │   │   ├── modal.component.ts
+│   │   │   │   └── modal.component.html
+│   │   │   ├── confirmation-dialog/
+│   │   │   │   ├── confirmation-dialog.component.ts
+│   │   │   │   └── confirmation-dialog.component.html
+│   │   │   ├── notification/
+│   │   │   │   ├── notification.component.ts
+│   │   │   │   └── notification.component.html
+│   │   │   ├── data-table/
+│   │   │   │   ├── data-table.component.ts
+│   │   │   │   └── data-table.component.html
+│   │   │   ├── card/
+│   │   │   │   ├── card.component.ts
+│   │   │   │   └── card.component.html
+│   │   │   ├── stats-card/
+│   │   │   │   ├── stats-card.component.ts
+│   │   │   │   └── stats-card.component.html
+│   │   │   ├── breadcrumb/
+│   │   │   │   ├── breadcrumb.component.ts
+│   │   │   │   └── breadcrumb.component.html
+│   │   │   └── pagination/
+│   │   │       ├── pagination.component.ts
+│   │   │       └── pagination.component.html
+│   │   ├── directives/
+│   │   │   ├── click-outside.directive.ts
+│   │   │   ├── tooltip.directive.ts
+│   │   │   ├── highlight.directive.ts
+│   │   │   └── index.ts
+│   │   ├── pipes/
+│   │   │   ├── date-format.pipe.ts
+│   │   │   ├── time-format.pipe.ts
+│   │   │   ├── truncate.pipe.ts
+│   │   │   ├── safe-html.pipe.ts
+│   │   │   └── index.ts
+│   │   └── validators/
+│   │       ├── custom-validators.ts
+│   │       └── index.ts
+│   │
+│   ├── layouts/
+│   │   ├── main-layout/
+│   │   │   ├── main-layout.component.ts
+│   │   │   └── main-layout.component.html
+│   │   ├── auth-layout/
+│   │   │   ├── auth-layout.component.ts
+│   │   │   └── auth-layout.component.html
+│   │   └── empty-layout/
+│   │       ├── empty-layout.component.ts
+│   │       └── empty-layout.component.html
+│   │
+│   ├── app.component.ts
+│   ├── app.component.html
+│   ├── app.config.ts
+│   └── app.routes.ts
+│
+├── assets/
+│   ├── images/
+│   │   ├── logo.png
+│   │   ├── avatar-placeholder.png
+│   │   └── icons/
+│   ├── fonts/
+│   └── data/
+│       └── menu-config.json
+│
+├── environments/
+│   ├── environment.ts
+│   └── environment.prod.ts
+│
+├── styles/
+│   └── global.css          # SINGLE CSS FILE FOR ENTIRE PROJECT
+│
+├── index.html
+├── main.ts
+└── styles.css              # Import global.css here

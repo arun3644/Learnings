@@ -1,0 +1,136 @@
+{
+  "page": {
+    "title": "Patients",
+    "cssClass": "page-patients"
+  },
+  "actions": [
+    { "key": "add",    "label": "Add Patient", "cssClass": "btn btn-primary" },
+    { "key": "export", "label": "Export",       "cssClass": "btn btn-secondary" }
+  ],
+  "filters": [
+    {
+      "key": "search",
+      "type": "text",
+      "placeholder": "Search patients...",
+      "cssClass": "form-input filter-input"
+    },
+    {
+      "key": "status",
+      "type": "select",
+      "label": "Status",
+      "cssClass": "form-input filter-select",
+      "options": [
+        { "value": "", "label": "All" },
+        { "value": "admitted", "label": "Admitted" },
+        { "value": "discharged", "label": "Discharged" },
+        { "value": "outpatient", "label": "Outpatient" }
+      ]
+    }
+  ],
+  "table": {
+    "cssClass": "data-table",
+    "columns": [
+      { "key": "id",        "label": "Patient ID",  "cssClass": "col-id",     "sortable": true  },
+      { "key": "name",      "label": "Name",        "cssClass": "col-name",   "sortable": true  },
+      { "key": "age",       "label": "Age",         "cssClass": "col-age",    "sortable": false },
+      { "key": "gender",    "label": "Gender",      "cssClass": "col-gender", "sortable": false },
+      { "key": "phone",     "label": "Phone",       "cssClass": "col-phone",  "sortable": false },
+      { "key": "doctor",    "label": "Doctor",      "cssClass": "col-doctor", "sortable": true  },
+      { "key": "status",    "label": "Status",      "cssClass": "col-status", "sortable": true, "badge": true },
+      { "key": "actions",   "label": "Actions",     "cssClass": "col-actions","sortable": false }
+    ]
+  },
+  "form": {
+    "title": "Patient Details",
+    "cssClass": "detail-form",
+    "fields": [
+      {
+        "key": "name",
+        "label": "Full Name",
+        "type": "text",
+        "required": true,
+        "cssClass": "form-field",
+        "inputCssClass": "form-input",
+        "labelCssClass": "form-label"
+      },
+      {
+        "key": "age",
+        "label": "Age",
+        "type": "number",
+        "required": true,
+        "cssClass": "form-field",
+        "inputCssClass": "form-input",
+        "labelCssClass": "form-label"
+      },
+      {
+        "key": "gender",
+        "label": "Gender",
+        "type": "select",
+        "required": true,
+        "cssClass": "form-field",
+        "inputCssClass": "form-input",
+        "labelCssClass": "form-label",
+        "options": [
+          { "value": "Male", "label": "Male" },
+          { "value": "Female", "label": "Female" },
+          { "value": "Other", "label": "Other" }
+        ]
+      },
+      {
+        "key": "phone",
+        "label": "Phone",
+        "type": "text",
+        "required": true,
+        "cssClass": "form-field",
+        "inputCssClass": "form-input",
+        "labelCssClass": "form-label"
+      },
+      {
+        "key": "email",
+        "label": "Email",
+        "type": "email",
+        "required": false,
+        "cssClass": "form-field",
+        "inputCssClass": "form-input",
+        "labelCssClass": "form-label"
+      },
+      {
+        "key": "condition",
+        "label": "Condition",
+        "type": "text",
+        "required": false,
+        "cssClass": "form-field",
+        "inputCssClass": "form-input",
+        "labelCssClass": "form-label"
+      },
+      {
+        "key": "bloodGroup",
+        "label": "Blood Group",
+        "type": "select",
+        "required": false,
+        "cssClass": "form-field",
+        "inputCssClass": "form-input",
+        "labelCssClass": "form-label",
+        "options": [
+          { "value": "A+", "label": "A+" },
+          { "value": "A-", "label": "A-" },
+          { "value": "B+", "label": "B+" },
+          { "value": "B-", "label": "B-" },
+          { "value": "AB+", "label": "AB+" },
+          { "value": "AB-", "label": "AB-" },
+          { "value": "O+", "label": "O+" },
+          { "value": "O-", "label": "O-" }
+        ]
+      },
+      {
+        "key": "address",
+        "label": "Address",
+        "type": "textarea",
+        "required": false,
+        "cssClass": "form-field",
+        "inputCssClass": "form-input",
+        "labelCssClass": "form-label"
+      }
+    ]
+  }
+}

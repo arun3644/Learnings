@@ -1,0 +1,176 @@
+Week 1 — Core Java Fundamentals & OOP (Days 1–10)
+Day	Topics	Study Plan (3 hours)
+1	Java setup, Hello World, Basic program structure	Install JDK & IDE, write simple Java program, data types, variables, literals, keywords (practice small programs)
+2	Operators, expressions, if-else, switch-case	Learn all operators, write programs using if-else and switch-case
+3	Loops: for, while, do-while	Write programs with all loop types, nested loops practice
+4	Classes & Objects basics	Define classes, create objects, instance variables and methods
+5	Methods & constructors	Method declaration, overloading, constructors, 'this' keyword
+6	Encapsulation & Access modifiers	private, public, protected, default, getter/setter methods
+7	Inheritance basics	extends keyword, super keyword, method overriding basics
+8	Polymorphism: method overloading & overriding	Practice examples, upcasting, dynamic method dispatch
+9	Abstract classes & Interfaces	Abstract methods, interfaces, implements keyword, multiple inheritance via interfaces
+10	String class and common methods	String immutability, concatenation, substring, equals, StringBuffer/StringBuilder basics
+
+Week 2 — Exception Handling, Collections & I/O (Days 11–18)
+Day	Topics	Study Plan (3 hours)
+11	Exception Handling basics	try-catch-finally, multiple catch blocks, nested try, throw vs throws
+12	Checked vs unchecked exceptions & Custom exceptions	Create custom exceptions, practice throwing and handling
+13	Collections Framework overview & List (ArrayList, LinkedList)	Learn Collection interface, List interface, ArrayList and LinkedList usage
+14	Set interface (HashSet, TreeSet)	HashSet and TreeSet differences, use cases, practice problems
+15	Map interface (HashMap, TreeMap)	HashMap and TreeMap, key-value basics, common methods
+16	Iterators and for-each loop	Use Iterator, ListIterator, enhanced for loop practice
+17	Comparable and Comparator interfaces	Implement sorting with Comparable and Comparator
+18	Java I/O basics	File handling, InputStream/OutputStream, Readers/Writers
+
+Week 3 — Multithreading, Java 8 Features & JDBC (Days 19–25)
+Day	Topics	Study Plan (3 hours)
+19	Multithreading basics	Thread class, Runnable interface, create and run threads
+20	Thread lifecycle, synchronization basics	Thread states, synchronized keyword, thread safety basics
+21	Thread communication	wait(), notify(), notifyAll(), simple producer-consumer example
+22	Java 8 Lambda expressions basics	Lambda syntax, functional interfaces, simple examples
+23	Functional interfaces & Streams basics	Predicate, Consumer, Function interfaces, Stream API intro
+24	Method references & common Stream operations	map, filter, collect, forEach examples
+25	JDBC basics	JDBC architecture, database connection, Statement and ResultSet basics
+
+Week 4 — Best Practices, Interview Patterns & Mini Project (Days 26–30)
+Day	Topics	Study Plan (3 hours)
+26	Java best practices	Code conventions, exception handling best practices, memory management basics
+27	Collections effective use & Garbage Collection	Tips for collection usage, overview of garbage collector
+28	Common interview coding patterns	Array and String manipulation, searching, sorting algorithms basics
+29	Recursion basics and simple data structures	Recursive problems, Stack, Queue, LinkedList (conceptual and basic code)
+30	Mini project: CRUD console app	Use collections, exception handling, JDBC connection, multithreading demo
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+Week 1 — Core Java Fundamentals & Basics
+Total topics: Java basics + OOP + String handling
+Suggested daily hours: ~6 hours/day
+Breakdown:
+
+Day 1: Java installation, program structure, data types, variables, keywords, operators — 6 hrs
+
+Day 2: Control flow (if-else, switch), loops (for, while, do-while) — 6 hrs (practice coding a lot)
+
+Day 3: Classes, Objects, Methods, Constructors — 6 hrs
+
+Day 4: Encapsulation, Access Modifiers, Inheritance basics — 6 hrs
+
+Day 5: Polymorphism (overloading, overriding), Abstract classes, Interfaces — 6 hrs
+
+Day 6: String class, StringBuffer, StringBuilder, String methods — 6 hrs
+
+Day 7: String immutability, performance and revision + practice problems — 4-6 hrs
+
+Week 2 — Advanced Core Java Concepts
+Total topics: Exception Handling + Collections + I/O
+Suggested daily hours: ~6 hours/day
+Breakdown:
+
+Day 8: Exception Handling (try-catch, checked vs unchecked, custom exceptions, throws/throw) — 6 hrs
+
+Day 9: Collection interface hierarchy + List (ArrayList, LinkedList) — 6 hrs
+
+Day 10: Set (HashSet, TreeSet) + Map (HashMap, TreeMap) — 6 hrs
+
+Day 11: Iterators, for-each, Comparable, Comparator — 6 hrs
+
+Day 12: Java I/O basics (File handling, InputStream, OutputStream) — 6 hrs
+
+Day 13: Readers, Writers, Serialization basics — 6 hrs
+
+Day 14: Revision + practice problems on exceptions, collections, I/O — 4-6 hrs
+
+Week 3 — Java APIs and Useful Concepts
+Total topics: Multithreading + Java 8 features + JDBC
+Suggested daily hours: ~6 hours/day
+Breakdown:
+
+Day 15: Multithreading basics (Thread class, Runnable interface, lifecycle, synchronization) — 6 hrs
+
+Day 16: Thread communication (wait, notify) + practice — 6 hrs
+
+Day 17: Java 8 Lambda expressions + Functional interfaces (Predicate, Consumer, Function) — 6 hrs
+
+Day 18: Streams API basics + Method references — 6 hrs
+
+Day 19: JDBC architecture, drivers, connecting DB — 6 hrs
+
+Day 20: Executing queries, PreparedStatement, ResultSet — 6 hrs
+
+Day 21: Revision + practice on multithreading, Java 8, JDBC — 4-6 hrs
+
+Week 4 — Practical & Interview Prep
+Total topics: Best practices + Coding patterns + Mini project
+Suggested daily hours: ~6 hours/day
+Breakdown:
+
+Day 22: Java best practices (code conventions, exception handling best practices) — 6 hrs
+
+Day 23: Effective use of collections + memory management and GC basics — 6 hrs
+
+Day 24: Common interview coding patterns: array/string manipulation, searching, sorting — 6 hrs
+
+Day 25: Recursion basics + stack, queue, linked list concepts — 6 hrs
+
+Day 26-28: Mini project: CRUD app + collections + JDBC + exception handling + multithreading demo — 6 hrs/day
+
+Day 29-30: Final revision + mock interviews + problem-solving practice — 6 hrs/day
+
+Summary Table
+Week	Topics	Hours/Day	Total Days
+1	Core Java Fundamentals & OOP	6	7
+2	Exception Handling, Collections, I/O	6	7
+3	Multithreading, Java 8, JDBC	6	7
+4	Best Practices, Coding Patterns, Project	6	6
+
+
+Level of DSA for Service-Based Companies:
+
+Topic			Depth Needed
+
+Arrays & Strings	Must know basics and common operations
+Linked Lists		Basic understanding, common problems
+Stacks & Queues		Usage and implementation basics
+Trees & Graphs		Basic understanding (optional for entry-level)
+Searching & Sorting	Must know simple sorts & binary search
+Recursion		Basic problems
+Hashing			Basic knowledge
+Algorithms		Simple algorithms, not very complex ones
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

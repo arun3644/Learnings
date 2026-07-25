@@ -1,0 +1,31 @@
+<div class="list-wrap">
+  <div class="page-header">
+    <div>
+      <h1>{{ (meta$ | async)?.page?.title || 'Doctors' }}</h1>
+      <p *ngIf="(doctors$ | async) as doctors" class="page-subtitle">
+        {{ doctors.length }} registered Doctors
+      </p>
+    </div>
+    <div *ngIf="(meta$ | async)?.page?.header?.fields as fields">
+      <app-button *ngFor="let btn of fields" [cssClass]="btn.cssClass" [disabled]="btn.disabled" [label]="btn.label"
+        [variant]="btn.variant" (clicked)="handleButtonClick(btn)">
+      </app-button>
+    </div>
+  </div>
+ <div class="filter-bar" (meta$ | async)?.filters as filters>
+    <input 
+    type="text"
+    placeholder=""
+    >
+    <select name="" id="">
+
+    </select>
+
+ </div>
+</div>
+
+<!-- 
+
+<app-modal *ngIf="showAddModal">
+
+</app-modal> -->

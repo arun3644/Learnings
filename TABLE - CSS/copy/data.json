@@ -1,0 +1,202 @@
+[
+  {
+    "name": {
+      "image": "https://randomuser.me/api/portraits/men/11.jpg",
+      "fullName": "Arun"
+    },
+    "status": "Ordered",
+    "currentDeliveryId": "JA243J",
+    "deliveredId": "134",
+    "vehicleId": "NY124"
+  },
+  {
+    "name": {
+      "image": "https://randomuser.me/api/portraits/women/21.jpg",
+      "fullName": "Priya"
+    },
+    "status": "Packed",
+    "currentDeliveryId": "JA287J",
+    "deliveredId": "542",
+    "vehicleId": "NY231"
+  },
+  {
+    "name": {
+      "image": "https://randomuser.me/api/portraits/men/32.jpg",
+      "fullName": "Suresh"
+    },
+    "status": "Delivered",
+    "currentDeliveryId": "JA123J",
+    "deliveredId": "219",
+    "vehicleId": "NY442"
+  },
+  {
+    "name": {
+      "image": "https://randomuser.me/api/portraits/women/14.jpg",
+      "fullName": "Anitha"
+    },
+    "status": "Delivered",
+    "currentDeliveryId": "JA562J",
+    "deliveredId": "876",
+    "vehicleId": "NY315"
+  },
+  {
+    "name": {
+      "image": "https://randomuser.me/api/portraits/men/40.jpg",
+      "fullName": "Karthik "
+    },
+    "status": "Ordered",
+    "currentDeliveryId": "JA998J",
+    "deliveredId": "003",
+    "vehicleId": "NY908"
+  },
+  {
+    "name": {
+      "image": "https://randomuser.me/api/portraits/women/46.jpg",
+      "fullName": "Divya"
+    },
+    "status": "Packed",
+    "currentDeliveryId": "JA672J",
+    "deliveredId": "244",
+    "vehicleId": "NY551"
+  },
+  {
+    "name": {
+      "image": "https://randomuser.me/api/portraits/men/58.jpg",
+      "fullName": "Vignesh "
+    },
+    "status": "Delivered",
+    "currentDeliveryId": "JA321J",
+    "deliveredId": "642",
+    "vehicleId": "NY117"
+  },
+  {
+    "name": {
+      "image": "https://randomuser.me/api/portraits/women/30.jpg",
+      "fullName": "Meena "
+    },
+    "status": "Ordered",
+    "currentDeliveryId": "JA482J",
+    "deliveredId": "110",
+    "vehicleId": "NY298"
+  },
+  {
+    "name": {
+      "image": "https://randomuser.me/api/portraits/men/45.jpg",
+      "fullName": "Ravi"
+    },
+    "status": "Delivered",
+    "currentDeliveryId": "JA211J",
+    "deliveredId": "553",
+    "vehicleId": "NY990"
+  },
+  {
+    "name": {
+      "image": "https://randomuser.me/api/portraits/women/63.jpg",
+      "fullName": "Kavya "
+    },
+    "status": "Packed",
+    "currentDeliveryId": "JA709J",
+    "deliveredId": "822",
+    "vehicleId": "NY458"
+  },
+  {
+    "name": {
+      "image": "https://randomuser.me/api/portraits/men/70.jpg",
+      "fullName": "Senthil"
+    },
+    "status": "Delivered",
+    "currentDeliveryId": "JA904J",
+    "deliveredId": "155",
+    "vehicleId": "NY612"
+  },
+  {
+    "name": {
+      "image": "https://randomuser.me/api/portraits/women/77.jpg",
+      "fullName": "Revathi"
+    },
+    "status": "Ordered",
+    "currentDeliveryId": "JA119J",
+    "deliveredId": "334",
+    "vehicleId": "NY381"
+  },
+  {
+    "name": {
+      "image": "https://randomuser.me/api/portraits/men/82.jpg",
+      "fullName": "Manoj "
+    },
+    "status": "Delivered",
+    "currentDeliveryId": "JA854J",
+    "deliveredId": "789",
+    "vehicleId": "NY227"
+  },
+  {
+    "name": {
+      "image": "https://randomuser.me/api/portraits/women/55.jpg",
+      "fullName": "Sandhya "
+    },
+    "status": "Packed",
+    "currentDeliveryId": "JA466J",
+    "deliveredId": "402",
+    "vehicleId": "NY069"
+  },
+  {
+    "name": {
+      "image": "https://randomuser.me/api/portraits/men/33.jpg",
+      "fullName": "Prakash"
+    },
+    "status": "Delivered",
+    "currentDeliveryId": "JA742J",
+    "deliveredId": "271",
+    "vehicleId": "NY589"
+  },
+  {
+    "name": {
+      "image": "https://randomuser.me/api/portraits/women/10.jpg",
+      "fullName": "Geetha"
+    },
+    "status": "Delivered",
+    "currentDeliveryId": "JA930J",
+    "deliveredId": "612",
+    "vehicleId": "NY777"
+  },
+  {
+    "name": {
+      "image": "https://randomuser.me/api/portraits/men/64.jpg",
+      "fullName": "Murali "
+    },
+    "status": "Ordered",
+    "currentDeliveryId": "JA120J",
+    "deliveredId": "421",
+    "vehicleId": "NY150"
+  },
+  {
+    "name": {
+      "image": "https://randomuser.me/api/portraits/women/85.jpg",
+      "fullName": "Janani "
+    },
+    "status": "Packed",
+    "currentDeliveryId": "JA688J",
+    "deliveredId": "290",
+    "vehicleId": "NY833"
+  },
+  {
+    "name": {
+      "image": "https://randomuser.me/api/portraits/men/19.jpg",
+      "fullName": "Ezhil Arasa"
+    },
+    "status": "Delivered",
+    "currentDeliveryId": "JA540J",
+    "deliveredId": "007",
+    "vehicleId": "NY304"
+  },
+  {
+    "name": {
+      "image": "https://randomuser.me/api/portraits/women/73.jpg",
+      "fullName": "Isai Vani"
+    },
+    "status": "Delivered",
+    "currentDeliveryId": "JA355J",
+    "deliveredId": "978",
+    "vehicleId": "NY909"
+  }
+]

@@ -1,0 +1,19 @@
+{
+  "nav": [
+    {
+      "key": "dashboard",
+      "label": "Dashboard",
+      "icon": "🏠"
+    },
+    {
+      "key": "appointments",
+      "label": "Appointments",
+      "icon": "📅"
+    },
+    {
+      "key": "patients",
+      "label": "Patients",
+      "icon": "🧑‍⚕️"
+    }
+  ]
+}

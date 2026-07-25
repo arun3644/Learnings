@@ -1,0 +1,37 @@
+<div class="data-table-container">
+  @if (loading) {
+    <div class="table-loading">
+      <app-loader size="medium" message="Loading data..."></app-loader>
+    </div>
+  } @else {
+    <table class="data-table">
+      <thead>
+        <tr>
+          @for (column of columns; track column.key) {
+            <th (click)="onSort(column)" [class.sortable]="column.sortable">
+              {{ column.label }}
+              @if (column.sortable && sortColumn === column.key) {
+                <span class="sort-icon">{{ sortDirection === 'asc' ? '↑' : '↓' }}</span>
+              }
+            </th>
+          }
+        </tr>
+      </thead>
+      <tbody>
+        @if (data.length === 0) {
+          <tr>
+            <td [attr.colspan]="columns.length" class="no-data">No data available</td>
+          </tr>
+        } @else {
+          @for (row of data; track row.id) {
+            <tr (click)="onRowClick(row)" class="clickable-row">
+              @for (column of columns; track column.key) {
+                <td>{{ row[column.key] }}</td>
+              }
+            </tr>
+          }
+        }
+      </tbody>
+    </table>
+  }
+</div>

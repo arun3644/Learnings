@@ -1,0 +1,138 @@
+<div class="appt-layout">
+  <div *ngIf="!meta" style="color: white; padding: 20px;">Loading metadata...</div>
+  <div>
+    <div class="calendar-card">
+      <div class="cal-header">
+        <h3>{{ currentMonth }}</h3>
+        <div class="cal-nav">
+          <button class="cal-nav-btn" (click)="previousMonth()">‹</button>
+          <button class="cal-nav-btn" (click)="nextMonth()">›</button>
+        </div>
+      </div>
+
+      <div class="cal-grid">
+        <div class="cal-day-head" *ngFor="let d of dayHead">
+          {{d}}
+        </div>
+        <!-- <div class="cal-day-head">Su</div>
+        <div class="cal-day-head">Mo</div>
+        <div class="cal-day-head">Tu</div>
+        <div class="cal-day-head">We</div>
+        <div class="cal-day-head">Th</div>
+        <div class="cal-day-head">Fr</div>
+        <div class="cal-day-head">Sa</div> -->
+
+        <div *ngFor="let day of calendarDays" class="cal-day" [class.other-month]="day.isOtherMonth"
+          [class.today]="day.isToday" [class.selected]="day.isSelected" [class.isDisabled]="day.isDisabled"
+          (click)="selectDay(day)">
+          {{ day.date }}
+        </div>
+      </div>
+    </div>
+
+    <div class="time-slots-card">
+      <div class="card-head">
+        <h3>Time Slots — {{ getFormattedDate() }}</h3>
+        <span class="badge">{{ getAvailableSlotsCount() }} Available</span>
+      </div>
+      <app-loading-bar [isLoading]="(timeSltLoading$ | async) ?? false" />
+      <div class="slot-grid" *ngIf="!(timeSltLoading$ | async)">
+        <ng-container>
+          <div *ngFor="let slot of timeSlots" 
+            class="time-slot" 
+            [class.booked]="slot.isBooked"
+            [class.past-time]="slot.isPastTime" 
+            [class.selected-slot]="slot.isSelected"
+            [style.opacity]="slot.isPastTime ? '0.4' : '1'"
+            [style.cursor]="slot.isBooked || slot.isPastTime ? 'not-allowed' : 'pointer'"
+            (click)="selectTimeSlot(slot)">{{slot.time}}
+          </div>
+        </ng-container>
+      </div>
+    </div>
+  </div>
+
+  <div class="appt-sidebar">
+    <div class="appt-form-card">
+      <h3>Book Appointment</h3>
+
+      <form [formGroup]="bookingForm" *ngIf="bookingForm">
+        <div class="field">
+          <label>Patient</label>
+          <input *ngIf="isPatientRole" type="text" formControlName="patient" readonly class="form-input" />
+          <select *ngIf="!isPatientRole" formControlName="patient" class="filter-select">
+            <option value="">Select patient...</option>
+            <option *ngFor="let p of allPatients" [value]="p.id">
+              <!-- {{ p.name }} ({{ p.patientId }}) -->
+              {{ p.name }}
+            </option>
+          </select>
+        </div>
+
+        <div class="field">
+          <label>Specialization</label>
+          <select class="filter-select" formControlName="specialization" (change)="onSpecializationChange($event)">
+            <option value="">Select specialization...</option>
+            <option *ngFor="let spec of specializations" [value]="spec">
+              {{ spec }}
+            </option>
+          </select>
+        </div>
+
+        <div class="field">
+          <label>Doctor</label>
+          <select class="filter-select" formControlName="doctor" [disabled]="!selectedSpecialization"
+            (change)="onDoctorChange($event)">
+            <option value="">Select doctor...</option>
+            <option *ngFor="let doctor of filteredDoctors" [value]="doctor.name">
+              {{ doctor.name }}
+            </option>
+          </select>
+        </div>
+
+        <div class="field">
+          <label>Selected Slot</label>
+          <div class="selected-slot-display">
+            {{ selectedSlot?.time || '--:--' }} — {{ getFormattedDate() }}
+          </div>
+        </div>
+
+        <div class="field">
+          <label>Reason</label>
+          <input type="text" formControlName="reason" placeholder="Brief reason..." class="form-input" />
+        </div>
+
+        <button type="button" class="login-btn" [disabled]="!bookingForm.valid || !selectedSlot"
+          (click)="confirmBooking()">
+          Confirm Booking
+        </button>
+      </form>
+    </div>
+
+    <div class="appt-list-card">
+      <div class="card-head">
+        <h3>Today's Queue</h3>
+        <span class="badge">{{ selectedDateAppointments.length }} appts</span>
+      </div>
+      <div class="queue-list" *ngIf="selectedDateAppointments && selectedDateAppointments.length > 0">
+        <div *ngFor="let appt of selectedDateAppointments" class="appt-item">
+          <div class="appt-time-badge">
+            <div class="atb-time">{{ appt.time }}</div>
+            <div class="atb-date">{{ appt.period }}</div>
+          </div>
+          <div class="appt-info">
+            <div class="appt-patient">{{ appt.patient }}</div>
+            <div class="appt-doctor-small">{{ appt.doctor }} · {{ appt.dept }}</div>
+          </div>
+          <span class="status-pill" [ngClass]="'s-' + appt.status">
+            {{ appt.statusLabel }}
+          </span>
+        </div>
+      </div>
+      <div *ngIf="!selectedDateAppointments || selectedDateAppointments.length === 0"
+        style="color: var(--muted); font-size: 0.75rem; padding: 10px;">
+        No appointments for selected date
+      </div>
+    </div>
+  </div>
+</div>

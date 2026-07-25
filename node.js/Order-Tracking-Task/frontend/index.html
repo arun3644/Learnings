@@ -1,0 +1,66 @@
+<!-- index.html -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Order Tracking</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <h1>📦 Order Tracking System</h1>
+
+  <section class="form-section">
+    <h2>Add New Order</h2>
+    <form id="orderForm">
+      <input type="text" id="customerName" placeholder="Customer Name" required>
+      <input type="text" id="product" placeholder="Product" required>
+      <input type="number" id="quantity" placeholder="Quantity" required>
+      <button type="submit">Add Order</button>
+    </form>
+  </section>
+
+  <section class="order-list">
+    <h2>All Orders</h2>
+    <table>
+      <thead>
+        <tr>
+          <th>ID</th>
+          <th>Customer</th>
+          <th>Product</th>
+          <th>Quantity</th>
+          <th>Status</th>
+          <th>Actions</th>
+        </tr>
+      </thead>
+      <tbody id="ordersTableBody"></tbody>
+    </table>
+  </section>
+
+  <!-- ✨ Update Modal -->
+  <div id="updateModal" class="modal">
+    <div class="modal-content">
+      <span class="close" id="closeModal">&times;</span>
+      <h2>Update Order</h2>
+      <form id="updateForm">
+        <input type="hidden" id="updateOrderId">
+
+        <label>Customer Name:</label>
+        <input type="text" id="updateCustomerName" placeholder="Enter new customer name">
+
+        <label>Product:</label>
+        <input type="text" id="updateProduct" placeholder="Enter new product">
+
+        <label>Quantity:</label>
+        <input type="number" id="updateQuantity" placeholder="Enter new quantity">
+
+        <label>Status:</label>
+        <input type="text" id="updateStatus" placeholder="Enter new status">
+
+        <button type="submit">Save Changes</button>
+      </form>
+    </div>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
