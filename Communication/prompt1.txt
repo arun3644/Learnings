@@ -1,0 +1,566 @@
+# Master Prompt: Complete English Communication Course Generator
+
+Act as a world-class English communication coach, grammar expert, corporate communication trainer, and curriculum designer with 20+ years of experience teaching students from beginner to professional levels.
+
+Your task is to create a complete English Communication Mastery Course in a Markdown (.md) file format.
+
+The goal is:
+
+After studying this complete document and completing all exercises, a learner should be able to:
+- Speak English confidently in daily life.
+- Communicate professionally in corporate environments.
+- Write emails, messages, and reports professionally.
+- Understand English grammar deeply.
+- Build correct sentences naturally.
+- Participate in meetings, interviews, presentations, and conversations.
+- Think and express ideas in English without translating word-by-word.
+
+---
+
+# Course Structure
+
+Divide the entire course into 3 major sections:
+
+## SECTION 1: Beginner English Communication
+
+Target:
+People who know basic English but struggle to form sentences and speak confidently.
+
+Cover:
+
+### Chapter 1: English Communication Basics
+Teach:
+- What is communication?
+- How English sentences are formed.
+- Basic sentence structures.
+- Subject + Verb + Object concept.
+- Common speaking patterns.
+
+For every concept provide:
+
+Tamil Explanation:
+(Explain clearly in Tamil)
+
+English Explanation:
+(Explain clearly in English)
+
+Examples:
+
+Tamil:
+நான் தினமும் வேலைக்கு செல்கிறேன்.
+
+English:
+I go to work every day.
+
+---
+
+### Chapter 2: Basic Sentence Building
+
+Cover:
+
+- Positive sentences
+- Negative sentences
+- Question sentences
+- WH questions
+- Yes/No questions
+- Short answers
+
+Examples:
+
+Tamil:
+நீங்கள் எங்கே வேலை செய்கிறீர்கள்?
+
+English:
+Where do you work?
+
+Meaning:
+Where = எங்கே
+Work = வேலை செய்
+
+---
+
+### Chapter 3: Daily Conversation English
+
+Teach conversations for:
+
+- Introducing yourself
+- Family conversations
+- Friends
+- Shopping
+- Travel
+- Asking directions
+- Phone conversations
+- Making requests
+- Asking permission
+- Expressing opinions
+
+Provide:
+
+Situation:
+English Conversation:
+Tamil Meaning:
+
+---
+
+### Chapter 4: Basic Grammar Foundation
+
+Teach:
+
+- Nouns
+- Pronouns
+- Verbs
+- Adjectives
+- Adverbs
+- Prepositions
+- Articles
+- Conjunctions
+
+For every grammar topic:
+
+1. Simple explanation
+2. Tamil explanation
+3. Rules
+4. Examples
+5. Common mistakes
+
+---
+
+### Beginner Chapter Tasks
+
+At the end of every chapter provide:
+
+## Practice Tasks
+
+Task 1:
+Sentence creation exercises.
+
+Task 2:
+Translation exercises:
+Tamil → English
+
+Task 3:
+Speaking practice.
+
+Task 4:
+Writing practice.
+
+Task 5:
+Self-test questions.
+
+---
+
+# SECTION 2: Intermediate English Communication
+
+Target:
+People who understand basic English but cannot communicate fluently.
+
+Cover:
+
+## Chapter 1: Advanced Sentence Formation
+
+Teach:
+
+- Complex sentences
+- Compound sentences
+- Connecting ideas
+- Giving explanations
+- Describing situations
+- Storytelling
+
+---
+
+## Chapter 2: Complete Tense Mastery
+
+Cover all tenses:
+
+Present:
+
+- Simple Present
+- Present Continuous
+- Present Perfect
+- Present Perfect Continuous
+
+Past:
+
+- Simple Past
+- Past Continuous
+- Past Perfect
+- Past Perfect Continuous
+
+Future:
+
+- Simple Future
+- Future Continuous
+- Future Perfect
+- Future Perfect Continuous
+
+
+For every tense provide:
+
+Tamil explanation.
+
+English explanation.
+
+Formula.
+
+Usage.
+
+Examples.
+
+Common mistakes.
+
+Real-life conversations.
+
+---
+
+## Chapter 3: Professional Communication
+
+Teach:
+
+Corporate English:
+
+- Office conversations
+- Speaking with managers
+- Speaking with colleagues
+- Asking questions professionally
+- Giving updates
+- Reporting problems
+- Discussing deadlines
+- Requesting help
+- Negotiations
+- Feedback conversations
+
+Examples:
+
+Normal English:
+"I need this report."
+
+Corporate English:
+"Could you please share the report when you have a moment?"
+
+Tamil Meaning:
+தயவு செய்து நேரம் கிடைக்கும் போது அறிக்கையை பகிர முடியுமா?
+
+
+---
+
+## Chapter 4: Email Communication
+
+Teach:
+
+Professional emails:
+
+- Email structure
+- Subject writing
+- Greetings
+- Requests
+- Follow-ups
+- Apologies
+- Confirmations
+- Meeting invitations
+- Status updates
+
+Provide:
+
+Bad email example.
+
+Improved professional email.
+
+Tamil explanation.
+
+---
+
+## Chapter 5: Vocabulary Development
+
+Create vocabulary lists:
+
+Format:
+
+Word:
+Meaning in Tamil:
+English explanation:
+Example sentence:
+
+Include:
+
+- Workplace vocabulary
+- Business vocabulary
+- Common daily words
+- Advanced words
+
+
+---
+
+# Intermediate Chapter Tasks
+
+Include:
+
+- Speaking assignments
+- Email writing exercises
+- Grammar tests
+- Vocabulary tests
+- Conversation practice
+- Role-play activities
+
+---
+
+# SECTION 3: Advanced English Communication
+
+Target:
+
+People who want professional-level English fluency.
+
+---
+
+## Chapter 1: Advanced Grammar
+
+Teach:
+
+- Advanced sentence structures
+- Passive voice
+- Active voice
+- Conditional sentences
+- Modal verbs
+- Reported speech
+- Relative clauses
+- Phrasal verbs
+- Idioms
+- Advanced expressions
+
+
+Explain difficult words with:
+
+Word:
+Meaning:
+Tamil meaning:
+Example:
+
+---
+
+## Chapter 2: Corporate Communication Mastery
+
+Teach professional communication used in multinational companies.
+
+Cover:
+
+### Meetings
+
+Teach:
+
+- Starting meetings
+- Presenting ideas
+- Agreeing
+- Disagreeing politely
+- Interrupting professionally
+- Asking clarification
+- Summarizing discussions
+
+
+### Presentations
+
+Teach:
+
+- Opening a presentation
+- Explaining charts
+- Giving opinions
+- Handling questions
+- Closing presentations
+
+
+### Leadership Communication
+
+Teach:
+
+- Giving instructions
+- Motivating teams
+- Conflict resolution
+- Decision-making language
+
+---
+
+## Chapter 3: Interview English
+
+Cover:
+
+- Self introduction
+- HR interview questions
+- Technical discussion communication
+- Salary discussion
+- Strengths and weaknesses
+- Professional storytelling
+
+
+Provide:
+
+Question:
+
+English Answer:
+
+Tamil Explanation:
+
+---
+
+## Chapter 4: Fluency Training
+
+Teach:
+
+- Thinking in English
+- Avoiding translation
+- Improving pronunciation
+- Speaking naturally
+- Using filler words correctly
+
+Examples:
+
+Instead of:
+
+"I don't know."
+
+Use:
+
+"Let me check and get back to you."
+
+Tamil meaning:
+நான் சரிபார்த்து உங்களுக்கு தெரிவிக்கிறேன்.
+
+---
+
+# Additional Requirements
+
+## Sentence-Based Learning
+
+Everything must be taught sentence by sentence.
+
+For every important sentence:
+
+Format:
+
+Tamil:
+(First provide Tamil sentence)
+
+English:
+(Then provide English sentence)
+
+Meaning:
+(Explain difficult words)
+
+Usage:
+(Explain when to use)
+
+---
+
+# Difficulty Explanation
+
+Whenever using difficult English words:
+
+Provide:
+
+Word:
+Meaning in Tamil:
+Simple English meaning:
+Example sentence:
+
+Example:
+
+Word:
+"Implement"
+
+Tamil:
+செயல்படுத்துதல்
+
+Meaning:
+To put a plan into action.
+
+Sentence:
+We will implement this strategy next month.
+
+---
+
+# Include:
+
+## Common English Mistakes
+
+Example:
+
+Wrong:
+"He go to office."
+
+Correct:
+"He goes to office."
+
+Tamil explanation:
+Third person singular subject requires "s/es" in present tense.
+
+---
+
+# Include:
+
+## Daily English Practice Plan
+
+Create:
+
+30-day beginner plan.
+
+60-day intermediate plan.
+
+90-day advanced plan.
+
+Include:
+
+Daily speaking tasks.
+
+Reading tasks.
+
+Writing tasks.
+
+Listening tasks.
+
+Vocabulary tasks.
+
+---
+
+# Include:
+
+## Final Master Tests
+
+At the end of the entire course provide:
+
+1. Grammar test.
+
+2. Vocabulary test.
+
+3. Speaking test.
+
+4. Writing test.
+
+5. Corporate communication test.
+
+6. Interview simulation.
+
+---
+
+# Teaching Style Rules
+
+Follow these rules:
+
+- Teach like a professional English trainer.
+- Assume the learner wants complete mastery.
+- Start from zero and gradually move to advanced.
+- Never skip important concepts.
+- Give many real-life examples.
+- Focus on practical communication.
+- Avoid unnecessary theory.
+- Make explanations simple.
+- Use Tamil first, then English.
+- Use chapter-wise organization.
+- Use Markdown formatting.
+- Add headings, tables, bullet points, and examples.
+- Make the document long and comprehensive.
+- The final output must be a complete `.md` file.
+
+The final document title:
+
+# Complete English Communication Mastery Course
+## Beginner to Advanced (Tamil + English)
+
+Create the entire course as a single Markdown document.
